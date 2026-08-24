@@ -1,0 +1,866 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bab 7: Describing Regular Activities | Bahasa Inggris Kelas VII Semester 1</title>
+    <style>
+        :root {
+            --primary: #0F172A;
+            --secondary: #D4AF37;
+            --bg: #FDFBF7;
+            --text: #334155;
+            --white: #ffffff;
+            --success: #16a34a;
+            --border: #e2e8f0;
+            --light-gold: #FDF6E3;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', 'Inter', Tahoma, sans-serif; }
+        body { background-color: var(--bg); color: var(--text); line-height: 1.7; padding: 20px; }
+        .container { max-width: 900px; margin: 0 auto; background: var(--white); padding: 50px; border-radius: 16px; box-shadow: 0 10px 40px -10px rgba(15, 23, 42, 0.1); border-top: 4px solid var(--secondary); }
+        
+        .nav-links { display: flex; justify-content: space-between; margin-bottom: 40px; flex-wrap: wrap; gap: 10px; }
+        .nav-links a { text-decoration: none; color: var(--primary); font-weight: 600; font-size: 0.9rem; padding: 10px 20px; border: 1px solid var(--border); border-radius: 8px; transition: all 0.3s; background: var(--white); }
+        .nav-links a:hover { background: var(--primary); color: var(--secondary); border-color: var(--primary); }
+
+        .header-badge { text-align: center; margin-bottom: 30px; }
+        .header-badge h2 { font-family: 'Georgia', serif; font-size: 1.2rem; color: var(--secondary); text-transform: uppercase; letter-spacing: 2px; margin-bottom: 10px; }
+        .header-badge h1 { font-family: 'Georgia', serif; font-size: 2.8rem; color: var(--primary); margin-bottom: 15px; line-height: 1.2; }
+        .header-badge p { color: #64748b; font-size: 1.05rem; max-width: 700px; margin: 0 auto; }
+        .author-info { text-align: center; color: #64748b; font-size: 0.95rem; margin: 30px 0; padding: 20px; background: var(--light-gold); border-radius: 8px; border: 1px solid rgba(212, 175, 55, 0.3); }
+        .author-info strong { color: var(--primary); font-size: 1.1rem; }
+
+        .section { margin-bottom: 40px; }
+        .section-title { font-family: 'Georgia', serif; font-size: 1.5rem; color: var(--primary); border-left: 5px solid var(--secondary); padding-left: 15px; margin-bottom: 20px; font-weight: 700; display: flex; align-items: center; gap: 10px; }
+        
+        .definition-box { background: #EFF6FF; border-left: 4px solid var(--primary); padding: 20px; border-radius: 0 8px 8px 0; margin: 20px 0; font-size: 1.05rem; }
+        .theory-box { background: #F0FDF4; border: 1px solid #BBF7D0; padding: 20px; border-radius: 8px; margin: 20px 0; }
+        .theory-box h4 { color: var(--success); margin-bottom: 10px; display: flex; align-items: center; gap: 8px; }
+        .tip-box { background: #FFFBEB; border: 1px solid #FDE68A; padding: 20px; border-radius: 8px; margin: 20px 0; }
+        .tip-box h4 { color: #B45309; margin-bottom: 10px; display: flex; align-items: center; gap: 8px; }
+        .warning-box { background: #FEF2F2; border: 1px solid #FECACA; padding: 20px; border-radius: 8px; margin: 20px 0; }
+        .warning-box h4 { color: #991B1B; margin-bottom: 10px; display: flex; align-items: center; gap: 8px; }
+
+        .table-wrapper { overflow-x: auto; margin: 20px 0; border-radius: 8px; border: 1px solid var(--border); }
+        .content-table { width: 100%; border-collapse: collapse; min-width: 600px; }
+        .content-table th { background: var(--primary); color: var(--secondary); padding: 15px; text-align: left; font-weight: 600; font-size: 0.95rem; }
+        .content-table td { padding: 15px; border-bottom: 1px solid var(--border); font-size: 0.95rem; }
+        .content-table tr:nth-child(even) { background: #F8FAFC; }
+        .content-table tr:hover { background: var(--light-gold); }
+
+        .example-box { background: var(--white); border: 1px solid var(--border); border-left: 4px solid var(--secondary); padding: 20px; border-radius: 0 8px 8px 0; margin: 20px 0; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); }
+        .example-box .label { font-size: 0.8rem; text-transform: uppercase; letter-spacing: 1px; color: var(--secondary); font-weight: 700; margin-bottom: 8px; display: block; }
+        .example-box .dialogue { font-style: italic; color: var(--primary); line-height: 1.8; }
+        .example-box .dialogue strong { color: var(--secondary); font-style: normal; }
+
+        .quote-box { text-align: center; background: var(--light-gold); border: 1px solid var(--secondary); padding: 30px; border-radius: 12px; margin: 40px 0; }
+        .quote-box .arabic { font-size: 1.6rem; color: var(--primary); margin-bottom: 15px; display: block; font-family: 'Traditional Arabic', 'Arial', serif; line-height: 1.6; }
+        .quote-box .translation { font-style: italic; color: var(--text); margin-bottom: 10px; }
+        .quote-box .source { font-weight: 700; color: var(--secondary); font-style: normal; font-size: 0.9rem; }
+
+        .glossary-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 15px; margin-top: 20px; }
+        .glossary-item { background: var(--white); border: 1px solid var(--border); padding: 15px; border-radius: 8px; transition: all 0.3s; }
+        .glossary-item:hover { border-color: var(--secondary); transform: translateY(-2px); box-shadow: 0 4px 12px rgba(0,0,0,0.05); }
+        .glossary-item .en { font-weight: 700; color: var(--primary); display: block; margin-bottom: 4px; }
+        .glossary-item .id { color: #64748b; font-size: 0.9rem; display: block; margin-bottom: 8px; }
+        .glossary-item .ex { font-size: 0.85rem; color: var(--secondary); font-style: italic; }
+
+        .reference-list { list-style: none; counter-reset: ref-counter; }
+        .reference-list li { counter-increment: ref-counter; margin-bottom: 12px; padding-left: 30px; position: relative; font-size: 0.95rem; color: #475569; }
+        .reference-list li::before { content: "[" counter(ref-counter) "]"; position: absolute; left: 0; color: var(--secondary); font-weight: 700; }
+
+        .quiz-section { background: #F8FAFC; border: 2px solid var(--border); border-radius: 12px; padding: 40px; margin-top: 50px; }
+        .quiz-header { text-align: center; margin-bottom: 30px; padding-bottom: 20px; border-bottom: 2px dashed var(--border); }
+        .quiz-header h3 { font-family: 'Georgia', serif; color: var(--primary); font-size: 1.8rem; margin-bottom: 10px; }
+        
+        .form-group { margin-bottom: 20px; }
+        .form-group label { display: block; font-weight: 600; margin-bottom: 8px; color: var(--primary); font-size: 0.95rem; }
+        .form-group input, .form-group select, .form-group textarea { width: 100%; padding: 12px; border: 1px solid var(--border); border-radius: 6px; font-size: 1rem; transition: border 0.3s; }
+        .form-group input:focus, .form-group select:focus, .form-group textarea:focus { outline: none; border-color: var(--secondary); box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.1); }
+        .form-group textarea { min-height: 100px; resize: vertical; }
+
+        .question-block { margin-bottom: 25px; padding: 20px; background: var(--white); border-radius: 8px; border: 1px solid var(--border); }
+        .question-text { font-weight: 600; margin-bottom: 15px; display: block; color: var(--primary); line-height: 1.5; }
+        .options label { display: block; margin-bottom: 10px; cursor: pointer; padding: 12px; border-radius: 6px; transition: background 0.2s; border: 1px solid transparent; }
+        .options label:hover { background: #F1F5F9; border-color: var(--border); }
+        .options input[type="radio"] { margin-right: 12px; accent-color: var(--secondary); }
+
+        .result-box { display: none; background: var(--primary); color: var(--white); padding: 30px; border-radius: 12px; margin-top: 30px; text-align: center; }
+        .result-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-top: 20px; }
+        .result-item { background: rgba(255,255,255,0.1); padding: 20px; border-radius: 8px; border: 1px solid rgba(212, 175, 55, 0.3); }
+        .result-item .score { font-size: 2.2rem; font-weight: 700; color: var(--secondary); display: block; margin-bottom: 5px; }
+        .result-item .label { font-size: 0.9rem; opacity: 0.9; text-transform: uppercase; letter-spacing: 1px; }
+
+        .btn-group { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 30px; justify-content: center; }
+        .btn { padding: 14px 28px; border: none; border-radius: 8px; font-weight: 600; cursor: pointer; transition: all 0.3s; font-size: 0.95rem; display: inline-flex; align-items: center; gap: 8px; text-decoration: none; }
+        .btn-primary { background: var(--primary); color: var(--white); }
+        .btn-primary:hover { background: #1E293B; transform: translateY(-2px); box-shadow: 0 10px 20px -5px rgba(15, 23, 42, 0.3); }
+        .btn-secondary { background: var(--white); color: var(--primary); border: 1px solid var(--primary); }
+        .btn-secondary:hover { background: #EFF6FF; }
+        .btn-success { background: var(--success); color: var(--white); }
+        .btn-success:hover { background: #15803D; }
+        .btn-warning { background: var(--secondary); color: var(--primary); }
+        .btn-warning:hover { background: #B8962E; }
+
+        footer { text-align: center; margin-top: 60px; padding-top: 30px; border-top: 1px solid var(--border); color: #64748b; font-size: 0.9rem; }
+        footer a { color: var(--primary); text-decoration: none; font-weight: 600; }
+
+        @media print {
+            body { background: white; padding: 0; }
+            .container { box-shadow: none; max-width: 100%; padding: 20px; border: none; }
+            .nav-links, .btn-group, footer, .quote-box { display: none !important; }
+            .quiz-section { break-inside: avoid; border: 1px solid #000; }
+            .result-box { display: block !important; color: black; background: #eee; border: 1px solid #000; }
+            .result-item .score { color: black; }
+            .section { break-inside: avoid; }
+        }
+
+        @media (max-width: 768px) {
+            .result-grid { grid-template-columns: 1fr; }
+            .container { padding: 25px; }
+            .header-badge h1 { font-size: 2rem; }
+            .btn-group { flex-direction: column; }
+            .btn { width: 100%; justify-content: center; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <!-- Navigation -->
+    <div class="nav-links">
+        <a href="6.html">← Bab 6: Physical Appearances & Personalities</a>
+        <a href="8.html">Pertemuan 8: UTS →</a>
+    </div>
+
+    <!-- Header -->
+    <div class="header-badge">
+        <h2>Pertemuan 7</h2>
+        <h1>Describing People's Regular Activities</h1>
+        <p>
+            Memahami cara mendeskripsikan aktivitas rutin seseorang dalam bahasa Inggris menggunakan <em>Simple Present Tense</em>, termasuk kosakata kegiatan sehari-hari, <em>adverbs of frequency</em>, dan ungkapan waktu. Materi ini melatih siswa menceritakan kebiasaan dan rutinitas secara komunikatif dan gramatikal.
+        </p>
+    </div>
+
+    <div class="author-info">
+        <strong>Hendria Roza, S.Pd.I</strong><br>
+        Guru Bahasa Inggris | MTsN 10 Agam | Tahun Pelajaran 2026/2027
+    </div>
+
+    <!-- Content -->
+    <div class="section">
+        <div class="section-title">📖 A. Pengertian dan Teori Pendukung</div>
+        <p><strong>Regular Activities</strong> (aktivitas rutin) adalah kegiatan yang dilakukan seseorang secara berulang-ulang pada waktu tertentu, seperti kebiasaan harian, mingguan, atau bulanan. Dalam bahasa Inggris, aktivitas rutin diekspresikan menggunakan <strong>Simple Present Tense</strong>.</p>
+        
+        <div class="theory-box">
+            <h4>💡 Teori Pendukung: <em>Simple Present Tense for Habitual Actions</em></h4>
+            <p>Menurut <strong>Raymond Murphy</strong> dalam <em>English Grammar in Use</em>, <strong>Simple Present Tense</strong> digunakan untuk menyatakan:</p>
+            <ul style="margin-left: 20px; margin-top: 10px; line-height: 2;">
+                <li><strong>Habits / Routines</strong> (kebiasaan/rutinitas): "I <em>wake up</em> at 04.30 every day."</li>
+                <li><strong>General Truths</strong> (kebenaran umum): "The sun <em>rises</em> in the east."</li>
+                <li><strong>Permanent Situations</strong> (situasi permanen): "She <em>lives</em> in Bukittinggi."</li>
+                <li><strong>Scheduled Events</strong> (jadwal tetap): "The train <em>leaves</em> at 08.00."</li>
+            </ul>
+            <p style="margin-top: 10px;">Untuk bab ini, fokus utama adalah penggunaan Simple Present Tense untuk <strong>habitual actions</strong> — aktivitas yang dilakukan secara rutin.</p>
+        </div>
+
+        <div class="definition-box">
+            📌 <strong>DEFINISI OPERASIONAL:</strong><br>
+            • <strong>Regular Activity</strong> = kegiatan yang dilakukan secara berulang dan teratur (misalnya: shalat 5 waktu, belajar, makan, tidur).<br>
+            • <strong>Simple Present Tense</strong> = bentuk tense yang digunakan untuk menyatakan kebiasaan, fakta umum, dan situasi permanen.<br>
+            • <strong>Adverb of Frequency</strong> = kata keterangan yang menunjukkan seberapa sering suatu aktivitas dilakukan (always, often, sometimes, rarely, never).
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="section-title">📊 B. Rumus Simple Present Tense</div>
+        <p>Simple Present Tense memiliki dua jenis kalimat utama: verbal (menggunakan kata kerja) dan nominal (menggunakan to be).</p>
+        
+        <div class="table-wrapper">
+            <table class="content-table">
+                <thead>
+                    <tr>
+                        <th style="width: 18%;">Jenis</th>
+                        <th style="width: 27%;">Rumus (+)</th>
+                        <th style="width: 27%;">Rumus (−)</th>
+                        <th style="width: 28%;">Rumus (?)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Verbal</strong></td>
+                        <td>S + V1 (+s/es untuk he/she/it)</td>
+                        <td>S + do/does + not + V1</td>
+                        <td>Do/Does + S + V1?</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Nominal</strong></td>
+                        <td>S + is/am/are + Complement</td>
+                        <td>S + is/am/are + not</td>
+                        <td>Is/Am/Are + S?</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="tip-box">
+            <h4>💡 Aturan Penting: Penambahan -s/-es</h4>
+            <p>Kata kerja mendapat akhiran <strong>-s/-es</strong> HANYA ketika subjeknya <strong>he, she, it</strong> (orang ketiga tunggal).</p>
+            <ul style="margin-left: 20px; margin-top: 10px;">
+                <li><strong>I / You / We / They</strong> → kata kerja dasar: "They <em>study</em> English."</li>
+                <li><strong>He / She / It</strong> → kata kerja + s/es: "She <em>studies</em> English."</li>
+            </ul>
+            <p style="margin-top: 10px;"><strong>Aturan -es:</strong> kata kerja berakhiran <em>-o, -ch, -sh, -ss, -x, -y</em> (setelah konsonan) → tambah <strong>-es</strong> (go→goes, watch→watches, study→studies).</p>
+        </div>
+
+        <div class="warning-box">
+            <h4>⚠️ Kesalahan Umum yang Harus Dihindari</h4>
+            <ul style="margin-left: 20px; margin-top: 10px;">
+                <li>❌ Salah: "She <strong>go</strong> to school." → ✅ Benar: "She <strong>goes</strong> to school."</li>
+                <li>❌ Salah: "He <strong>don't</strong> like coffee." → ✅ Benar: "He <strong>doesn't</strong> like coffee."</li>
+                <li>❌ Salah: "They <strong>is</strong> students." → ✅ Benar: "They <strong>are</strong> students."</li>
+                <li>❌ Salah: "Does she <strong>goes</strong>?" → ✅ Benar: "Does she <strong>go</strong>?" (setelah does, kata kerja kembali ke bentuk dasar)</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="section-title">📊 C. Adverbs of Frequency (Kata Keterangan Frekuensi)</div>
+        <p>Adverbs of frequency digunakan untuk menunjukkan seberapa sering suatu aktivitas dilakukan. Kata-kata ini biasanya diletakkan <strong>sebelum kata kerja utama</strong> atau <strong>setelah to be</strong>.</p>
+        
+        <div class="table-wrapper">
+            <table class="content-table">
+                <thead>
+                    <tr>
+                        <th style="width: 25%;">Adverb</th>
+                        <th style="width: 15%;">Arti</th>
+                        <th style="width: 20%;">Frekuensi</th>
+                        <th style="width: 40%;">Contoh Kalimat</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Always</strong></td>
+                        <td>Selalu</td>
+                        <td>100%</td>
+                        <td>"I <em>always</em> pray five times a day."</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Often</strong></td>
+                        <td>Sering</td>
+                        <td>70-80%</td>
+                        <td>"She <em>often</em> reads books at night."</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Sometimes</strong></td>
+                        <td>Kadang-kadang</td>
+                        <td>40-50%</td>
+                        <td>"They <em>sometimes</em> play football after school."</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Rarely / Seldom</strong></td>
+                        <td>Jarang</td>
+                        <td>10-20%</td>
+                        <td>"He <em>rarely</em> eats fast food."</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Never</strong></td>
+                        <td>Tidak pernah</td>
+                        <td>0%</td>
+                        <td>"I <em>never</em> skip the Fajr prayer."</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="tip-box">
+            <h4>💡 Posisi Adverb of Frequency</h4>
+            <ul style="margin-left: 20px; margin-top: 10px;">
+                <li><strong>Sebelum kata kerja utama:</strong> "She <em>always drinks</em> milk." ✅</li>
+                <li><strong>Setelah to be:</strong> "He is <em>always</em> diligent." ✅</li>
+                <li><strong>"Sometimes"</strong> bisa di awal/tengah/akhir kalimat: "<em>Sometimes</em>, I read novels." ✅</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="section-title">📊 D. Kosakata Aktivitas Sehari-hari</div>
+        <p>Berikut adalah kosakata yang umum digunakan untuk mendeskripsikan rutinitas harian:</p>
+        
+        <div class="table-wrapper">
+            <table class="content-table">
+                <thead>
+                    <tr>
+                        <th style="width: 20%;">Waktu</th>
+                        <th style="width: 40%;">Aktivitas (Verb Phrase)</th>
+                        <th style="width: 40%;">Arti</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td rowspan="4"><strong>Pagi<br>(Morning)</strong></td>
+                        <td>Wake up early</td>
+                        <td>Bangun pagi</td>
+                    </tr>
+                    <tr>
+                        <td>Take a bath / shower</td>
+                        <td>Mandi</td>
+                    </tr>
+                    <tr>
+                        <td>Have breakfast</td>
+                        <td>Sarapan</td>
+                    </tr>
+                    <tr>
+                        <td>Go to school</td>
+                        <td>Pergi ke sekolah</td>
+                    </tr>
+                    <tr>
+                        <td rowspan="3"><strong>Siang<br>(Afternoon)</strong></td>
+                        <td>Have lunch</td>
+                        <td>Makan siang</td>
+                    </tr>
+                    <tr>
+                        <td>Study at school</td>
+                        <td>Belajar di sekolah</td>
+                    </tr>
+                    <tr>
+                        <td>Pray Dhuhr / Ashar</td>
+                        <td>Shalat Dzuhur / Ashar</td>
+                    </tr>
+                    <tr>
+                        <td rowspan="4"><strong>Sore/Malam<br>(Evening/Night)</strong></td>
+                        <td>Go home</td>
+                        <td>Pulang ke rumah</td>
+                    </tr>
+                    <tr>
+                        <td>Do homework</td>
+                        <td>Mengerjakan PR</td>
+                    </tr>
+                    <tr>
+                        <td>Have dinner</td>
+                        <td>Makan malam</td>
+                    </tr>
+                    <tr>
+                        <td>Go to bed / sleep</td>
+                        <td>Tidur</td>
+                    </tr>
+                    <tr>
+                        <td rowspan="3"><strong>Ibadah Harian</strong></td>
+                        <td>Pray five times a day</td>
+                        <td>Shalat 5 waktu</td>
+                    </tr>
+                    <tr>
+                        <td>Read the Qur'an</td>
+                        <td>Membaca Al-Qur'an</td>
+                    </tr>
+                    <tr>
+                        <td>Recite Al-Qur'an</td>
+                        <td>Mengaji</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="section-title">📊 E. Ekspresi Waktu dalam Simple Present Tense</div>
+        <p>Simple Present Tense sering menggunakan kata keterangan waktu yang menunjukkan keteraturan:</p>
+        
+        <div class="table-wrapper">
+            <table class="content-table">
+                <thead>
+                    <tr>
+                        <th style="width: 35%;">Time Expression</th>
+                        <th style="width: 30%;">Arti</th>
+                        <th style="width: 35%;">Contoh Kalimat</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Every day / Every morning</td>
+                        <td>Setiap hari / setiap pagi</td>
+                        <td>"I study English <em>every day</em>."</td>
+                    </tr>
+                    <tr>
+                        <td>Every week / Every Monday</td>
+                        <td>Setiap minggu / setiap Senin</td>
+                        <td>"She visits her grandma <em>every Sunday</em>."</td>
+                    </tr>
+                    <tr>
+                        <td>Once a week / Twice a month</td>
+                        <td>Sekali seminggu / dua kali sebulan</td>
+                        <td>"They play football <em>twice a week</em>."</td>
+                    </tr>
+                    <tr>
+                        <td>In the morning / afternoon / evening</td>
+                        <td>Di pagi / siang / sore hari</td>
+                        <td>"Father reads the newspaper <em>in the morning</em>."</td>
+                    </tr>
+                    <tr>
+                        <td>On weekends / On Saturdays</td>
+                        <td>Di akhir pekan / di hari Sabtu</td>
+                        <td>"We go hiking <em>on weekends</em>."</td>
+                    </tr>
+                    <tr>
+                        <td>At 04.30 / At night</td>
+                        <td>Pukul 04.30 / di malam hari</td>
+                        <td>"I wake up <em>at 04.30</em>."</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="section-title">💬 F. Contoh Dialog Aktivitas Rutin</div>
+        <p>Berikut adalah contoh dialog dalam berbagai situasi:</p>
+
+        <div class="example-box">
+            <span class="label">Contoh Dialog 1: Menceritakan Rutinitas Harian</span>
+            <div class="dialogue">
+                <strong>Teacher:</strong> "Ahmad, can you tell us about your daily activities?"<br>
+                <strong>Ahmad:</strong> "Sure, Sir. I always wake up at 04.30 in the morning. Then, I take a bath and have breakfast. I go to school at 06.30. I study at school until 14.00. After that, I go home and pray Ashar."<br>
+                <strong>Teacher:</strong> "What do you do in the evening?"<br>
+                <strong>Ahmad:</strong> "In the evening, I usually do my homework and read the Qur'an. I have dinner with my family at 18.30. I always go to bed at 21.00."<br>
+                <strong>Teacher:</strong> "Very good! You have a disciplined routine."
+            </div>
+        </div>
+
+        <div class="example-box">
+            <span class="label">Contoh Dialog 2: Bertanya tentang Kebiasaan Teman</span>
+            <div class="dialogue">
+                <strong>Siti:</strong> "Rina, do you often exercise?"<br>
+                <strong>Rina:</strong> "Yes, I do. I jog every morning around the field near my house. How about you?"<br>
+                <strong>Siti:</strong> "I rarely exercise. I sometimes play badminton on weekends with my brother."<br>
+                <strong>Rina:</strong> "You should exercise more often. It's good for your health."<br>
+                <strong>Siti:</strong> "You're right. I will try to exercise twice a week starting next week."<br>
+                <strong>Rina:</strong> "That's a great plan!"
+            </div>
+        </div>
+
+        <div class="example-box">
+            <span class="label">Contoh Dialog 3: Mewawancarai Teman tentang Hobi & Rutinitas</span>
+            <div class="dialogue">
+                <strong>Interviewer:</strong> "What do you usually do in your free time, Fatimah?"<br>
+                <strong>Fatimah:</strong> "I enjoy cooking. I often cook traditional Minang dishes with my mother."<br>
+                <strong>Interviewer:</strong> "How often do you cook?"<br>
+                <strong>Fatimah:</strong> "I cook three times a week, usually on Wednesdays, Fridays, and Sundays."<br>
+                <strong>Interviewer:</strong> "Do you also help clean the house?"<br>
+                <strong>Fatimah:</strong> "Yes, I always sweep the floor every morning and wash the dishes after dinner."<br>
+                <strong>Interviewer:</strong> "You are a diligent daughter. Thank you for sharing."
+            </div>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="section-title">🕌 G. Adab Aktivitas Rutin dalam Konteks Islami</div>
+        <div class="quote-box">
+            <span class="arabic">وَٱلْعَصْرِ إِنَّ ٱلْإِنسَـٰنَ لَفِى خُسْرٍ إِلَّا ٱلَّذِينَ ءَامَنُوا۟ وَعَمِلُوا۟ ٱلصَّـٰلِحَـٰتِ وَتَوَاصَوْا۟ بِٱلْحَقِّ وَتَوَاصَوْا۟ بِٱلصَّبْرِ</span>
+            <p class="translation">"Demi masa. Sungguh, manusia berada dalam kerugian, kecuali orang-orang yang beriman dan mengerjakan kebajikan serta saling menasihati untuk kebenaran dan saling menasihati untuk kesabaran."</p>
+            <span class="source">— QS. Al-Asr [103]: 1-3</span>
+        </div>
+        <p>Ayat ini menjadi landasan utama dalam Islam tentang pentingnya mengisi waktu dengan aktivitas yang bermanfaat. Berikut adalah adab mengatur aktivitas rutin dalam Islam:</p>
+        <ul style="margin-left: 20px; margin-top: 15px;">
+            <li><strong>Mendahulukan ibadah wajib:</strong> Semua aktivitas rutin harus disesuaikan dengan jadwal shalat 5 waktu. Rasulullah ﷺ bersabda: <em>"Amal yang paling dicintai Allah adalah amal yang rutin (konsisten) meskipun sedikit."</em> (HR. Bukhari & Muslim).</li>
+            <li><strong>Disiplin waktu (amanah waktu):</strong> Waktu adalah amanah yang harus dikelola dengan baik. QS. Al-Asr mengingatkan bahwa manusia akan rugi jika tidak mengisi waktu dengan kebaikan.</li>
+            <li><strong>Niatkan karena Allah:</strong> Setiap aktivitas rutin (belajar, bekerja, berolahraga) bisa bernilai ibadah jika diniatkan karena Allah dan dilakukan dengan cara yang halal.</li>
+            <li><strong>Seimbang antara dunia-akhirat:</strong> Rutinitas yang baik menyeimbangkan aktivitas duniawi (sekolah, kerja) dan ukhrawi (ibadah, mengaji, berdzikir).</li>
+            <li><strong>Istiqamah (konsisten):</strong> Rasulullah ﷺ menyukai amal yang konsisten, meskipun sedikit. Rutinitas kecil yang dilakukan terus-menerus lebih baik daripada amal besar yang hanya sekali.</li>
+            <li><strong>Tidak berlebihan (israf):</strong> Aktivitas rutin tidak boleh membuat kita kelelahan hingga meninggalkan kewajiban atau merusak kesehatan.</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <div class="section-title">📚 H. Glosarium (Kosa Kata Kunci)</div>
+        <div class="glossary-grid">
+            <div class="glossary-item">
+                <span class="en">Regular activity</span>
+                <span class="id">Aktivitas rutin</span>
+                <span class="ex">"My regular activity is studying."</span>
+            </div>
+            <div class="glossary-item">
+                <span class="en">Daily routine</span>
+                <span class="id">Rutinitas harian</span>
+                <span class="ex">"I have a daily routine."</span>
+            </div>
+            <div class="glossary-item">
+                <span class="en">Simple Present Tense</span>
+                <span class="id">Bentuk waktu kini sederhana</span>
+                <span class="ex">"Used for habits and routines."</span>
+            </div>
+            <div class="glossary-item">
+                <span class="en">Adverb of frequency</span>
+                <span class="id">Kata keterangan frekuensi</span>
+                <span class="ex">"Always, often, sometimes, never."</span>
+            </div>
+            <div class="glossary-item">
+                <span class="en">Wake up</span>
+                <span class="id">Bangun tidur</span>
+                <span class="ex">"I wake up at 04.30."</span>
+            </div>
+            <div class="glossary-item">
+                <span class="en">Have breakfast/lunch/dinner</span>
+                <span class="id">Sarapan/makan siang/makan malam</span>
+                <span class="ex">"We have dinner together."</span>
+            </div>
+            <div class="glossary-item">
+                <span class="en">Go to school</span>
+                <span class="id">Pergi ke sekolah</span>
+                <span class="ex">"She goes to school every day."</span>
+            </div>
+            <div class="glossary-item">
+                <span class="en">Do homework</span>
+                <span class="id">Mengerjakan PR</span>
+                <span class="ex">"I do my homework after school."</span>
+            </div>
+            <div class="glossary-item">
+                <span class="en">Every day / week</span>
+                <span class="id">Setiap hari / minggu</span>
+                <span class="ex">"I pray five times every day."</span>
+            </div>
+            <div class="glossary-item">
+                <span class="en">Istiqamah</span>
+                <span class="id">Konsisten (Arab)</span>
+                <span class="ex">"Istiqamah in doing good deeds."</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="section-title">📖 I. Referensi Pendukung</div>
+        <ul class="reference-list">
+            <li>Kementerian Pendidikan, Kebudayaan, Riset, dan Teknologi. (2022). <em>Bahasa Inggris: Think Globally Act Locally untuk SMP/MTs Kelas VII</em>. Jakarta: Pusat Perbukuan.</li>
+            <li>Echols, J. M., & Shadily, H. (2018). <em>Kamus Inggris-Indonesia</em>. Jakarta: Gramedia Pustaka Utama.</li>
+            <li>Murphy, R. (2019). <em>English Grammar in Use</em> (5th ed.). Cambridge: Cambridge University Press.</li>
+            <li>Eastwood, J. (2005). <em>Oxford Guide to English Grammar</em>. Oxford: Oxford University Press.</li>
+            <li>Cambridge Dictionary. (2026). <em>Simple Present Tense and Daily Routines</em>. Diakses dari dictionary.cambridge.org</li>
+        </ul>
+    </div>
+
+    <!-- Formative Test Section -->
+    <div class="quiz-section" id="quiz">
+        <div class="quiz-header">
+            <h3>📝 Uji Formatif Bab 7: Describing Regular Activities</h3>
+            <p style="color: #64748b; font-size: 0.95rem;">
+                📋 Bagian A: Pilihan Ganda (10 soal, skor 10/soal) &nbsp;|&nbsp; ✍️ Bagian B: Essay (5 soal, skor 20/soal)<br>
+                Materi: Simple Present Tense, adverbs of frequency, kosakata aktivitas harian, time expressions, dan adab Islami.
+            </p>
+        </div>
+
+        <form id="quizForm">
+            <!-- Identitas -->
+            <div style="background: white; padding: 25px; border-radius: 8px; margin-bottom: 30px; border: 1px solid var(--border);">
+                <h4 style="margin-bottom: 20px; color: var(--primary); border-bottom: 1px solid var(--border); padding-bottom: 10px;">📋 Identitas Siswa</h4>
+                <div class="form-group">
+                    <label>Nama Lengkap *</label>
+                    <input type="text" id="studentName" required placeholder="Masukkan nama lengkap sesuai absen">
+                </div>
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+                    <div class="form-group">
+                        <label>No. Absen / NIS *</label>
+                        <input type="text" id="studentNIS" required placeholder="Contoh: 15">
+                    </div>
+                    <div class="form-group">
+                        <label>Kelas *</label>
+                        <select id="studentClass" required>
+                            <option value="">Pilih Kelas</option>
+                            <option value="VII-A">VII-A</option>
+                            <option value="VII-B">VII-B</option>
+                            <option value="VII-C">VII-C</option>
+                            <option value="VII-D">VII-D</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>Semester</label>
+                    <input type="text" value="1 (Satu) - TP. 2026/2027" readonly style="background: #F1F5F9; color: #64748b;">
+                </div>
+            </div>
+
+            <!-- Bagian A: Pilihan Ganda -->
+            <h4 style="margin-bottom: 20px; color: var(--primary);">📋 Bagian A: Pilihan Ganda</h4>
+            
+            <div class="question-block">
+                <span class="question-text">Soal 1 (10 POIN)<br>Lengkapi kalimat: <em>"She ... to school every day."</em></span>
+                <div class="options">
+                    <label><input type="radio" name="q1" value="A"> A. go</label>
+                    <label><input type="radio" name="q1" value="B"> B. goes</label>
+                    <label><input type="radio" name="q1" value="C"> C. going</label>
+                    <label><input type="radio" name="q1" value="D"> D. gone</label>
+                </div>
+            </div>
+
+            <div class="question-block">
+                <span class="question-text">Soal 2 (10 POIN)<br>Manakah kalimat <strong>Simple Present Tense</strong> yang benar?</span>
+                <div class="options">
+                    <label><input type="radio" name="q2" value="A"> A. They goes to school every day.</label>
+                    <label><input type="radio" name="q2" value="B"> B. He don't like coffee.</label>
+                    <label><input type="radio" name="q2" value="C"> C. She always reads Qur'an at night.</label>
+                    <label><input type="radio" name="q2" value="D"> D. We is students.</label>
+                </div>
+            </div>
+
+            <div class="question-block">
+                <span class="question-text">Soal 3 (10 POIN)<br>Kata keterangan <em>"often"</em> menunjukkan frekuensi...</span>
+                <div class="options">
+                    <label><input type="radio" name="q3" value="A"> A. Selalu (100%)</label>
+                    <label><input type="radio" name="q3" value="B"> B. Sering (70-80%)</label>
+                    <label><input type="radio" name="q3" value="C"> C. Kadang-kadang (40-50%)</label>
+                    <label><input type="radio" name="q3" value="D"> D. Tidak pernah (0%)</label>
+                </div>
+            </div>
+
+            <div class="question-block">
+                <span class="question-text">Soal 4 (10 POIN)<br>Lengkapi kalimat: <em>"My father ... the newspaper every morning."</em></span>
+                <div class="options">
+                    <label><input type="radio" name="q4" value="A"> A. read</label>
+                    <label><input type="radio" name="q4" value="B"> B. reads</label>
+                    <label><input type="radio" name="q4" value="C"> C. reading</label>
+                    <label><input type="radio" name="q4" value="D"> D. is read</label>
+                </div>
+            </div>
+
+            <div class="question-block">
+                <span class="question-text">Soal 5 (10 POIN)<br>Manakah yang merupakan <strong>adverb of frequency</strong>?</span>
+                <div class="options">
+                    <label><input type="radio" name="q5" value="A"> A. Yesterday</label>
+                    <label><input type="radio" name="q5" value="B"> B. Tomorrow</label>
+                    <label><input type="radio" name="q5" value="C"> C. Sometimes</label>
+                    <label><input type="radio" name="q5" value="D"> D. Last week</label>
+                </div>
+            </div>
+
+            <div class="question-block">
+                <span class="question-text">Soal 6 (10 POIN)<br>Lengkapi kalimat: <em>"They ... football every afternoon."</em></span>
+                <div class="options">
+                    <label><input type="radio" name="q6" value="A"> A. plays</label>
+                    <label><input type="radio" name="q6" value="B"> B. play</label>
+                    <label><input type="radio" name="q6" value="C"> C. playing</label>
+                    <label><input type="radio" name="q6" value="D"> D. played</label>
+                </div>
+            </div>
+
+            <div class="question-block">
+                <span class="question-text">Soal 7 (10 POIN)<br>Bentuk negatif dari kalimat <em>"She likes coffee"</em> adalah...</span>
+                <div class="options">
+                    <label><input type="radio" name="q7" value="A"> A. She don't like coffee.</label>
+                    <label><input type="radio" name="q7" value="B"> B. She doesn't likes coffee.</label>
+                    <label><input type="radio" name="q7" value="C"> C. She doesn't like coffee.</label>
+                    <label><input type="radio" name="q7" value="D"> D. She not likes coffee.</label>
+                </div>
+            </div>
+
+            <div class="question-block">
+                <span class="question-text">Soal 8 (10 POIN)<br>Menurut hadis Rasulullah ﷺ, amal yang paling dicintai Allah adalah...</span>
+                <div class="options">
+                    <label><input type="radio" name="q8" value="A"> A. Amal yang besar tetapi hanya sekali.</label>
+                    <label><input type="radio" name="q8" value="B"> B. Amal yang rutin (konsisten) meskipun sedikit.</label>
+                    <label><input type="radio" name="q8" value="C"> C. Amal yang dilakukan hanya saat Ramadan.</label>
+                    <label><input type="radio" name="q8" value="D"> D. Amal yang dilakukan tanpa niat.</label>
+                </div>
+            </div>
+
+            <div class="question-block">
+                <span class="question-text">Soal 9 (10 POIN)<br>Arti dari <em>"I rarely eat fast food"</em> adalah...</span>
+                <div class="options">
+                    <label><input type="radio" name="q9" value="A"> A. Saya selalu makan fast food.</label>
+                    <label><input type="radio" name="q9" value="B"> B. Saya sering makan fast food.</label>
+                    <label><input type="radio" name="q9" value="C"> C. Saya jarang makan fast food.</label>
+                    <label><input type="radio" name="q9" value="D"> D. Saya tidak pernah makan fast food.</label>
+                </div>
+            </div>
+
+            <div class="question-block">
+                <span class="question-text">Soal 10 (10 POIN)<br>Menurut QS. Al-Asr [103]: 1-3, manusia berada dalam kerugian KECUALI mereka yang...</span>
+                <div class="options">
+                    <label><input type="radio" name="q10" value="A"> A. Memiliki banyak harta.</label>
+                    <label><input type="radio" name="q10" value="B"> B. Beriman, beramal saleh, dan saling menasihati dalam kebenaran serta kesabaran.</label>
+                    <label><input type="radio" name="q10" value="C"> C. Memiliki jabatan tinggi.</label>
+                    <label><input type="radio" name="q10" value="D"> D. Memiliki banyak waktu luang.</label>
+                </div>
+            </div>
+
+            <!-- Bagian B: Essay -->
+            <h4 style="margin-bottom: 20px; color: var(--primary); margin-top: 40px;">✍️ Bagian B: Essay</h4>
+            
+            <div class="question-block">
+                <span class="question-text">Essay 1 (20 POIN)<br>Jelaskan rumus Simple Present Tense untuk kalimat verbal (+), (−), dan (?)! Berikan masing-masing satu contoh kalimat!</span>
+                <textarea name="essay1" placeholder="Tulis jawaban Anda di sini..."></textarea>
+            </div>
+
+            <div class="question-block">
+                <span class="question-text">Essay 2 (20 POIN)<br>Tuliskan <strong>daily routine</strong> kamu dalam minimal 8 kalimat menggunakan Simple Present Tense! Mulai dari bangun tidur hingga tidur kembali! Gunakan adverbs of frequency (always, often, sometimes, rarely, never) minimal 3 kali!</span>
+                <textarea name="essay2" placeholder="Tulis jawaban Anda di sini..."></textarea>
+            </div>
+
+            <div class="question-block">
+                <span class="question-text">Essay 3 (20 POIN)<br>Jelaskan perbedaan penggunaan <strong>"always"</strong>, <strong>"sometimes"</strong>, dan <strong>"never"</strong>! Berikan masing-masing satu contoh kalimat yang relevan dengan kehidupan sekolah!</span>
+                <textarea name="essay3" placeholder="Tulis jawaban Anda di sini..."></textarea>
+            </div>
+
+            <div class="question-block">
+                <span class="question-text">Essay 4 (20 POIN)<br>Buatlah sebuah dialog singkat (minimal 6 baris percakapan) antara dua orang teman yang saling bertanya tentang aktivitas rutin mereka di akhir pekan! Gunakan Simple Present Tense dan time expressions yang tepat!</span>
+                <textarea name="essay4" placeholder="Tulis jawaban Anda di sini..."></textarea>
+            </div>
+
+            <div class="question-block">
+                <span class="question-text">Essay 5 (20 POIN)<br>Sebutkan 4 (empat) adab mengatur aktivitas rutin dalam konteks Islami yang telah kamu pelajari! Jelaskan mengapa QS. Al-Asr [103]: 1-3 mengingatkan kita tentang pentingnya mengisi waktu dengan kebaikan!</span>
+                <textarea name="essay5" placeholder="Tulis jawaban Anda di sini..."></textarea>
+            </div>
+
+            <!-- Result Display -->
+            <div class="result-box" id="resultBox">
+                <h3 style="font-family: 'Georgia', serif; margin-bottom: 10px;">📊 Hasil Uji Formatif</h3>
+                <div class="result-grid">
+                    <div class="result-item">
+                        <span class="score" id="mcqScore">0</span>
+                        <span class="label">📋 Pilihan Ganda (/100)</span>
+                    </div>
+                    <div class="result-item">
+                        <span class="score" id="essayScore">0</span>
+                        <span class="label">✍️ Essay (Menunggu Penilaian)</span>
+                    </div>
+                    <div class="result-item">
+                        <span class="score" id="totalScore">0</span>
+                        <span class="label">🏆 Skor Akhir PG</span>
+                    </div>
+                </div>
+                <p style="margin-top: 20px; font-size: 0.9rem; opacity: 0.9; background: rgba(255,255,255,0.1); padding: 10px; border-radius: 6px;">
+                    *Catatan: Skor Essay akan dinilai secara manual oleh guru berdasarkan ketepatan tata bahasa, kelengkapan jawaban, dan kesesuaian konteks melalui file yang Anda kirimkan.
+                </p>
+            </div>
+
+            <!-- Action Buttons -->
+            <div class="btn-group">
+                <button type="button" class="btn btn-primary" onclick="calculateScore()">✉️ KIRIM JAWABAN & LIHAT HASIL</button>
+                <button type="button" class="btn btn-secondary" onclick="downloadPDF()">📥 UNDUH PDF LENGKAP</button>
+                <button type="button" class="btn btn-secondary" onclick="downloadTXT()">📄 UNDUH SKOR & JAWABAN (TXT)</button>
+                <button type="button" class="btn btn-warning" onclick="resetQuiz()">🔄 MULAI ULANG</button>
+                <button type="button" class="btn btn-success" onclick="emailGuru()">📧 KIRIM KE EMAIL GURU</button>
+            </div>
+        </form>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2026 <strong>Hendria Roza, S.Pd.I</strong> — MTsN 10 Agam.</p>
+        <p>Hak Cipta Dilindungi Undang-Undang. Dilarang memperbanyak tanpa izin.</p>
+        <p style="margin-top: 10px;">Email: <a href="mailto:hendriaroza85@gmail.com">hendriaroza85@gmail.com</a></p>
+    </footer>
+</div>
+
+<script>
+    // Kunci Jawaban Pilihan Ganda
+    const answerKey = {
+        q1: 'B', q2: 'C', q3: 'B', q4: 'B', q5: 'C',
+        q6: 'B', q7: 'C', q8: 'B', q9: 'C', q10: 'B'
+    };
+
+    function calculateScore() {
+        const name = document.getElementById('studentName').value.trim();
+        const nis = document.getElementById('studentNIS').value.trim();
+        const kelas = document.getElementById('studentClass').value;
+
+        if (!name || !nis || !kelas) {
+            alert("⚠️ Harap lengkapi Identitas Siswa (Nama, NIS, dan Kelas) sebelum mengirim jawaban!");
+            return;
+        }
+
+        let mcqCorrect = 0;
+        for (let i = 1; i <= 10; i++) {
+            const selected = document.querySelector(`input[name="q${i}"]:checked`);
+            if (selected && selected.value === answerKey[`q${i}`]) {
+                mcqCorrect++;
+            }
+        }
+
+        const mcqTotalScore = mcqCorrect * 10;
+        
+        document.getElementById('mcqScore').textContent = mcqTotalScore;
+        document.getElementById('essayScore').textContent = "Menunggu";
+        document.getElementById('totalScore').textContent = mcqTotalScore;
+        document.getElementById('resultBox').style.display = 'block';
+        
+        document.getElementById('resultBox').scrollIntoView({ behavior: 'smooth', block: 'center' });
+        
+        alert(`✅ Terima kasih, ${name}!\n\nJawaban Pilihan Ganda Anda telah dinilai.\nSkor Sementara: ${mcqTotalScore}/100.\n\nJawaban Essay akan dinilai oleh guru melalui file yang Anda unduh/kirim.`);
+    }
+
+    function downloadPDF() {
+        window.print();
+    }
+
+    function downloadTXT() {
+        const name = document.getElementById('studentName').value.trim() || "Nama_Siswa";
+        const nis = document.getElementById('studentNIS').value.trim() || "NIS";
+        const kelas = document.getElementById('studentClass').value || "Kelas";
+        const mcqScore = document.getElementById('mcqScore').textContent;
+        
+        let content = `==================================================\n`;
+        content += `HASIL UJI FORMATIF BAB 7: DESCRIBING REGULAR ACTIVITIES\n`;
+        content += `Bahasa Inggris Kelas VII Semester 1 - MTsN 10 Agam\n`;
+        content += `==================================================\n`;
+        content += `Nama  : ${name}\n`;
+        content += `NIS   : ${nis}\n`;
+        content += `Kelas : ${kelas}\n`;
+        content += `Tanggal: ${new Date().toLocaleDateString('id-ID', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' })}\n`;
+        content += `Skor PG : ${mcqScore}/100\n`;
+        content += `==================================================\n\n`;
+        
+        content += `--- PILIHAN GANDA ---\n`;
+        for (let i = 1; i <= 10; i++) {
+            const selected = document.querySelector(`input[name="q${i}"]:checked`);
+            const jawaban = selected ? selected.value : "Tidak dijawab";
+            const isCorrect = jawaban === answerKey[`q${i}`] ? "[BENAR]" : "[SALAH]";
+            content += `Soal ${i.toString().padStart(2, '0')}: Jawaban Siswa = ${jawaban} ${isCorrect} (Kunci: ${answerKey[`q${i}`]})\n`;
+        }
+        
+        content += `\n--- JAWABAN ESSAI ---\n`;
+        for (let i = 1; i <= 5; i++) {
+            const essayAns = document.querySelector(`textarea[name="essay${i}"]`).value.trim() || "Tidak dijawab";
+            content += `Essay ${i}:\n${essayAns}\n\n--------------------------------------------------\n`;
+        }
+        
+        content += `\nDokumen ini dibuat secara otomatis melalui sistem Uji Formatif Digital.\n`;
+        content += `© 2026 Hendria Roza, S.Pd.I - MTsN 10 Agam`;
+
+        const blob = new Blob([content], { type: 'text/plain;charset=utf-8' });
+        const url = window.URL.createObjectURL(blob);
+        const a = document.createElement('a');
+        a.href = url;
+        a.download = `UjiFormatif_Bab7_RegularActivities_${name.replace(/\s+/g, '_')}.txt`;
+        document.body.appendChild(a);
+        a.click();
+        document.body.removeChild(a);
+        window.URL.revokeObjectURL(url);
+    }
+
+    function resetQuiz() {
+        if (confirm("⚠️ Apakah Anda yakin ingin mengosongkan SEMUA jawaban dan mulai ulang? Tindakan ini tidak dapat dibatalkan.")) {
+            document.getElementById('quizForm').reset();
+            document.getElementById('resultBox').style.display = 'none';
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+    }
+
+    function emailGuru() {
+        const name = document.getElementById('studentName').value.trim();
+        const nis = document.getElementById('studentNIS').value.trim();
+        const kelas = document.getElementById('studentClass').value;
+        const mcqScore = document.getElementById('mcqScore').textContent;
+
+        if (!name || mcqScore === "0") {
+            alert("⚠️ Harap isi Nama Lengkap dan klik 'Kirim Jawaban & Lihat Hasil' terlebih dahulu untuk mendapatkan skor.");
+            return;
+        }
+
+        const subject = `Hasil Uji Formatif Bab 7 (Regular Activities) - ${name} (${kelas})`;
+        const body = `Yth. Ibu Hendria Roza, S.Pd.I,\n\nAssalamu'alaikum Warahmatullahi Wabarakatuh.\n\nBerikut adalah hasil uji formatif saya:\n\nNama : ${name}\nNIS  : ${nis}\nKelas: ${kelas}\nSkor Pilihan Ganda: ${mcqScore}/100\n\nSaya telah mengunduh file TXT berisi jawaban lengkap (termasuk Essay) dan siap mengumpulkan/mengirimkannya sesuai instruksi Ibu.\n\nTerima kasih.\nWassalamu'alaikum Warahmatullahi Wabarakatuh.`;
+        
+        window.location.href = `mailto:hendriaroza85@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    }
+</script>
+
+</body>
+</html>
