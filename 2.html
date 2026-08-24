@@ -1,0 +1,743 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bab 2: Saying Goodbye | Bahasa Inggris Kelas VII Semester 1</title>
+    <style>
+        :root {
+            --primary: #0F172A; /* Deep Navy */
+            --secondary: #D4AF37; /* Luxury Gold */
+            --bg: #FDFBF7; /* Cream/Off-white */
+            --text: #334155;
+            --white: #ffffff;
+            --success: #16a34a;
+            --border: #e2e8f0;
+            --light-gold: #FDF6E3;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', 'Inter', Tahoma, sans-serif; }
+        body { background-color: var(--bg); color: var(--text); line-height: 1.7; padding: 20px; }
+        .container { max-width: 900px; margin: 0 auto; background: var(--white); padding: 50px; border-radius: 16px; box-shadow: 0 10px 40px -10px rgba(15, 23, 42, 0.1); border-top: 4px solid var(--secondary); }
+        
+        /* Navigation */
+        .nav-links { display: flex; justify-content: space-between; margin-bottom: 40px; flex-wrap: wrap; gap: 10px; }
+        .nav-links a { text-decoration: none; color: var(--primary); font-weight: 600; font-size: 0.9rem; padding: 10px 20px; border: 1px solid var(--border); border-radius: 8px; transition: all 0.3s; background: var(--white); }
+        .nav-links a:hover { background: var(--primary); color: var(--secondary); border-color: var(--primary); }
+
+        /* Header */
+        .header-badge { text-align: center; margin-bottom: 30px; }
+        .header-badge h2 { font-family: 'Georgia', serif; font-size: 1.2rem; color: var(--secondary); text-transform: uppercase; letter-spacing: 2px; margin-bottom: 10px; }
+        .header-badge h1 { font-family: 'Georgia', serif; font-size: 2.8rem; color: var(--primary); margin-bottom: 15px; line-height: 1.2; }
+        .header-badge p { color: #64748b; font-size: 1.05rem; max-width: 700px; margin: 0 auto; }
+        .author-info { text-align: center; color: #64748b; font-size: 0.95rem; margin: 30px 0; padding: 20px; background: var(--light-gold); border-radius: 8px; border: 1px solid rgba(212, 175, 55, 0.3); }
+        .author-info strong { color: var(--primary); font-size: 1.1rem; }
+
+        /* Content Sections */
+        .section { margin-bottom: 40px; }
+        .section-title { font-family: 'Georgia', serif; font-size: 1.5rem; color: var(--primary); border-left: 5px solid var(--secondary); padding-left: 15px; margin-bottom: 20px; font-weight: 700; display: flex; align-items: center; gap: 10px; }
+        
+        .definition-box { background: #EFF6FF; border-left: 4px solid var(--primary); padding: 20px; border-radius: 0 8px 8px 0; margin: 20px 0; font-size: 1.05rem; }
+        .theory-box { background: #F0FDF4; border: 1px solid #BBF7D0; padding: 20px; border-radius: 8px; margin: 20px 0; }
+        .theory-box h4 { color: var(--success); margin-bottom: 10px; display: flex; align-items: center; gap: 8px; }
+
+        /* Tables */
+        .table-wrapper { overflow-x: auto; margin: 20px 0; border-radius: 8px; border: 1px solid var(--border); }
+        .content-table { width: 100%; border-collapse: collapse; min-width: 600px; }
+        .content-table th { background: var(--primary); color: var(--secondary); padding: 15px; text-align: left; font-weight: 600; font-size: 0.95rem; }
+        .content-table td { padding: 15px; border-bottom: 1px solid var(--border); font-size: 0.95rem; }
+        .content-table tr:nth-child(even) { background: #F8FAFC; }
+        .content-table tr:hover { background: var(--light-gold); }
+
+        /* Examples */
+        .example-box { background: var(--white); border: 1px solid var(--border); border-left: 4px solid var(--secondary); padding: 20px; border-radius: 0 8px 8px 0; margin: 20px 0; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); }
+        .example-box .label { font-size: 0.8rem; text-transform: uppercase; letter-spacing: 1px; color: var(--secondary); font-weight: 700; margin-bottom: 8px; display: block; }
+        .example-box .dialogue { font-style: italic; color: var(--primary); line-height: 1.8; }
+        .example-box .dialogue strong { color: var(--secondary); font-style: normal; }
+
+        /* Islamic Quote */
+        .quote-box { text-align: center; background: var(--light-gold); border: 1px solid var(--secondary); padding: 30px; border-radius: 12px; margin: 40px 0; }
+        .quote-box .arabic { font-size: 1.6rem; color: var(--primary); margin-bottom: 15px; display: block; font-family: 'Traditional Arabic', 'Arial', serif; line-height: 1.6; }
+        .quote-box .translation { font-style: italic; color: var(--text); margin-bottom: 10px; }
+        .quote-box .source { font-weight: 700; color: var(--secondary); font-style: normal; font-size: 0.9rem; }
+
+        /* Glossary */
+        .glossary-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 15px; margin-top: 20px; }
+        .glossary-item { background: var(--white); border: 1px solid var(--border); padding: 15px; border-radius: 8px; transition: all 0.3s; }
+        .glossary-item:hover { border-color: var(--secondary); transform: translateY(-2px); box-shadow: 0 4px 12px rgba(0,0,0,0.05); }
+        .glossary-item .en { font-weight: 700; color: var(--primary); display: block; margin-bottom: 4px; }
+        .glossary-item .id { color: #64748b; font-size: 0.9rem; display: block; margin-bottom: 8px; }
+        .glossary-item .ex { font-size: 0.85rem; color: var(--secondary); font-style: italic; }
+
+        /* References */
+        .reference-list { list-style: none; counter-reset: ref-counter; }
+        .reference-list li { counter-increment: ref-counter; margin-bottom: 12px; padding-left: 30px; position: relative; font-size: 0.95rem; color: #475569; }
+        .reference-list li::before { content: "[" counter(ref-counter) "]"; position: absolute; left: 0; color: var(--secondary); font-weight: 700; }
+
+        /* Quiz Section */
+        .quiz-section { background: #F8FAFC; border: 2px solid var(--border); border-radius: 12px; padding: 40px; margin-top: 50px; }
+        .quiz-header { text-align: center; margin-bottom: 30px; padding-bottom: 20px; border-bottom: 2px dashed var(--border); }
+        .quiz-header h3 { font-family: 'Georgia', serif; color: var(--primary); font-size: 1.8rem; margin-bottom: 10px; }
+        
+        .form-group { margin-bottom: 20px; }
+        .form-group label { display: block; font-weight: 600; margin-bottom: 8px; color: var(--primary); font-size: 0.95rem; }
+        .form-group input, .form-group select, .form-group textarea { width: 100%; padding: 12px; border: 1px solid var(--border); border-radius: 6px; font-size: 1rem; transition: border 0.3s; }
+        .form-group input:focus, .form-group select:focus, .form-group textarea:focus { outline: none; border-color: var(--secondary); box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.1); }
+        .form-group textarea { min-height: 100px; resize: vertical; }
+
+        .question-block { margin-bottom: 25px; padding: 20px; background: var(--white); border-radius: 8px; border: 1px solid var(--border); }
+        .question-text { font-weight: 600; margin-bottom: 15px; display: block; color: var(--primary); line-height: 1.5; }
+        .options label { display: block; margin-bottom: 10px; cursor: pointer; padding: 12px; border-radius: 6px; transition: background 0.2s; border: 1px solid transparent; }
+        .options label:hover { background: #F1F5F9; border-color: var(--border); }
+        .options input[type="radio"] { margin-right: 12px; accent-color: var(--secondary); }
+
+        /* Results */
+        .result-box { display: none; background: var(--primary); color: var(--white); padding: 30px; border-radius: 12px; margin-top: 30px; text-align: center; }
+        .result-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-top: 20px; }
+        .result-item { background: rgba(255,255,255,0.1); padding: 20px; border-radius: 8px; border: 1px solid rgba(212, 175, 55, 0.3); }
+        .result-item .score { font-size: 2.2rem; font-weight: 700; color: var(--secondary); display: block; margin-bottom: 5px; }
+        .result-item .label { font-size: 0.9rem; opacity: 0.9; text-transform: uppercase; letter-spacing: 1px; }
+
+        /* Buttons */
+        .btn-group { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 30px; justify-content: center; }
+        .btn { padding: 14px 28px; border: none; border-radius: 8px; font-weight: 600; cursor: pointer; transition: all 0.3s; font-size: 0.95rem; display: inline-flex; align-items: center; gap: 8px; text-decoration: none; }
+        .btn-primary { background: var(--primary); color: var(--white); }
+        .btn-primary:hover { background: #1E293B; transform: translateY(-2px); box-shadow: 0 10px 20px -5px rgba(15, 23, 42, 0.3); }
+        .btn-secondary { background: var(--white); color: var(--primary); border: 1px solid var(--primary); }
+        .btn-secondary:hover { background: #EFF6FF; }
+        .btn-success { background: var(--success); color: var(--white); }
+        .btn-success:hover { background: #15803D; }
+        .btn-warning { background: var(--secondary); color: var(--primary); }
+        .btn-warning:hover { background: #B8962E; }
+
+        /* Footer */
+        footer { text-align: center; margin-top: 60px; padding-top: 30px; border-top: 1px solid var(--border); color: #64748b; font-size: 0.9rem; }
+        footer a { color: var(--primary); text-decoration: none; font-weight: 600; }
+
+        /* Print Styling */
+        @media print {
+            body { background: white; padding: 0; }
+            .container { box-shadow: none; max-width: 100%; padding: 20px; border: none; }
+            .nav-links, .btn-group, footer, .quote-box { display: none !important; }
+            .quiz-section { break-inside: avoid; border: 1px solid #000; }
+            .result-box { display: block !important; color: black; background: #eee; border: 1px solid #000; }
+            .result-item .score { color: black; }
+            .section { break-inside: avoid; }
+        }
+
+        @media (max-width: 768px) {
+            .result-grid { grid-template-columns: 1fr; }
+            .container { padding: 25px; }
+            .header-badge h1 { font-size: 2rem; }
+            .btn-group { flex-direction: column; }
+            .btn { width: 100%; justify-content: center; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <!-- Navigation -->
+    <div class="nav-links">
+        <a href="1.html">← Bab 1: Greeting</a>
+        <a href="3.html">Bab 3: Self Introduction →</a>
+    </div>
+
+    <!-- Header -->
+    <div class="header-badge">
+        <h2>Pertemuan 2</h2>
+        <h1>Saying Goodbye (Ungkapan Perpisahan)</h1>
+        <p>
+            Memahami konsep dan variasi ungkapan perpisahan (<em>leave-taking</em>) dalam bahasa Inggris, meliputi ungkapan formal, informal, berdasarkan waktu, serta respon yang tepat. Materi ini melengkapi Bab 1 tentang sapaan untuk membentuk komunikasi interpersonal yang utuh dan sopan.
+        </p>
+    </div>
+
+    <div class="author-info">
+        <strong>Hendria Roza, S.Pd.I</strong><br>
+        Guru Bahasa Inggris | MTsN 10 Agam | Tahun Pelajaran 2026/2027
+    </div>
+
+    <!-- Content -->
+    <div class="section">
+        <div class="section-title">📖 A. Pengertian dan Teori Pendukung</div>
+        <p><strong>Saying Goodbye</strong> atau <strong>Leave-taking</strong> adalah ungkapan yang digunakan untuk mengakhiri percakapan, berpisah, atau meninggalkan seseorang. Dalam linguistik, perpisahan bukan sekadar akhir dari percakapan, melainkan bagian penting dari struktur komunikasi yang menunjukkan rasa hormat dan kepedulian.</p>
+        
+        <div class="theory-box">
+            <h4>💡 Teori Pendukung: <em>Speech Act Theory</em> (Closing Act)</h4>
+            <p>Menurut <strong>J.L. Austin</strong> dan <strong>John Searle</strong> dalam <em>Speech Act Theory</em>, ungkapan perpisahan termasuk dalam kategori <strong>Expressive Speech Act</strong>. Artinya, fungsi utama dari ungkapan seperti "Goodbye" atau "See you later" bukanlah untuk menyampaikan informasi faktual, melainkan untuk <strong>menyampaikan perasaan</strong> (harapan baik, doa, atau rasa hormat) kepada lawan bicara sebelum berpisah. Perpisahan yang baik akan meninggalkan kesan positif dan membuka peluang untuk bertemu kembali.</p>
+        </div>
+
+        <div class="definition-box">
+            📌 <strong>DEFINISI OPERASIONAL:</strong> <em>Leave-taking</em> adalah ungkapan linguistik yang digunakan untuk menandai akhir dari suatu interaksi sosial secara sopan, sedangkan <em>Greeting</em> adalah ungkapan pembuka. Keduanya membentuk satu kesatuan dalam etika berkomunikasi.
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="section-title">📊 B. Klasifikasi Leave-taking: Formal vs. Informal</div>
+        <p>Sama seperti sapaan, ungkapan perpisahan juga terbagi berdasarkan tingkat formalitas. Pemilihan yang tepat menunjukkan kepekaan sosial (social awareness) pembicara.</p>
+        
+        <div class="table-wrapper">
+            <table class="content-table">
+                <thead>
+                    <tr>
+                        <th style="width: 20%;">Aspek</th>
+                        <th style="width: 40%;">Formal Leave-taking</th>
+                        <th style="width: 40%;">Informal Leave-taking</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Situasi</strong></td>
+                        <td>Resmi, akademik, bisnis, atau acara kenegaraan.</td>
+                        <td>Santai, kasual, sehari-hari, atau bersama teman dekat.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Kepada Siapa</strong></td>
+                        <td>Orang yang lebih tua, guru, atasan, klien, atau orang yang baru dikenal.</td>
+                        <td>Teman sebaya, adik, anggota keluarga, atau sahabat.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Ciri Bahasa</strong></td>
+                        <td>Tata bahasa lengkap, tidak ada singkatan, kosakata baku.</td>
+                        <td>Menggunakan singkatan, slang, atau idiom kasual.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Contoh Ungkapan</strong></td>
+                        <td>"Goodbye, Sir."<br>"It was a pleasure meeting you."<br>"Have a nice day."</td>
+                        <td>"Bye!"<br>"See ya!"<br>"Catch you later!"<br>"Take care!"</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Nada Bicara</strong></td>
+                        <td>Sopan, tenang, dan penuh hormat.</td>
+                        <td>Ramah, santai, dan akrab.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="section-title">🕒 C. Ungkapan Perpisahan Berdasarkan Situasi dan Waktu</div>
+        <p>Berbeda dengan sapaan yang terikat waktu tertentu, ungkapan perpisahan lebih terikat pada <strong>situasi</strong> (akan tidur, pergi jauh, bertemu lagi besok, dll).</p>
+        
+        <div class="table-wrapper">
+            <table class="content-table">
+                <thead>
+                    <tr>
+                        <th>Ungkapan</th>
+                        <th>Situasi Penggunaan</th>
+                        <th>Catatan Penting</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Goodbye</strong></td>
+                        <td>Umum, bisa formal maupun informal.</td>
+                        <td>Ungkapan paling universal dan aman digunakan di hampir semua situasi.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Good Night</strong></td>
+                        <td>Malam hari, akan tidur atau berpisah di malam hari.</td>
+                        <td>⚠️ <strong>HANYA</strong> digunakan untuk berpisah di malam hari, <em>bukan</em> untuk menyapa.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>See you (later/tomorrow)</strong></td>
+                        <td>Akan bertemu lagi dalam waktu dekat.</td>
+                        <td>Menunjukkan harapan untuk bertemu kembali. Informal.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Have a nice day / evening</strong></td>
+                        <td>Formal atau semi-formal, berharap lawan bicara menikmati harinya.</td>
+                        <td>Sangat sopan, sering digunakan di toko, hotel, atau sekolah.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Take care</strong></td>
+                        <td>Menunjukkan kepedulian, bisa formal maupun informal.</td>
+                        <td>Menyiratkan "jaga diri baik-baik". Cocok untuk perpisahan yang agak lama.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Safe trip / Bon voyage</strong></td>
+                        <td>Seseorang akan melakukan perjalanan jauh.</td>
+                        <td><em>Bon voyage</em> berasal dari bahasa Prancis, artinya "perjalanan yang menyenangkan".</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Keep in touch</strong></td>
+                        <td>Akan berjauhan dalam waktu lama (pindah rumah, lulus sekolah).</td>
+                        <td>Mengajak lawan bicara untuk tetap berkomunikasi.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="section-title">💬 D. Pola Respon dan Contoh Dialog</div>
+        <p>Setiap ungkapan perpisahan memiliki pasangan respon yang wajar. Berikut adalah pola yang umum digunakan:</p>
+
+        <div class="example-box">
+            <span class="label">Contoh Dialog 1: Formal (Di Sekolah)</span>
+            <div class="dialogue">
+                <strong>Guru:</strong> "Well, class is over for today. Goodbye, students."<br>
+                <strong>Siswa:</strong> "Goodbye, Sir. Thank you for the lesson."<br>
+                <strong>Guru:</strong> "You're welcome. Have a nice day."<br>
+                <strong>Siswa:</strong> "You too, Sir. See you tomorrow."
+            </div>
+        </div>
+
+        <div class="example-box">
+            <span class="label">Contoh Dialog 2: Informal (Antar Teman)</span>
+            <div class="dialogue">
+                <strong>Rina:</strong> "Okay, I have to go now. See you tomorrow, Siti!"<br>
+                <strong>Siti:</strong> "Sure! Take care, Rina."<br>
+                <strong>Rina:</strong> "You too. Bye!"<br>
+                <strong>Siti:</strong> "Bye-bye!"
+            </div>
+        </div>
+
+        <div class="example-box">
+            <span class="label">Contoh Dialog 3: Perpisahan Perjalanan Jauh</span>
+            <div class="dialogue">
+                <strong>Ibu:</strong> "Have a safe trip, Nak. hati-hati di jalan."<br>
+                <strong>Anak:</strong> "Thank you, Mom. I will. Take care of yourself too."<br>
+                <strong>Ibu:</strong> "Keep in touch, okay? Call me when you arrive."<br>
+                <strong>Anak:</strong> "I will, Mom. Love you. Bye."
+            </div>
+        </div>
+
+        <div class="table-wrapper" style="margin-top: 25px;">
+            <table class="content-table">
+                <thead>
+                    <tr>
+                        <th>Ungkapan Perpisahan</th>
+                        <th>Respon yang Tepat (Appropriate)</th>
+                        <th>Respon yang Kurang Tepat (Inappropriate)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>"Goodbye."</td>
+                        <td>"Goodbye." / "See you."</td>
+                        <td>"I am fine." (Tidak nyambung)</td>
+                    </tr>
+                    <tr>
+                        <td>"See you tomorrow."</td>
+                        <td>"See you." / "Okay, see you then."</td>
+                        <td>"Good morning." (Salah konteks)</td>
+                    </tr>
+                    <tr>
+                        <td>"Have a nice day."</td>
+                        <td>"Thank you. You too."</td>
+                        <td>"My name is Ahmad." (Tidak relevan)</td>
+                    </tr>
+                    <tr>
+                        <td>"Take care."</td>
+                        <td>"You too." / "Thanks, you too."</td>
+                        <td>"I am 12 years old." (Tidak nyambung)</td>
+                    </tr>
+                    <tr>
+                        <td>"Good night."</td>
+                        <td>"Good night." / "Sweet dreams."</td>
+                        <td>"Good morning." (Salah waktu)</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="section-title">🕌 E. Adab dan Etika Perpisahan dalam Konteks Islami</div>
+        <div class="quote-box">
+            <span class="arabic">أَسْتَوْدِعُكَ اللهَ الَّذِي لَا تَضِيعُ وَدَائِعُهُ</span>
+            <p class="translation">"Aku menitipkanmu kepada Allah, Dzat yang tidak akan menyia-nyiakan titipan-Nya."</p>
+            <span class="source">— Doa Safar / Perpisahan (HR. Ibnu Majah)</span>
+        </div>
+        <p>Dalam tradisi Islam, perpisahan memiliki dimensi spiritual yang mendalam. Ketika berpisah dengan seseorang—terutama yang akan melakukan perjalanan—sangat dianjurkan untuk mendoakan keselamatan mereka. Doa di atas dikenal sebagai <strong>Doa Safar</strong> atau doa perpisahan yang diajarkan oleh Rasulullah ﷺ kepada para sahabatnya.</p>
+        <p style="margin-top: 15px;">Sebagai siswa MTsN, setelah mengucapkan ungkapan perpisahan dalam bahasa Inggris (seperti "Goodbye" atau "Take care"), kita dapat melengkapinya dengan doa Islami seperti <em>"Fi amanillah"</em> (semoga engkau dalam lindungan Allah) atau doa safar di atas untuk menunjukkan identitas keislaman sekaligus kasih sayang kepada sesama.</p>
+    </div>
+
+    <div class="section">
+        <div class="section-title">📚 F. Glosarium (Kosa Kata Kunci)</div>
+        <div class="glossary-grid">
+            <div class="glossary-item">
+                <span class="en">Leave-taking</span>
+                <span class="id">Ungkapan perpisahan</span>
+                <span class="ex">"Leave-taking is important to end a conversation politely."</span>
+            </div>
+            <div class="glossary-item">
+                <span class="en">Goodbye</span>
+                <span class="id">Selamat jalan / selamat tinggal</span>
+                <span class="ex">"Goodbye, see you tomorrow!"</span>
+            </div>
+            <div class="glossary-item">
+                <span class="en">See you later</span>
+                <span class="id">Sampai jumpa nanti</span>
+                <span class="ex">"I have to go now. See you later!"</span>
+            </div>
+            <div class="glossary-item">
+                <span class="en">Take care</span>
+                <span class="id">Jaga diri baik-baik</span>
+                <span class="ex">"Take care on your way home."</span>
+            </div>
+            <div class="glossary-item">
+                <span class="en">Have a nice day</span>
+                <span class="id">Semoga harimu menyenangkan</span>
+                <span class="ex">"Have a nice day, Sir!"</span>
+            </div>
+            <div class="glossary-item">
+                <span class="en">Safe trip</span>
+                <span class="id">Semoga selamat dalam perjalanan</span>
+                <span class="ex">"Have a safe trip to Jakarta."</span>
+            </div>
+            <div class="glossary-item">
+                <span class="en">Keep in touch</span>
+                <span class="id">Tetap berhubungan</span>
+                <span class="ex">"We are graduating. Let's keep in touch."</span>
+            </div>
+            <div class="glossary-item">
+                <span class="en">Bon voyage</span>
+                <span class="id">Selamat perjalanan (bahasa Prancis)</span>
+                <span class="ex">"Bon voyage! Enjoy your holiday."</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="section-title">📖 G. Referensi Pendukung</div>
+        <ul class="reference-list">
+            <li>Kementerian Pendidikan, Kebudayaan, Riset, dan Teknologi. (2022). <em>Bahasa Inggris: Think Globally Act Locally untuk SMP/MTs Kelas VII</em>. Jakarta: Pusat Perbukuan.</li>
+            <li>Echols, J. M., & Shadily, H. (2018). <em>Kamus Inggris-Indonesia</em>. Jakarta: Gramedia Pustaka Utama.</li>
+            <li>Austin, J. L. (1962). <em>How to Do Things with Words</em>. Oxford: Oxford University Press.</li>
+            <li>Searle, J. R. (1976). "A Classification of Illocutionary Acts". <em>Language in Society</em>, 1(1), 1-23.</li>
+            <li>Cambridge Dictionary. (2026). <em>Saying Goodbye and Leave-taking</em>. Diakses dari dictionary.cambridge.org</li>
+        </ul>
+    </div>
+
+    <!-- Formative Test Section -->
+    <div class="quiz-section" id="quiz">
+        <div class="quiz-header">
+            <h3>📝 Uji Formatif Bab 2: Saying Goodbye</h3>
+            <p style="color: #64748b; font-size: 0.95rem;">
+                📋 Bagian A: Pilihan Ganda (10 soal, skor 10/soal) &nbsp;|&nbsp; ✍️ Bagian B: Essay (5 soal, skor 20/soal)<br>
+                Materi: Pengertian leave-taking, formal/informal, ungkapan berdasarkan situasi, respon, dan adab perpisahan.
+            </p>
+        </div>
+
+        <form id="quizForm">
+            <!-- Identitas -->
+            <div style="background: white; padding: 25px; border-radius: 8px; margin-bottom: 30px; border: 1px solid var(--border);">
+                <h4 style="margin-bottom: 20px; color: var(--primary); border-bottom: 1px solid var(--border); padding-bottom: 10px;">📋 Identitas Siswa</h4>
+                <div class="form-group">
+                    <label>Nama Lengkap *</label>
+                    <input type="text" id="studentName" required placeholder="Masukkan nama lengkap sesuai absen">
+                </div>
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+                    <div class="form-group">
+                        <label>No. Absen / NIS *</label>
+                        <input type="text" id="studentNIS" required placeholder="Contoh: 15">
+                    </div>
+                    <div class="form-group">
+                        <label>Kelas *</label>
+                        <select id="studentClass" required>
+                            <option value="">Pilih Kelas</option>
+                            <option value="VII-A">VII-A</option>
+                            <option value="VII-B">VII-B</option>
+                            <option value="VII-C">VII-C</option>
+                            <option value="VII-D">VII-D</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>Semester</label>
+                    <input type="text" value="1 (Satu) - TP. 2026/2027" readonly style="background: #F1F5F9; color: #64748b;">
+                </div>
+            </div>
+
+            <!-- Bagian A: Pilihan Ganda -->
+            <h4 style="margin-bottom: 20px; color: var(--primary);">📋 Bagian A: Pilihan Ganda</h4>
+            
+            <div class="question-block">
+                <span class="question-text">Soal 1 (10 POIN)<br>Manakah di bawah ini yang merupakan contoh <strong>Formal Leave-taking</strong> yang paling tepat?</span>
+                <div class="options">
+                    <label><input type="radio" name="q1" value="A"> A. Bye-bye!</label>
+                    <label><input type="radio" name="q1" value="B"> B. See ya!</label>
+                    <label><input type="radio" name="q1" value="C"> C. Goodbye, Sir. Have a nice day.</label>
+                    <label><input type="radio" name="q1" value="D"> D. Catch you later!</label>
+                </div>
+            </div>
+
+            <div class="question-block">
+                <span class="question-text">Soal 2 (10 POIN)<br>Respon yang paling tepat untuk ungkapan <em>"See you tomorrow"</em> adalah...</span>
+                <div class="options">
+                    <label><input type="radio" name="q2" value="A"> A. I am fine, thank you.</label>
+                    <label><input type="radio" name="q2" value="B"> B. Okay, see you then.</label>
+                    <label><input type="radio" name="q2" value="C"> C. Good morning.</label>
+                    <label><input type="radio" name="q2" value="D"> D. Nice to meet you.</label>
+                </div>
+            </div>
+
+            <div class="question-block">
+                <span class="question-text">Soal 3 (10 POIN)<br>Ungkapan "Good Night" digunakan ketika...</span>
+                <div class="options">
+                    <label><input type="radio" name="q3" value="A"> A. Kita bertemu seseorang di pagi hari.</label>
+                    <label><input type="radio" name="q3" value="B"> B. Kita berpisah atau akan tidur di malam hari.</label>
+                    <label><input type="radio" name="q3" value="C"> C. Kita makan siang bersama.</label>
+                    <label><input type="radio" name="q3" value="D"> D. Kita baru bertemu di siang hari.</label>
+                </div>
+            </div>
+
+            <div class="question-block">
+                <span class="question-text">Soal 4 (10 POIN)<br>Respon yang paling tepat untuk ungkapan <em>"Have a nice day"</em> adalah...</span>
+                <div class="options">
+                    <label><input type="radio" name="q4" value="A"> A. Thank you. You too.</label>
+                    <label><input type="radio" name="q4" value="B"> B. My name is Rina.</label>
+                    <label><input type="radio" name="q4" value="C"> C. I am 12 years old.</label>
+                    <label><input type="radio" name="q4" value="D"> D. Goodbye, Sir.</label>
+                </div>
+            </div>
+
+            <div class="question-block">
+                <span class="question-text">Soal 5 (10 POIN)<br>Manakah yang termasuk <strong>Informal Leave-taking</strong> untuk berpisah dengan teman sebaya?</span>
+                <div class="options">
+                    <label><input type="radio" name="q5" value="A"> A. It was a pleasure meeting you, Madam.</label>
+                    <label><input type="radio" name="q5" value="B"> B. Goodbye, Mr. President.</label>
+                    <label><input type="radio" name="q5" value="C"> C. See ya! Take care!</label>
+                    <label><input type="radio" name="q5" value="D"> D. Have a nice day, Sir.</label>
+                </div>
+            </div>
+
+            <div class="question-block">
+                <span class="question-text">Soal 6 (10 POIN)<br>Doa safar yang diajarkan Rasulullah ﷺ ketika berpisah dengan seseorang yang akan bepergian adalah...</span>
+                <div class="options">
+                    <label><input type="radio" name="q6" value="A"> A. Jazakallah khairan katsiran.</label>
+                    <label><input type="radio" name="q6" value="B"> B. Astaghfirullahal 'azhim.</label>
+                    <label><input type="radio" name="q6" value="C"> C. Astaudi'ukallaha alladzi laa tadhii'u wadaa'i'uh (Aku menitipkanmu kepada Allah...)</label>
+                    <label><input type="radio" name="q6" value="D"> D. Bismillahirrahmanirrahim.</label>
+                </div>
+            </div>
+
+            <div class="question-block">
+                <span class="question-text">Soal 7 (10 POIN)<br>Respon yang paling tepat untuk ungkapan <em>"Take care"</em> adalah...</span>
+                <div class="options">
+                    <label><input type="radio" name="q7" value="A"> A. You too.</label>
+                    <label><input type="radio" name="q7" value="B"> B. I am fine.</label>
+                    <label><input type="radio" name="q7" value="C"> C. Good morning.</label>
+                    <label><input type="radio" name="q7" value="D"> D. Nice to meet you.</label>
+                </div>
+            </div>
+
+            <div class="question-block">
+                <span class="question-text">Soal 8 (10 POIN)<br>Sahabatmu akan pergi ke luar negeri untuk melanjutkan studi. Ungkapan perpisahan yang paling tepat adalah...</span>
+                <div class="options">
+                    <label><input type="radio" name="q8" value="A"> A. Good morning!</label>
+                    <label><input type="radio" name="q8" value="B"> B. Safe trip and keep in touch!</label>
+                    <label><input type="radio" name="q8" value="C"> C. How are you?</label>
+                    <label><input type="radio" name="q8" value="D"> D. Nice to meet you.</label>
+                </div>
+            </div>
+
+            <div class="question-block">
+                <span class="question-text">Soal 9 (10 POIN)<br>Respon yang paling tepat untuk ungkapan <em>"Goodbye"</em> adalah...</span>
+                <div class="options">
+                    <label><input type="radio" name="q9" value="A"> A. Goodbye. See you.</label>
+                    <label><input type="radio" name="q9" value="B"> B. I am fine, thank you.</label>
+                    <label><input type="radio" name="q9" value="C"> C. My name is Ahmad.</label>
+                    <label><input type="radio" name="q9" value="D"> D. Good morning.</label>
+                </div>
+            </div>
+
+            <div class="question-block">
+                <span class="question-text">Soal 10 (10 POIN)<br>Dalam <em>Speech Act Theory</em> (Austin & Searle), ungkapan perpisahan seperti "Goodbye" termasuk dalam kategori...</span>
+                <div class="options">
+                    <label><input type="radio" name="q10" value="A"> A. Informative Speech Act (menyampaikan informasi).</label>
+                    <label><input type="radio" name="q10" value="B"> B. Expressive Speech Act (menyampaikan perasaan/harapan baik).</label>
+                    <label><input type="radio" name="q10" value="C"> C. Directive Speech Act (memberi perintah).</label>
+                    <label><input type="radio" name="q10" value="D"> D. Declarative Speech Act (menyatakan fakta hukum).</label>
+                </div>
+            </div>
+
+            <!-- Bagian B: Essay -->
+            <h4 style="margin-bottom: 20px; color: var(--primary); margin-top: 40px;">✍️ Bagian B: Essay</h4>
+            
+            <div class="question-block">
+                <span class="question-text">Essay 1 (20 POIN)<br>Jelaskan perbedaan mendasar antara <em>Formal Leave-taking</em> dan <em>Informal Leave-taking</em>! Berikan masing-masing dua contoh kalimat yang relevan dengan kehidupan sekolah!</span>
+                <textarea name="essay1" placeholder="Tulis jawaban Anda di sini..."></textarea>
+            </div>
+
+            <div class="question-block">
+                <span class="question-text">Essay 2 (20 POIN)<br>Buatlah sebuah dialog singkat (minimal 4 baris percakapan) antara seorang siswa dan guru yang berpisah di akhir pelajaran pada pukul 10.00 pagi! Gunakan ungkapan perpisahan dan respon yang tepat!</span>
+                <textarea name="essay2" placeholder="Tulis jawaban Anda di sini..."></textarea>
+            </div>
+
+            <div class="question-block">
+                <span class="question-text">Essay 3 (20 POIN)<br>Mengapa ungkapan "Good Night" <strong>hanya</strong> digunakan untuk berpisah di malam hari dan tidak boleh digunakan sebagai sapaan? Jelaskan alasan dan perbedaan penggunaannya dengan "Good Evening"!</span>
+                <textarea name="essay3" placeholder="Tulis jawaban Anda di sini..."></textarea>
+            </div>
+
+            <div class="question-block">
+                <span class="question-text">Essay 4 (20 POIN)<br>Sebutkan 5 (lima) ungkapan perpisahan berdasarkan situasi yang berbeda (misalnya: akan bertemu lagi besok, perjalanan jauh, akan tidur, dll) beserta respon yang tepat untuk masing-masing ungkapan!</span>
+                <textarea name="essay4" placeholder="Tulis jawaban Anda di sini..."></textarea>
+            </div>
+
+            <div class="question-block">
+                <span class="question-text">Essay 5 (20 POIN)<br>Tuliskan 5 (lima) kosa kata baru (vocabulary) yang kamu pelajari dari bab Saying Goodbye ini, lengkap dengan arti bahasa Indonesia dan buatlah 1 kalimat contoh untuk salah satu kata tersebut!</span>
+                <textarea name="essay5" placeholder="Tulis jawaban Anda di sini..."></textarea>
+            </div>
+
+            <!-- Result Display -->
+            <div class="result-box" id="resultBox">
+                <h3 style="font-family: 'Georgia', serif; margin-bottom: 10px;">📊 Hasil Uji Formatif</h3>
+                <div class="result-grid">
+                    <div class="result-item">
+                        <span class="score" id="mcqScore">0</span>
+                        <span class="label">📋 Pilihan Ganda (/100)</span>
+                    </div>
+                    <div class="result-item">
+                        <span class="score" id="essayScore">0</span>
+                        <span class="label">✍️ Essay (Menunggu Penilaian)</span>
+                    </div>
+                    <div class="result-item">
+                        <span class="score" id="totalScore">0</span>
+                        <span class="label">🏆 Skor Akhir PG</span>
+                    </div>
+                </div>
+                <p style="margin-top: 20px; font-size: 0.9rem; opacity: 0.9; background: rgba(255,255,255,0.1); padding: 10px; border-radius: 6px;">
+                    *Catatan: Skor Essay akan dinilai secara manual oleh guru berdasarkan ketepatan tata bahasa, kelengkapan jawaban, dan kesesuaian konteks melalui file yang Anda kirimkan.
+                </p>
+            </div>
+
+            <!-- Action Buttons -->
+            <div class="btn-group">
+                <button type="button" class="btn btn-primary" onclick="calculateScore()">✉️ KIRIM JAWABAN & LIHAT HASIL</button>
+                <button type="button" class="btn btn-secondary" onclick="downloadPDF()">📥 UNDUH PDF LENGKAP</button>
+                <button type="button" class="btn btn-secondary" onclick="downloadTXT()">📄 UNDUH SKOR & JAWABAN (TXT)</button>
+                <button type="button" class="btn btn-warning" onclick="resetQuiz()">🔄 MULAI ULANG</button>
+                <button type="button" class="btn btn-success" onclick="emailGuru()">📧 KIRIM KE EMAIL GURU</button>
+            </div>
+        </form>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2026 <strong>Hendria Roza, S.Pd.I</strong> — MTsN 10 Agam.</p>
+        <p>Hak Cipta Dilindungi Undang-Undang. Dilarang memperbanyak tanpa izin.</p>
+        <p style="margin-top: 10px;">Email: <a href="mailto:hendriaroza85@gmail.com">hendriaroza85@gmail.com</a></p>
+    </footer>
+</div>
+
+<script>
+    // Kunci Jawaban Pilihan Ganda
+    const answerKey = {
+        q1: 'C', q2: 'B', q3: 'B', q4: 'A', q5: 'C',
+        q6: 'C', q7: 'A', q8: 'B', q9: 'A', q10: 'B'
+    };
+
+    function calculateScore() {
+        // Validasi identitas
+        const name = document.getElementById('studentName').value.trim();
+        const nis = document.getElementById('studentNIS').value.trim();
+        const kelas = document.getElementById('studentClass').value;
+
+        if (!name || !nis || !kelas) {
+            alert("⚠️ Harap lengkapi Identitas Siswa (Nama, NIS, dan Kelas) sebelum mengirim jawaban!");
+            return;
+        }
+
+        let mcqCorrect = 0;
+        for (let i = 1; i <= 10; i++) {
+            const selected = document.querySelector(`input[name="q${i}"]:checked`);
+            if (selected && selected.value === answerKey[`q${i}`]) {
+                mcqCorrect++;
+            }
+        }
+
+        const mcqTotalScore = mcqCorrect * 10;
+        
+        // Tampilkan hasil
+        document.getElementById('mcqScore').textContent = mcqTotalScore;
+        document.getElementById('essayScore').textContent = "Menunggu";
+        document.getElementById('totalScore').textContent = mcqTotalScore;
+        document.getElementById('resultBox').style.display = 'block';
+        
+        // Scroll ke hasil
+        document.getElementById('resultBox').scrollIntoView({ behavior: 'smooth', block: 'center' });
+        
+        alert(`✅ Terima kasih, ${name}!\n\nJawaban Pilihan Ganda Anda telah dinilai.\nSkor Sementara: ${mcqTotalScore}/100.\n\nJawaban Essay akan dinilai oleh guru melalui file yang Anda unduh/kirim.`);
+    }
+
+    function downloadPDF() {
+        window.print();
+    }
+
+    function downloadTXT() {
+        const name = document.getElementById('studentName').value.trim() || "Nama_Siswa";
+        const nis = document.getElementById('studentNIS').value.trim() || "NIS";
+        const kelas = document.getElementById('studentClass').value || "Kelas";
+        const mcqScore = document.getElementById('mcqScore').textContent;
+        
+        let content = `==================================================\n`;
+        content += `HASIL UJI FORMATIF BAB 2: SAYING GOODBYE\n`;
+        content += `Bahasa Inggris Kelas VII Semester 1 - MTsN 10 Agam\n`;
+        content += `==================================================\n`;
+        content += `Nama  : ${name}\n`;
+        content += `NIS   : ${nis}\n`;
+        content += `Kelas : ${kelas}\n`;
+        content += `Tanggal: ${new Date().toLocaleDateString('id-ID', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' })}\n`;
+        content += `Skor PG : ${mcqScore}/100\n`;
+        content += `==================================================\n\n`;
+        
+        content += `--- PILIHAN GANDA ---\n`;
+        for (let i = 1; i <= 10; i++) {
+            const selected = document.querySelector(`input[name="q${i}"]:checked`);
+            const jawaban = selected ? selected.value : "Tidak dijawab";
+            const isCorrect = jawaban === answerKey[`q${i}`] ? "[BENAR]" : "[SALAH]";
+            content += `Soal ${i.toString().padStart(2, '0')}: Jawaban Siswa = ${jawaban} ${isCorrect} (Kunci: ${answerKey[`q${i}`]})\n`;
+        }
+        
+        content += `\n--- JAWABAN ESSAI ---\n`;
+        for (let i = 1; i <= 5; i++) {
+            const essayAns = document.querySelector(`textarea[name="essay${i}"]`).value.trim() || "Tidak dijawab";
+            content += `Essay ${i}:\n${essayAns}\n\n--------------------------------------------------\n`;
+        }
+        
+        content += `\nDokumen ini dibuat secara otomatis melalui sistem Uji Formatif Digital.\n`;
+        content += `© 2026 Hendria Roza, S.Pd.I - MTsN 10 Agam`;
+
+        const blob = new Blob([content], { type: 'text/plain;charset=utf-8' });
+        const url = window.URL.createObjectURL(blob);
+        const a = document.createElement('a');
+        a.href = url;
+        a.download = `UjiFormatif_Bab2_SayingGoodbye_${name.replace(/\s+/g, '_')}.txt`;
+        document.body.appendChild(a);
+        a.click();
+        document.body.removeChild(a);
+        window.URL.revokeObjectURL(url);
+    }
+
+    function resetQuiz() {
+        if (confirm("⚠️ Apakah Anda yakin ingin mengosongkan SEMUA jawaban dan mulai ulang? Tindakan ini tidak dapat dibatalkan.")) {
+            document.getElementById('quizForm').reset();
+            document.getElementById('resultBox').style.display = 'none';
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+    }
+
+    function emailGuru() {
+        const name = document.getElementById('studentName').value.trim();
+        const nis = document.getElementById('studentNIS').value.trim();
+        const kelas = document.getElementById('studentClass').value;
+        const mcqScore = document.getElementById('mcqScore').textContent;
+
+        if (!name || mcqScore === "0") {
+            alert("⚠️ Harap isi Nama Lengkap dan klik 'Kirim Jawaban & Lihat Hasil' terlebih dahulu untuk mendapatkan skor.");
+            return;
+        }
+
+        const subject = `Hasil Uji Formatif Bab 2 (Saying Goodbye) - ${name} (${kelas})`;
+        const body = `Yth. Ibu Hendria Roza, S.Pd.I,\n\nAssalamu'alaikum Warahmatullahi Wabarakatuh.\n\nBerikut adalah hasil uji formatif saya:\n\nNama : ${name}\nNIS  : ${nis}\nKelas: ${kelas}\nSkor Pilihan Ganda: ${mcqScore}/100\n\nSaya telah mengunduh file TXT berisi jawaban lengkap (termasuk Essay) dan siap mengumpulkan/mengirimkannya sesuai instruksi Ibu.\n\nTerima kasih.\nWassalamu'alaikum Warahmatullahi Wabarakatuh.`;
+        
+        window.location.href = `mailto:hendriaroza85@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    }
+</script>
+
+</body>
+</html>

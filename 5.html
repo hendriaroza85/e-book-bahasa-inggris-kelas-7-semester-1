@@ -1,0 +1,725 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bab 5: Describing Hobby | Bahasa Inggris Kelas VII Semester 1</title>
+    <style>
+        :root {
+            --primary: #0F172A;
+            --secondary: #D4AF37;
+            --bg: #FDFBF7;
+            --text: #334155;
+            --white: #ffffff;
+            --success: #16a34a;
+            --border: #e2e8f0;
+            --light-gold: #FDF6E3;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', 'Inter', Tahoma, sans-serif; }
+        body { background-color: var(--bg); color: var(--text); line-height: 1.7; padding: 20px; }
+        .container { max-width: 900px; margin: 0 auto; background: var(--white); padding: 50px; border-radius: 16px; box-shadow: 0 10px 40px -10px rgba(15, 23, 42, 0.1); border-top: 4px solid var(--secondary); }
+        
+        .nav-links { display: flex; justify-content: space-between; margin-bottom: 40px; flex-wrap: wrap; gap: 10px; }
+        .nav-links a { text-decoration: none; color: var(--primary); font-weight: 600; font-size: 0.9rem; padding: 10px 20px; border: 1px solid var(--border); border-radius: 8px; transition: all 0.3s; background: var(--white); }
+        .nav-links a:hover { background: var(--primary); color: var(--secondary); border-color: var(--primary); }
+
+        .header-badge { text-align: center; margin-bottom: 30px; }
+        .header-badge h2 { font-family: 'Georgia', serif; font-size: 1.2rem; color: var(--secondary); text-transform: uppercase; letter-spacing: 2px; margin-bottom: 10px; }
+        .header-badge h1 { font-family: 'Georgia', serif; font-size: 2.8rem; color: var(--primary); margin-bottom: 15px; line-height: 1.2; }
+        .header-badge p { color: #64748b; font-size: 1.05rem; max-width: 700px; margin: 0 auto; }
+        .author-info { text-align: center; color: #64748b; font-size: 0.95rem; margin: 30px 0; padding: 20px; background: var(--light-gold); border-radius: 8px; border: 1px solid rgba(212, 175, 55, 0.3); }
+        .author-info strong { color: var(--primary); font-size: 1.1rem; }
+
+        .section { margin-bottom: 40px; }
+        .section-title { font-family: 'Georgia', serif; font-size: 1.5rem; color: var(--primary); border-left: 5px solid var(--secondary); padding-left: 15px; margin-bottom: 20px; font-weight: 700; display: flex; align-items: center; gap: 10px; }
+        
+        .definition-box { background: #EFF6FF; border-left: 4px solid var(--primary); padding: 20px; border-radius: 0 8px 8px 0; margin: 20px 0; font-size: 1.05rem; }
+        .theory-box { background: #F0FDF4; border: 1px solid #BBF7D0; padding: 20px; border-radius: 8px; margin: 20px 0; }
+        .theory-box h4 { color: var(--success); margin-bottom: 10px; display: flex; align-items: center; gap: 8px; }
+        .tip-box { background: #FFFBEB; border: 1px solid #FDE68A; padding: 20px; border-radius: 8px; margin: 20px 0; }
+        .tip-box h4 { color: #B45309; margin-bottom: 10px; display: flex; align-items: center; gap: 8px; }
+
+        .table-wrapper { overflow-x: auto; margin: 20px 0; border-radius: 8px; border: 1px solid var(--border); }
+        .content-table { width: 100%; border-collapse: collapse; min-width: 600px; }
+        .content-table th { background: var(--primary); color: var(--secondary); padding: 15px; text-align: left; font-weight: 600; font-size: 0.95rem; }
+        .content-table td { padding: 15px; border-bottom: 1px solid var(--border); font-size: 0.95rem; }
+        .content-table tr:nth-child(even) { background: #F8FAFC; }
+        .content-table tr:hover { background: var(--light-gold); }
+
+        .example-box { background: var(--white); border: 1px solid var(--border); border-left: 4px solid var(--secondary); padding: 20px; border-radius: 0 8px 8px 0; margin: 20px 0; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); }
+        .example-box .label { font-size: 0.8rem; text-transform: uppercase; letter-spacing: 1px; color: var(--secondary); font-weight: 700; margin-bottom: 8px; display: block; }
+        .example-box .dialogue { font-style: italic; color: var(--primary); line-height: 1.8; }
+        .example-box .dialogue strong { color: var(--secondary); font-style: normal; }
+
+        .quote-box { text-align: center; background: var(--light-gold); border: 1px solid var(--secondary); padding: 30px; border-radius: 12px; margin: 40px 0; }
+        .quote-box .arabic { font-size: 1.6rem; color: var(--primary); margin-bottom: 15px; display: block; font-family: 'Traditional Arabic', 'Arial', serif; line-height: 1.6; }
+        .quote-box .translation { font-style: italic; color: var(--text); margin-bottom: 10px; }
+        .quote-box .source { font-weight: 700; color: var(--secondary); font-style: normal; font-size: 0.9rem; }
+
+        .glossary-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 15px; margin-top: 20px; }
+        .glossary-item { background: var(--white); border: 1px solid var(--border); padding: 15px; border-radius: 8px; transition: all 0.3s; }
+        .glossary-item:hover { border-color: var(--secondary); transform: translateY(-2px); box-shadow: 0 4px 12px rgba(0,0,0,0.05); }
+        .glossary-item .en { font-weight: 700; color: var(--primary); display: block; margin-bottom: 4px; }
+        .glossary-item .id { color: #64748b; font-size: 0.9rem; display: block; margin-bottom: 8px; }
+        .glossary-item .ex { font-size: 0.85rem; color: var(--secondary); font-style: italic; }
+
+        .reference-list { list-style: none; counter-reset: ref-counter; }
+        .reference-list li { counter-increment: ref-counter; margin-bottom: 12px; padding-left: 30px; position: relative; font-size: 0.95rem; color: #475569; }
+        .reference-list li::before { content: "[" counter(ref-counter) "]"; position: absolute; left: 0; color: var(--secondary); font-weight: 700; }
+
+        .quiz-section { background: #F8FAFC; border: 2px solid var(--border); border-radius: 12px; padding: 40px; margin-top: 50px; }
+        .quiz-header { text-align: center; margin-bottom: 30px; padding-bottom: 20px; border-bottom: 2px dashed var(--border); }
+        .quiz-header h3 { font-family: 'Georgia', serif; color: var(--primary); font-size: 1.8rem; margin-bottom: 10px; }
+        
+        .form-group { margin-bottom: 20px; }
+        .form-group label { display: block; font-weight: 600; margin-bottom: 8px; color: var(--primary); font-size: 0.95rem; }
+        .form-group input, .form-group select, .form-group textarea { width: 100%; padding: 12px; border: 1px solid var(--border); border-radius: 6px; font-size: 1rem; transition: border 0.3s; }
+        .form-group input:focus, .form-group select:focus, .form-group textarea:focus { outline: none; border-color: var(--secondary); box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.1); }
+        .form-group textarea { min-height: 100px; resize: vertical; }
+
+        .question-block { margin-bottom: 25px; padding: 20px; background: var(--white); border-radius: 8px; border: 1px solid var(--border); }
+        .question-text { font-weight: 600; margin-bottom: 15px; display: block; color: var(--primary); line-height: 1.5; }
+        .options label { display: block; margin-bottom: 10px; cursor: pointer; padding: 12px; border-radius: 6px; transition: background 0.2s; border: 1px solid transparent; }
+        .options label:hover { background: #F1F5F9; border-color: var(--border); }
+        .options input[type="radio"] { margin-right: 12px; accent-color: var(--secondary); }
+
+        .result-box { display: none; background: var(--primary); color: var(--white); padding: 30px; border-radius: 12px; margin-top: 30px; text-align: center; }
+        .result-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-top: 20px; }
+        .result-item { background: rgba(255,255,255,0.1); padding: 20px; border-radius: 8px; border: 1px solid rgba(212, 175, 55, 0.3); }
+        .result-item .score { font-size: 2.2rem; font-weight: 700; color: var(--secondary); display: block; margin-bottom: 5px; }
+        .result-item .label { font-size: 0.9rem; opacity: 0.9; text-transform: uppercase; letter-spacing: 1px; }
+
+        .btn-group { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 30px; justify-content: center; }
+        .btn { padding: 14px 28px; border: none; border-radius: 8px; font-weight: 600; cursor: pointer; transition: all 0.3s; font-size: 0.95rem; display: inline-flex; align-items: center; gap: 8px; text-decoration: none; }
+        .btn-primary { background: var(--primary); color: var(--white); }
+        .btn-primary:hover { background: #1E293B; transform: translateY(-2px); box-shadow: 0 10px 20px -5px rgba(15, 23, 42, 0.3); }
+        .btn-secondary { background: var(--white); color: var(--primary); border: 1px solid var(--primary); }
+        .btn-secondary:hover { background: #EFF6FF; }
+        .btn-success { background: var(--success); color: var(--white); }
+        .btn-success:hover { background: #15803D; }
+        .btn-warning { background: var(--secondary); color: var(--primary); }
+        .btn-warning:hover { background: #B8962E; }
+
+        footer { text-align: center; margin-top: 60px; padding-top: 30px; border-top: 1px solid var(--border); color: #64748b; font-size: 0.9rem; }
+        footer a { color: var(--primary); text-decoration: none; font-weight: 600; }
+
+        @media print {
+            body { background: white; padding: 0; }
+            .container { box-shadow: none; max-width: 100%; padding: 20px; border: none; }
+            .nav-links, .btn-group, footer, .quote-box { display: none !important; }
+            .quiz-section { break-inside: avoid; border: 1px solid #000; }
+            .result-box { display: block !important; color: black; background: #eee; border: 1px solid #000; }
+            .result-item .score { color: black; }
+            .section { break-inside: avoid; }
+        }
+
+        @media (max-width: 768px) {
+            .result-grid { grid-template-columns: 1fr; }
+            .container { padding: 25px; }
+            .header-badge h1 { font-size: 2rem; }
+            .btn-group { flex-direction: column; }
+            .btn { width: 100%; justify-content: center; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <!-- Navigation -->
+    <div class="nav-links">
+        <a href="4.html">← Bab 4: Introducing Others</a>
+        <a href="6.html">Bab 6: Physical Appearances & Personalities →</a>
+    </div>
+
+    <!-- Header -->
+    <div class="header-badge">
+        <h2>Pertemuan 5</h2>
+        <h1>Describing Hobby (Mendeskripsikan Hobi)</h1>
+        <p>
+            Memahami konsep hobi, cara mendeskripsikannya dalam bahasa Inggris, berbagai ungkapan untuk menyatakan kesukaan, jenis-jenis hobi, serta manfaat memiliki hobi yang positif. Materi ini memperkaya kemampuan siswa dalam mengungkapkan minat dan kegemaran secara komunikatif.
+        </p>
+    </div>
+
+    <div class="author-info">
+        <strong>Hendria Roza, S.Pd.I</strong><br>
+        Guru Bahasa Inggris | MTsN 10 Agam | Tahun Pelajaran 2026/2027
+    </div>
+
+    <!-- Content -->
+    <div class="section">
+        <div class="section-title">📖 A. Pengertian dan Teori Pendukung</div>
+        <p><strong>Hobby</strong> (hobi) adalah kegiatan yang dilakukan seseorang secara sukarela pada waktu luang untuk kesenangan dan kepuasan pribadi. Hobi bukan sekadar pengisi waktu, melainkan cerminan minat, bakat, dan kepribadian seseorang.</p>
+        
+        <div class="theory-box">
+            <h4>💡 Teori Pendukung: <em>Flow Theory</em> (Mihaly Csikszentmihalyi)</h4>
+            <p>Menurut psikolog <strong>Mihaly Csikszentmihalyi</strong>, ketika seseorang melakukan hobi yang disukainya, ia sering mengalami kondisi yang disebut <strong>"Flow"</strong> — keadaan di mana seseorang begitu tenggelam dalam aktivitas yang dilakukannya sehingga waktu terasa berlalu begitu cepat. Kondisi <em>flow</em> ini menghasilkan kebahagiaan mendalam, kreativitas tinggi, dan kesejahteraan psikologis. Inilah mengapa hobi yang tepat dapat menjadi sumber kebahagiaan dan pengembangan diri.</p>
+        </div>
+
+        <div class="definition-box">
+            📌 <strong>DEFINISI OPERASIONAL:</strong> <em>Hobby</em> adalah aktivitas yang dilakukan secara rutin pada waktu luang untuk kesenangan pribadi, bukan karena kewajiban atau untuk mendapatkan uang. Dalam bahasa Inggris, hobi umumnya diekspresikan menggunakan <strong>gerund</strong> (kata kerja + -ing) karena berfungsi sebagai kata benda.
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="section-title">📊 B. Ungkapan Menyatakan Hobi</div>
+        <p>Dalam bahasa Inggris, terdapat berbagai cara untuk menyatakan hobi dengan tingkat formalitas dan nuansa yang berbeda. Berikut adalah ungkapan yang paling umum digunakan:</p>
+        
+        <div class="table-wrapper">
+            <table class="content-table">
+                <thead>
+                    <tr>
+                        <th style="width: 25%;">Ungkapan</th>
+                        <th style="width: 30%;">Arti / Nuansa</th>
+                        <th style="width: 45%;">Contoh Kalimat</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>My hobby is ...</strong></td>
+                        <td>Hobi saya adalah ... (paling umum & netral)</td>
+                        <td>"My hobby is <em>reading novels</em>."</td>
+                    </tr>
+                    <tr>
+                        <td><strong>I like ...</strong></td>
+                        <td>Saya suka ... (umum, informal)</td>
+                        <td>"I like <em>playing football</em>."</td>
+                    </tr>
+                    <tr>
+                        <td><strong>I love ...</strong></td>
+                        <td>Saya cinta/sangat suka ... (lebih kuat dari "like")</td>
+                        <td>"I love <em>cooking</em>."</td>
+                    </tr>
+                    <tr>
+                        <td><strong>I enjoy ...</strong></td>
+                        <td>Saya menikmati ... (menekankan kesenangan)</td>
+                        <td>"I enjoy <em>swimming</em> in the morning."</td>
+                    </tr>
+                    <tr>
+                        <td><strong>I am fond of ...</strong></td>
+                        <td>Saya sangat menyukai ... (agak formal, nuansa mendalam)</td>
+                        <td>"I am fond of <em>painting</em>."</td>
+                    </tr>
+                    <tr>
+                        <td><strong>I am interested in ...</strong></td>
+                        <td>Saya tertarik pada ... (menekankan minat)</td>
+                        <td>"I am interested in <em>photography</em>."</td>
+                    </tr>
+                    <tr>
+                        <td><strong>My favorite activity is ...</strong></td>
+                        <td>Aktivitas favorit saya adalah ...</td>
+                        <td>"My favorite activity is <em>writing poetry</em>."</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="tip-box">
+            <h4>💡 Catatan Grammar Penting</h4>
+            <p>Setelah ungkapan <strong>like, love, enjoy, be fond of, be interested in</strong>, kata kerja yang mengikuti harus dalam bentuk <strong>gerund (-ing)</strong> atau <strong>noun</strong>, bukan kata kerja dasar.</p>
+            <ul style="margin-left: 20px; margin-top: 10px;">
+                <li>✅ Benar: "I like <strong>reading</strong>." / "I enjoy <strong>swimming</strong>."</li>
+                <li>❌ Salah: "I like <strong>read</strong>." / "I enjoy <strong>swim</strong>."</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="section-title">📊 C. Klasifikasi Jenis Hobi</div>
+        <p>Hobi dapat diklasifikasikan berdasarkan berbagai aspek. Berikut adalah pengelompokan hobi yang umum:</p>
+        
+        <div class="table-wrapper">
+            <table class="content-table">
+                <thead>
+                    <tr>
+                        <th style="width: 25%;">Kategori</th>
+                        <th style="width: 35%;">Penjelasan</th>
+                        <th style="width: 40%;">Contoh</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Indoor Hobbies</strong></td>
+                        <td>Hobi yang dilakukan di dalam ruangan.</td>
+                        <td>Reading, writing, drawing, cooking, knitting, playing chess, collecting stamps.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Outdoor Hobbies</strong></td>
+                        <td>Hobi yang dilakukan di luar ruangan.</td>
+                        <td>Swimming, cycling, hiking, gardening, fishing, playing football, jogging.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Physical Hobbies</strong></td>
+                        <td>Hobi yang melibatkan aktivitas fisik/olahraga.</td>
+                        <td>Swimming, cycling, dancing, martial arts, running.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Intellectual Hobbies</strong></td>
+                        <td>Hobi yang melibatkan aktivitas mental/pikiran.</td>
+                        <td>Reading, writing, playing chess, solving puzzles, learning languages.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Creative Hobbies</strong></td>
+                        <td>Hobi yang melibatkan kreativitas dan seni.</td>
+                        <td>Painting, drawing, photography, singing, playing music, writing poetry.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Collecting Hobbies</strong></td>
+                        <td>Hobi mengumpulkan benda-benda tertentu.</td>
+                        <td>Collecting stamps, coins, dolls, antiques, comic books.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="section-title">💬 D. Contoh Dialog tentang Hobi</div>
+        <p>Berikut adalah contoh dialog dalam berbagai situasi:</p>
+
+        <div class="example-box">
+            <span class="label">Contoh Dialog 1: Antar Teman di Sekolah</span>
+            <div class="dialogue">
+                <strong>Ahmad:</strong> "Hi, Rina! What is your hobby?"<br>
+                <strong>Rina:</strong> "Hi, Ahmad! My hobby is reading novels. I love reading stories about adventure. How about you?"<br>
+                <strong>Ahmad:</strong> "I am fond of playing football. I play with my friends every afternoon."<br>
+                <strong>Rina:</strong> "That sounds fun! Do you often watch football matches too?"<br>
+                <strong>Ahmad:</strong> "Yes, I do. I enjoy watching Premier League matches on weekends."<br>
+                <strong>Rina:</strong> "Cool! Maybe we can hang out together sometime."
+            </div>
+        </div>
+
+        <div class="example-box">
+            <span class="label">Contoh Dialog 2: Wawancara Singkat (Formal)</span>
+            <div class="dialogue">
+                <strong>Pewawancara:</strong> "Could you tell me about your hobbies?"<br>
+                <strong>Siti:</strong> "Certainly. I am interested in photography and cooking. I enjoy taking pictures of nature, and I also love trying new recipes in the kitchen."<br>
+                <strong>Pewawancara:</strong> "That's wonderful! How long have you been doing these hobbies?"<br>
+                <strong>Siti:</strong> "I have been doing photography for three years, and cooking since I was in elementary school."<br>
+                <strong>Pewawancara:</strong> "Thank you for sharing."
+            </div>
+        </div>
+
+        <div class="example-box">
+            <span class="label">Contoh Dialog 3: Bertemu Teman Baru</span>
+            <div class="dialogue">
+                <strong>Fatimah:</strong> "Nice to meet you, Ali. What do you usually do in your free time?"<br>
+                <strong>Ali:</strong> "Nice to meet you too. I enjoy playing the guitar and writing songs. What about you?"<br>
+                <strong>Fatimah:</strong> "My favorite activity is gardening. I have a small garden at home with many flowers."<br>
+                <strong>Ali:</strong> "That's beautiful! Maybe you can teach me how to take care of plants someday."<br>
+                <strong>Fatimah:</strong> "Sure! And maybe you can teach me how to play the guitar."
+            </div>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="section-title">🕌 E. Adab dan Etika Hobi dalam Konteks Islami</div>
+        <div class="quote-box">
+            <span class="arabic">اِغْتَنِمْ خَمْسًا قَبْلَ خَمْسٍ: شَبَابَكَ قَبْلَ هَرَمِكَ، وَصِحَّتَكَ قَبْلَ سَقَمِكَ، وَغِنَاكَ قَبْلَ فَقْرِكَ، وَفَرَاغَكَ قَبْلَ شُغْلِكَ، وَحَيَاتَكَ قَبْلَ مَوْتِكَ</span>
+            <p class="translation">"Manfaatkanlah lima perkara sebelum lima perkara: (1) masa mudamu sebelum masa tuamu, (2) masa sehatmu sebelum masa sakitmu, (3) masa kayamu sebelum masa fakirmu, (4) <strong>masa luangmu sebelum masa sibukmu</strong>, dan (5) masa hidupmu sebelum matimu."</p>
+            <span class="source">— Hadis Riwayat Al-Hakim</span>
+        </div>
+        <p>Dalam Islam, hobi memiliki dimensi spiritual yang penting. Waktu luang adalah nikmat yang harus dimanfaatkan dengan bijak. Berikut adalah adab memilih dan menjalani hobi dalam Islam:</p>
+        <ul style="margin-left: 20px; margin-top: 15px;">
+            <li><strong>Hobi yang bermanfaat (nafi'):</strong> Pilihlah hobi yang membawa manfaat, baik untuk diri sendiri maupun orang lain. Rasulullah ﷺ bersabda: <em>"Sebaik-baik manusia adalah yang paling bermanfaat bagi orang lain."</em></li>
+            <li><strong>Tidak melalaikan kewajiban:</strong> Hobi tidak boleh membuat kita lalai dari ibadah wajib (shalat, puasa) dan tanggung jawab (belajar, membantu orang tua).</li>
+            <li><strong>Menjauhi hobi yang haram:</strong> Hindari hobi yang mengandung unsur judi, maksiat, atau merugikan orang lain (misalnya: bermain game yang mengandung unsur judi, menonton konten tidak pantas).</li>
+            <li><strong>Tidak berlebihan (israf):</strong> Hobi boleh dinikmati, tetapi jangan sampai menghabiskan harta, waktu, dan tenaga secara berlebihan.</li>
+            <li><strong>Niatkan karena Allah:</strong> Jadikan hobi sebagai sarana mendekatkan diri kepada Allah. Misalnya, hobi membaca bisa diniatkan untuk menuntut ilmu, hobi olahraga untuk menjaga kesehatan agar kuat beribadah.</li>
+            <li><strong>Berbagi dengan sesama:</strong> Jika memungkinkan, bagikan manfaat hobi kita kepada orang lain. Misalnya, hobi memasak bisa dengan berbagi makanan, hobi fotografi dengan mengabadikan momen kebaikan.</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <div class="section-title">📚 F. Glosarium (Kosa Kata Kunci)</div>
+        <div class="glossary-grid">
+            <div class="glossary-item">
+                <span class="en">Hobby</span>
+                <span class="id">Hobi / Kegemaran</span>
+                <span class="ex">"My hobby is reading."</span>
+            </div>
+            <div class="glossary-item">
+                <span class="en">Leisure time</span>
+                <span class="id">Waktu luang</span>
+                <span class="ex">"I read books in my leisure time."</span>
+            </div>
+            <div class="glossary-item">
+                <span class="en">Enjoy</span>
+                <span class="id">Menikmati</span>
+                <span class="ex">"I enjoy swimming."</span>
+            </div>
+            <div class="glossary-item">
+                <span class="en">Fond of</span>
+                <span class="id">Sangat menyukai</span>
+                <span class="ex">"She is fond of painting."</span>
+            </div>
+            <div class="glossary-item">
+                <span class="en">Interested in</span>
+                <span class="id">Tertarik pada</span>
+                <span class="ex">"I am interested in science."</span>
+            </div>
+            <div class="glossary-item">
+                <span class="en">Favorite</span>
+                <span class="id">Favorit / kesukaan</span>
+                <span class="ex">"My favorite activity is cooking."</span>
+            </div>
+            <div class="glossary-item">
+                <span class="en">Indoor</span>
+                <span class="id">Di dalam ruangan</span>
+                <span class="ex">"Reading is an indoor hobby."</span>
+            </div>
+            <div class="glossary-item">
+                <span class="en">Outdoor</span>
+                <span class="id">Di luar ruangan</span>
+                <span class="ex">"Cycling is an outdoor hobby."</span>
+            </div>
+            <div class="glossary-item">
+                <span class="en">Gerund</span>
+                <span class="id">Kata kerja -ing yang berfungsi sebagai kata benda</span>
+                <span class="ex">"Swimming is fun." (Swimming = gerund)</span>
+            </div>
+            <div class="glossary-item">
+                <span class="en">Collecting</span>
+                <span class="id">Mengumpulkan / mengoleksi</span>
+                <span class="ex">"He enjoys collecting stamps."</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="section-title">📖 G. Referensi Pendukung</div>
+        <ul class="reference-list">
+            <li>Kementerian Pendidikan, Kebudayaan, Riset, dan Teknologi. (2022). <em>Bahasa Inggris: Think Globally Act Locally untuk SMP/MTs Kelas VII</em>. Jakarta: Pusat Perbukuan.</li>
+            <li>Echols, J. M., & Shadily, H. (2018). <em>Kamus Inggris-Indonesia</em>. Jakarta: Gramedia Pustaka Utama.</li>
+            <li>Csikszentmihalyi, M. (1990). <em>Flow: The Psychology of Optimal Experience</em>. New York: Harper & Row.</li>
+            <li>Cambridge Dictionary. (2026). <em>Hobbies and Leisure Activities</em>. Diakses dari dictionary.cambridge.org</li>
+            <li>Murphy, R. (2019). <em>English Grammar in Use</em> (5th ed.). Cambridge: Cambridge University Press.</li>
+        </ul>
+    </div>
+
+    <!-- Formative Test Section -->
+    <div class="quiz-section" id="quiz">
+        <div class="quiz-header">
+            <h3>📝 Uji Formatif Bab 5: Describing Hobby</h3>
+            <p style="color: #64748b; font-size: 0.95rem;">
+                📋 Bagian A: Pilihan Ganda (10 soal, skor 10/soal) &nbsp;|&nbsp; ✍️ Bagian B: Essay (5 soal, skor 20/soal)<br>
+                Materi: Pengertian hobi, ungkapan menyatakan hobi, gerund, jenis-jenis hobi, dan adab Islami.
+            </p>
+        </div>
+
+        <form id="quizForm">
+            <!-- Identitas -->
+            <div style="background: white; padding: 25px; border-radius: 8px; margin-bottom: 30px; border: 1px solid var(--border);">
+                <h4 style="margin-bottom: 20px; color: var(--primary); border-bottom: 1px solid var(--border); padding-bottom: 10px;">📋 Identitas Siswa</h4>
+                <div class="form-group">
+                    <label>Nama Lengkap *</label>
+                    <input type="text" id="studentName" required placeholder="Masukkan nama lengkap sesuai absen">
+                </div>
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+                    <div class="form-group">
+                        <label>No. Absen / NIS *</label>
+                        <input type="text" id="studentNIS" required placeholder="Contoh: 15">
+                    </div>
+                    <div class="form-group">
+                        <label>Kelas *</label>
+                        <select id="studentClass" required>
+                            <option value="">Pilih Kelas</option>
+                            <option value="VII-A">VII-A</option>
+                            <option value="VII-B">VII-B</option>
+                            <option value="VII-C">VII-C</option>
+                            <option value="VII-D">VII-D</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>Semester</label>
+                    <input type="text" value="1 (Satu) - TP. 2026/2027" readonly style="background: #F1F5F9; color: #64748b;">
+                </div>
+            </div>
+
+            <!-- Bagian A: Pilihan Ganda -->
+            <h4 style="margin-bottom: 20px; color: var(--primary);">📋 Bagian A: Pilihan Ganda</h4>
+            
+            <div class="question-block">
+                <span class="question-text">Soal 1 (10 POIN)<br>Manakah definisi yang paling tepat untuk <strong>hobby</strong>?</span>
+                <div class="options">
+                    <label><input type="radio" name="q1" value="A"> A. Kegiatan yang dilakukan karena kewajiban sekolah.</label>
+                    <label><input type="radio" name="q1" value="B"> B. Kegiatan yang dilakukan pada waktu luang untuk kesenangan pribadi.</label>
+                    <label><input type="radio" name="q1" value="C"> C. Kegiatan yang dilakukan untuk mendapatkan uang.</label>
+                    <label><input type="radio" name="q1" value="D"> D. Kegiatan yang dilakukan hanya saat liburan panjang.</label>
+                </div>
+            </div>
+
+            <div class="question-block">
+                <span class="question-text">Soal 2 (10 POIN)<br>Kata <em>"reading"</em> dalam kalimat <em>"My hobby is reading"</em> termasuk jenis kata...</span>
+                <div class="options">
+                    <label><input type="radio" name="q2" value="A"> A. Verb (kata kerja biasa)</label>
+                    <label><input type="radio" name="q2" value="B"> B. Adjective (kata sifat)</label>
+                    <label><input type="radio" name="q2" value="C"> C. Gerund (kata kerja -ing yang berfungsi sebagai kata benda)</label>
+                    <label><input type="radio" name="q2" value="D"> D. Adverb (kata keterangan)</label>
+                </div>
+            </div>
+
+            <div class="question-block">
+                <span class="question-text">Soal 3 (10 POIN)<br>Ungkapan yang tepat untuk menanyakan hobi seseorang adalah...</span>
+                <div class="options">
+                    <label><input type="radio" name="q3" value="A"> A. What is your name?</label>
+                    <label><input type="radio" name="q3" value="B"> B. How old are you?</label>
+                    <label><input type="radio" name="q3" value="C"> C. What is your hobby?</label>
+                    <label><input type="radio" name="q3" value="D"> D. Where do you live?</label>
+                </div>
+            </div>
+
+            <div class="question-block">
+                <span class="question-text">Soal 4 (10 POIN)<br>Manakah yang merupakan contoh <strong>indoor hobby</strong>?</span>
+                <div class="options">
+                    <label><input type="radio" name="q4" value="A"> A. Swimming</label>
+                    <label><input type="radio" name="q4" value="B"> B. Cycling</label>
+                    <label><input type="radio" name="q4" value="C"> C. Reading novels</label>
+                    <label><input type="radio" name="q4" value="D"> D. Hiking</label>
+                </div>
+            </div>
+
+            <div class="question-block">
+                <span class="question-text">Soal 5 (10 POIN)<br>Ungkapan <em>"I am fond of painting"</em> memiliki arti...</span>
+                <div class="options">
+                    <label><input type="radio" name="q5" value="A"> A. Saya benci melukis.</label>
+                    <label><input type="radio" name="q5" value="B"> B. Saya sangat menyukai melukis.</label>
+                    <label><input type="radio" name="q5" value="C"> C. Saya sedang belajar melukis.</label>
+                    <label><input type="radio" name="q5" value="D"> D. Saya takut melukis.</label>
+                </div>
+            </div>
+
+            <div class="question-block">
+                <span class="question-text">Soal 6 (10 POIN)<br>Manakah kalimat yang <strong>benar secara grammar</strong>?</span>
+                <div class="options">
+                    <label><input type="radio" name="q6" value="A"> A. I like read books.</label>
+                    <label><input type="radio" name="q6" value="B"> B. I enjoy swimming every morning.</label>
+                    <label><input type="radio" name="q6" value="C"> C. She is fond of cook.</label>
+                    <label><input type="radio" name="q6" value="D"> D. They are interested in play football.</label>
+                </div>
+            </div>
+
+            <div class="question-block">
+                <span class="question-text">Soal 7 (10 POIN)<br>Manakah yang merupakan contoh <strong>creative hobby</strong>?</span>
+                <div class="options">
+                    <label><input type="radio" name="q7" value="A"> A. Watching TV</label>
+                    <label><input type="radio" name="q7" value="B"> B. Sleeping</label>
+                    <label><input type="radio" name="q7" value="C"> C. Writing poetry</label>
+                    <label><input type="radio" name="q7" value="D"> D. Eating</label>
+                </div>
+            </div>
+
+            <div class="question-block">
+                <span class="question-text">Soal 8 (10 POIN)<br>Lengkapi kalimat berikut: <em>"She enjoys ... in the park every afternoon."</em></span>
+                <div class="options">
+                    <label><input type="radio" name="q8" value="A"> A. jog</label>
+                    <label><input type="radio" name="q8" value="B"> B. jogging</label>
+                    <label><input type="radio" name="q8" value="C"> C. to jogging</label>
+                    <label><input type="radio" name="q8" value="D"> D. jogs</label>
+                </div>
+            </div>
+
+            <div class="question-block">
+                <span class="question-text">Soal 9 (10 POIN)<br>Dalam teori <em>Flow</em> dari Csikszentmihalyi, ketika seseorang melakukan hobi yang disukainya, ia akan mengalami...</span>
+                <div class="options">
+                    <label><input type="radio" name="q9" value="A"> A. Kebosanan dan kegelisahan.</label>
+                    <label><input type="radio" name="q9" value="B"> B. Kondisi tenggelam dalam aktivitas sehingga waktu terasa cepat berlalu.</label>
+                    <label><input type="radio" name="q9" value="C"> C. Keinginan untuk berhenti.</label>
+                    <label><input type="radio" name="q9" value="D"> D. Rasa malas dan mengantuk.</label>
+                </div>
+            </div>
+
+            <div class="question-block">
+                <span class="question-text">Soal 10 (10 POIN)<br>Menurut hadis Rasulullah ﷺ, salah satu nikmat yang harus dimanfaatkan sebelum hilang adalah...</span>
+                <div class="options">
+                    <label><input type="radio" name="q10" value="A"> A. Masa liburan sebelum masa sekolah.</label>
+                    <label><input type="radio" name="q10" value="B"> B. Masa luang sebelum masa sibuk.</label>
+                    <label><input type="radio" name="q10" value="C"> C. Masa bermain sebelum masa bekerja.</label>
+                    <label><input type="radio" name="q10" value="D"> D. Masa muda sebelum masa tua saja.</label>
+                </div>
+            </div>
+
+            <!-- Bagian B: Essay -->
+            <h4 style="margin-bottom: 20px; color: var(--primary); margin-top: 40px;">✍️ Bagian B: Essay</h4>
+            
+            <div class="question-block">
+                <span class="question-text">Essay 1 (20 POIN)<br>Jelaskan pengertian hobi menurut pemahamanmu! Sebutkan minimal 5 (lima) contoh hobi yang positif dan bermanfaat!</span>
+                <textarea name="essay1" placeholder="Tulis jawaban Anda di sini..."></textarea>
+            </div>
+
+            <div class="question-block">
+                <span class="question-text">Essay 2 (20 POIN)<br>Buatlah sebuah dialog singkat (minimal 6 baris percakapan) antara dua orang teman yang sedang membicarakan hobi mereka masing-masing! Gunakan ungkapan yang bervariasi (seperti "My hobby is...", "I enjoy...", "I am fond of...")!</span>
+                <textarea name="essay2" placeholder="Tulis jawaban Anda di sini..."></textarea>
+            </div>
+
+            <div class="question-block">
+                <span class="question-text">Essay 3 (20 POIN)<br>Jelaskan perbedaan penggunaan ungkapan <em>"I like"</em>, <em>"I enjoy"</em>, dan <em>"I am fond of"</em> dalam menyatakan hobi! Berikan masing-masing satu contoh kalimat!</span>
+                <textarea name="essay3" placeholder="Tulis jawaban Anda di sini..."></textarea>
+            </div>
+
+            <div class="question-block">
+                <span class="question-text">Essay 4 (20 POIN)<br>Sebutkan 5 (lima) contoh <strong>indoor hobby</strong> dan 5 (lima) contoh <strong>outdoor hobby</strong>! Jelaskan mengapa kamu lebih menyukai salah satu kategori tersebut!</span>
+                <textarea name="essay4" placeholder="Tulis jawaban Anda di sini..."></textarea>
+            </div>
+
+            <div class="question-block">
+                <span class="question-text">Essay 5 (20 POIN)<br>Sebutkan 4 (empat) adab memilih dan menjalani hobi dalam konteks Islami yang telah kamu pelajari! Jelaskan mengapa hobi yang bermanfaat lebih utama daripada hobi yang sia-sia!</span>
+                <textarea name="essay5" placeholder="Tulis jawaban Anda di sini..."></textarea>
+            </div>
+
+            <!-- Result Display -->
+            <div class="result-box" id="resultBox">
+                <h3 style="font-family: 'Georgia', serif; margin-bottom: 10px;">📊 Hasil Uji Formatif</h3>
+                <div class="result-grid">
+                    <div class="result-item">
+                        <span class="score" id="mcqScore">0</span>
+                        <span class="label">📋 Pilihan Ganda (/100)</span>
+                    </div>
+                    <div class="result-item">
+                        <span class="score" id="essayScore">0</span>
+                        <span class="label">✍️ Essay (Menunggu Penilaian)</span>
+                    </div>
+                    <div class="result-item">
+                        <span class="score" id="totalScore">0</span>
+                        <span class="label">🏆 Skor Akhir PG</span>
+                    </div>
+                </div>
+                <p style="margin-top: 20px; font-size: 0.9rem; opacity: 0.9; background: rgba(255,255,255,0.1); padding: 10px; border-radius: 6px;">
+                    *Catatan: Skor Essay akan dinilai secara manual oleh guru berdasarkan ketepatan tata bahasa, kelengkapan jawaban, dan kesesuaian konteks melalui file yang Anda kirimkan.
+                </p>
+            </div>
+
+            <!-- Action Buttons -->
+            <div class="btn-group">
+                <button type="button" class="btn btn-primary" onclick="calculateScore()">✉️ KIRIM JAWABAN & LIHAT HASIL</button>
+                <button type="button" class="btn btn-secondary" onclick="downloadPDF()">📥 UNDUH PDF LENGKAP</button>
+                <button type="button" class="btn btn-secondary" onclick="downloadTXT()">📄 UNDUH SKOR & JAWABAN (TXT)</button>
+                <button type="button" class="btn btn-warning" onclick="resetQuiz()">🔄 MULAI ULANG</button>
+                <button type="button" class="btn btn-success" onclick="emailGuru()">📧 KIRIM KE EMAIL GURU</button>
+            </div>
+        </form>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2026 <strong>Hendria Roza, S.Pd.I</strong> — MTsN 10 Agam.</p>
+        <p>Hak Cipta Dilindungi Undang-Undang. Dilarang memperbanyak tanpa izin.</p>
+        <p style="margin-top: 10px;">Email: <a href="mailto:hendriaroza85@gmail.com">hendriaroza85@gmail.com</a></p>
+    </footer>
+</div>
+
+<script>
+    // Kunci Jawaban Pilihan Ganda
+    const answerKey = {
+        q1: 'B', q2: 'C', q3: 'C', q4: 'C', q5: 'B',
+        q6: 'B', q7: 'C', q8: 'B', q9: 'B', q10: 'B'
+    };
+
+    function calculateScore() {
+        const name = document.getElementById('studentName').value.trim();
+        const nis = document.getElementById('studentNIS').value.trim();
+        const kelas = document.getElementById('studentClass').value;
+
+        if (!name || !nis || !kelas) {
+            alert("⚠️ Harap lengkapi Identitas Siswa (Nama, NIS, dan Kelas) sebelum mengirim jawaban!");
+            return;
+        }
+
+        let mcqCorrect = 0;
+        for (let i = 1; i <= 10; i++) {
+            const selected = document.querySelector(`input[name="q${i}"]:checked`);
+            if (selected && selected.value === answerKey[`q${i}`]) {
+                mcqCorrect++;
+            }
+        }
+
+        const mcqTotalScore = mcqCorrect * 10;
+        
+        document.getElementById('mcqScore').textContent = mcqTotalScore;
+        document.getElementById('essayScore').textContent = "Menunggu";
+        document.getElementById('totalScore').textContent = mcqTotalScore;
+        document.getElementById('resultBox').style.display = 'block';
+        
+        document.getElementById('resultBox').scrollIntoView({ behavior: 'smooth', block: 'center' });
+        
+        alert(`✅ Terima kasih, ${name}!\n\nJawaban Pilihan Ganda Anda telah dinilai.\nSkor Sementara: ${mcqTotalScore}/100.\n\nJawaban Essay akan dinilai oleh guru melalui file yang Anda unduh/kirim.`);
+    }
+
+    function downloadPDF() {
+        window.print();
+    }
+
+    function downloadTXT() {
+        const name = document.getElementById('studentName').value.trim() || "Nama_Siswa";
+        const nis = document.getElementById('studentNIS').value.trim() || "NIS";
+        const kelas = document.getElementById('studentClass').value || "Kelas";
+        const mcqScore = document.getElementById('mcqScore').textContent;
+        
+        let content = `==================================================\n`;
+        content += `HASIL UJI FORMATIF BAB 5: DESCRIBING HOBBY\n`;
+        content += `Bahasa Inggris Kelas VII Semester 1 - MTsN 10 Agam\n`;
+        content += `==================================================\n`;
+        content += `Nama  : ${name}\n`;
+        content += `NIS   : ${nis}\n`;
+        content += `Kelas : ${kelas}\n`;
+        content += `Tanggal: ${new Date().toLocaleDateString('id-ID', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' })}\n`;
+        content += `Skor PG : ${mcqScore}/100\n`;
+        content += `==================================================\n\n`;
+        
+        content += `--- PILIHAN GANDA ---\n`;
+        for (let i = 1; i <= 10; i++) {
+            const selected = document.querySelector(`input[name="q${i}"]:checked`);
+            const jawaban = selected ? selected.value : "Tidak dijawab";
+            const isCorrect = jawaban === answerKey[`q${i}`] ? "[BENAR]" : "[SALAH]";
+            content += `Soal ${i.toString().padStart(2, '0')}: Jawaban Siswa = ${jawaban} ${isCorrect} (Kunci: ${answerKey[`q${i}`]})\n`;
+        }
+        
+        content += `\n--- JAWABAN ESSAI ---\n`;
+        for (let i = 1; i <= 5; i++) {
+            const essayAns = document.querySelector(`textarea[name="essay${i}"]`).value.trim() || "Tidak dijawab";
+            content += `Essay ${i}:\n${essayAns}\n\n--------------------------------------------------\n`;
+        }
+        
+        content += `\nDokumen ini dibuat secara otomatis melalui sistem Uji Formatif Digital.\n`;
+        content += `© 2026 Hendria Roza, S.Pd.I - MTsN 10 Agam`;
+
+        const blob = new Blob([content], { type: 'text/plain;charset=utf-8' });
+        const url = window.URL.createObjectURL(blob);
+        const a = document.createElement('a');
+        a.href = url;
+        a.download = `UjiFormatif_Bab5_DescribingHobby_${name.replace(/\s+/g, '_')}.txt`;
+        document.body.appendChild(a);
+        a.click();
+        document.body.removeChild(a);
+        window.URL.revokeObjectURL(url);
+    }
+
+    function resetQuiz() {
+        if (confirm("⚠️ Apakah Anda yakin ingin mengosongkan SEMUA jawaban dan mulai ulang? Tindakan ini tidak dapat dibatalkan.")) {
+            document.getElementById('quizForm').reset();
+            document.getElementById('resultBox').style.display = 'none';
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+    }
+
+    function emailGuru() {
+        const name = document.getElementById('studentName').value.trim();
+        const nis = document.getElementById('studentNIS').value.trim();
+        const kelas = document.getElementById('studentClass').value;
+        const mcqScore = document.getElementById('mcqScore').textContent;
+
+        if (!name || mcqScore === "0") {
+            alert("⚠️ Harap isi Nama Lengkap dan klik 'Kirim Jawaban & Lihat Hasil' terlebih dahulu untuk mendapatkan skor.");
+            return;
+        }
+
+        const subject = `Hasil Uji Formatif Bab 5 (Describing Hobby) - ${name} (${kelas})`;
+        const body = `Yth. Ibu Hendria Roza, S.Pd.I,\n\nAssalamu'alaikum Warahmatullahi Wabarakatuh.\n\nBerikut adalah hasil uji formatif saya:\n\nNama : ${name}\nNIS  : ${nis}\nKelas: ${kelas}\nSkor Pilihan Ganda: ${mcqScore}/100\n\nSaya telah mengunduh file TXT berisi jawaban lengkap (termasuk Essay) dan siap mengumpulkan/mengirimkannya sesuai instruksi Ibu.\n\nTerima kasih.\nWassalamu'alaikum Warahmatullahi Wabarakatuh.`;
+        
+        window.location.href = `mailto:hendriaroza85@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,1335 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ujian Akhir Semester (UAS) | Bahasa Inggris Kelas VII Semester 1</title>
+    <style>
+        :root {
+            --primary: #0F172A;
+            --secondary: #D4AF37;
+            --bg: #FDFBF7;
+            --text: #334155;
+            --white: #ffffff;
+            --success: #16a34a;
+            --danger: #DC2626;
+            --warning: #F59E0B;
+            --info: #0284C7;
+            --border: #e2e8f0;
+            --light-gold: #FDF6E3;
+            --hots: #7C3AED;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', 'Inter', Tahoma, sans-serif; }
+        body { background-color: var(--bg); color: var(--text); line-height: 1.7; padding: 20px; }
+        .container { max-width: 950px; margin: 0 auto; background: var(--white); padding: 50px; border-radius: 16px; box-shadow: 0 10px 40px -10px rgba(15, 23, 42, 0.15); border-top: 5px solid var(--secondary); }
+        
+        .nav-links { display: flex; justify-content: space-between; margin-bottom: 40px; flex-wrap: wrap; gap: 10px; }
+        .nav-links a { text-decoration: none; color: var(--primary); font-weight: 600; font-size: 0.9rem; padding: 10px 20px; border: 1px solid var(--border); border-radius: 8px; transition: all 0.3s; background: var(--white); }
+        .nav-links a:hover { background: var(--primary); color: var(--secondary); border-color: var(--primary); }
+
+        .header-badge { text-align: center; margin-bottom: 30px; padding: 30px; background: linear-gradient(135deg, var(--primary) 0%, #1E293B 100%); border-radius: 12px; color: var(--white); position: relative; overflow: hidden; }
+        .header-badge::before { content: ''; position: absolute; top: -50%; right: -20%; width: 400px; height: 400px; background: radial-gradient(circle, rgba(212, 175, 55, 0.2) 0%, transparent 70%); border-radius: 50%; }
+        .header-badge .exam-type { display: inline-block; background: var(--secondary); color: var(--primary); padding: 6px 16px; border-radius: 20px; font-size: 0.85rem; font-weight: 700; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 15px; position: relative; z-index: 1; }
+        .header-badge h2 { font-family: 'Georgia', serif; font-size: 1.2rem; color: var(--secondary); text-transform: uppercase; letter-spacing: 2px; margin-bottom: 10px; position: relative; z-index: 1; }
+        .header-badge h1 { font-family: 'Georgia', serif; font-size: 2.5rem; color: var(--white); margin-bottom: 15px; line-height: 1.2; position: relative; z-index: 1; }
+        .header-badge p { color: #CBD5E1; font-size: 1rem; max-width: 700px; margin: 0 auto; position: relative; z-index: 1; }
+
+        .exam-info-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; margin: 30px 0; padding: 20px; background: var(--light-gold); border-radius: 8px; border: 1px solid rgba(212, 175, 55, 0.3); }
+        .exam-info-item { text-align: center; }
+        .exam-info-item .label { font-size: 0.8rem; text-transform: uppercase; letter-spacing: 1px; color: #64748B; margin-bottom: 5px; }
+        .exam-info-item .value { font-size: 1.1rem; font-weight: 700; color: var(--primary); }
+
+        .author-info { text-align: center; color: #64748b; font-size: 0.95rem; margin: 30px 0; padding: 20px; background: var(--light-gold); border-radius: 8px; border: 1px solid rgba(212, 175, 55, 0.3); }
+        .author-info strong { color: var(--primary); font-size: 1.1rem; }
+
+        .section { margin-bottom: 40px; }
+        .section-title { font-family: 'Georgia', serif; font-size: 1.5rem; color: var(--primary); border-left: 5px solid var(--secondary); padding-left: 15px; margin-bottom: 20px; font-weight: 700; display: flex; align-items: center; gap: 10px; }
+        
+        .instruction-box { background: #EFF6FF; border-left: 4px solid var(--info); padding: 20px; border-radius: 0 8px 8px 0; margin: 20px 0; }
+        .instruction-box h4 { color: var(--info); margin-bottom: 10px; display: flex; align-items: center; gap: 8px; }
+        .instruction-box ul { margin-left: 20px; margin-top: 10px; }
+
+        .scoring-box { background: var(--light-gold); border: 1px solid var(--secondary); padding: 20px; border-radius: 8px; margin: 20px 0; }
+        .scoring-box h4 { color: var(--primary); margin-bottom: 15px; text-align: center; }
+        .scoring-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 15px; }
+        .scoring-item { background: var(--white); padding: 15px; border-radius: 8px; text-align: center; border: 1px solid var(--border); }
+        .scoring-item .type { font-size: 0.85rem; color: #64748B; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 5px; }
+        .scoring-item .points { font-size: 1.5rem; font-weight: 700; color: var(--secondary); }
+        .scoring-item .desc { font-size: 0.85rem; color: var(--text); margin-top: 5px; }
+
+        .quiz-section { background: #F8FAFC; border: 2px solid var(--border); border-radius: 12px; padding: 40px; margin-top: 50px; }
+        .quiz-header { text-align: center; margin-bottom: 30px; padding-bottom: 20px; border-bottom: 2px dashed var(--border); }
+        .quiz-header h3 { font-family: 'Georgia', serif; color: var(--primary); font-size: 1.8rem; margin-bottom: 10px; }
+        
+        .form-group { margin-bottom: 20px; }
+        .form-group label { display: block; font-weight: 600; margin-bottom: 8px; color: var(--primary); font-size: 0.95rem; }
+        .form-group input, .form-group select, .form-group textarea { width: 100%; padding: 12px; border: 1px solid var(--border); border-radius: 6px; font-size: 1rem; transition: border 0.3s; }
+        .form-group input:focus, .form-group select:focus { outline: none; border-color: var(--secondary); box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.1); }
+
+        .part-header { background: var(--primary); color: var(--secondary); padding: 15px 20px; border-radius: 8px; margin: 30px 0 20px; font-family: 'Georgia', serif; font-size: 1.2rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px; }
+        .part-header .badge { background: var(--secondary); color: var(--primary); padding: 4px 12px; border-radius: 20px; font-size: 0.8rem; font-weight: 700; }
+
+        .question-block { margin-bottom: 25px; padding: 20px; background: var(--white); border-radius: 8px; border: 1px solid var(--border); position: relative; }
+        .question-block.hots { border-left: 4px solid var(--hots); background: linear-gradient(to right, #F5F3FF, var(--white)); }
+        .question-text { font-weight: 600; margin-bottom: 15px; display: block; color: var(--primary); line-height: 1.5; }
+        .question-number { display: inline-block; background: var(--primary); color: var(--secondary); padding: 4px 10px; border-radius: 4px; font-size: 0.85rem; margin-right: 8px; }
+        .hots-badge { display: inline-block; background: var(--hots); color: var(--white); padding: 3px 10px; border-radius: 12px; font-size: 0.75rem; font-weight: 700; margin-left: 8px; text-transform: uppercase; letter-spacing: 1px; }
+        .chapter-badge { display: inline-block; background: #E0E7FF; color: #3730A3; padding: 2px 8px; border-radius: 10px; font-size: 0.7rem; font-weight: 600; margin-left: 8px; }
+        
+        .options label { display: block; margin-bottom: 10px; cursor: pointer; padding: 12px; border-radius: 6px; transition: background 0.2s; border: 1px solid transparent; }
+        .options label:hover { background: #F1F5F9; border-color: var(--border); }
+        .options input[type="radio"], .options input[type="checkbox"] { margin-right: 12px; accent-color: var(--secondary); }
+
+        /* True/False Table */
+        .tf-table { width: 100%; border-collapse: collapse; margin-top: 15px; }
+        .tf-table th { background: var(--primary); color: var(--secondary); padding: 12px; text-align: left; font-size: 0.9rem; }
+        .tf-table td { padding: 12px; border-bottom: 1px solid var(--border); }
+        .tf-table .statement { min-width: 300px; }
+        .tf-table .tf-options { text-align: center; width: 150px; }
+        .tf-table label { display: inline-block; margin: 0 8px; cursor: pointer; }
+
+        /* Matching */
+        .matching-table { width: 100%; border-collapse: collapse; margin-top: 15px; }
+        .matching-table th { background: var(--primary); color: var(--secondary); padding: 12px; text-align: left; font-size: 0.9rem; }
+        .matching-table td { padding: 12px; border-bottom: 1px solid var(--border); }
+        .matching-table select { padding: 8px; border: 1px solid var(--border); border-radius: 4px; width: 100%; max-width: 250px; }
+
+        .result-box { display: none; background: linear-gradient(135deg, var(--primary) 0%, #1E293B 100%); color: var(--white); padding: 35px; border-radius: 12px; margin-top: 30px; text-align: center; border: 2px solid var(--secondary); }
+        .result-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 15px; margin-top: 20px; }
+        .result-item { background: rgba(255,255,255,0.1); padding: 20px; border-radius: 8px; border: 1px solid rgba(212, 175, 55, 0.3); }
+        .result-item .score { font-size: 2rem; font-weight: 700; color: var(--secondary); display: block; margin-bottom: 5px; }
+        .result-item .label { font-size: 0.85rem; opacity: 0.9; text-transform: uppercase; letter-spacing: 1px; }
+        .result-total { background: var(--secondary); color: var(--primary); padding: 25px; border-radius: 8px; margin-top: 20px; }
+        .result-total .score { font-size: 3rem; font-weight: 700; display: block; }
+        .result-total .label { font-size: 1rem; text-transform: uppercase; letter-spacing: 2px; font-weight: 600; }
+
+        .btn-group { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 30px; justify-content: center; }
+        .btn { padding: 14px 28px; border: none; border-radius: 8px; font-weight: 600; cursor: pointer; transition: all 0.3s; font-size: 0.95rem; display: inline-flex; align-items: center; gap: 8px; text-decoration: none; }
+        .btn-primary { background: var(--primary); color: var(--white); }
+        .btn-primary:hover { background: #1E293B; transform: translateY(-2px); box-shadow: 0 10px 20px -5px rgba(15, 23, 42, 0.3); }
+        .btn-secondary { background: var(--white); color: var(--primary); border: 1px solid var(--primary); }
+        .btn-secondary:hover { background: #EFF6FF; }
+        .btn-success { background: var(--success); color: var(--white); }
+        .btn-success:hover { background: #15803D; }
+        .btn-warning { background: var(--secondary); color: var(--primary); }
+        .btn-warning:hover { background: #B8962E; }
+        .btn-danger { background: var(--danger); color: var(--white); }
+        .btn-danger:hover { background: #991B1B; }
+
+        footer { text-align: center; margin-top: 60px; padding-top: 30px; border-top: 1px solid var(--border); color: #64748b; font-size: 0.9rem; }
+        footer a { color: var(--primary); text-decoration: none; font-weight: 600; }
+
+        @media print {
+            body { background: white; padding: 0; }
+            .container { box-shadow: none; max-width: 100%; padding: 20px; border: none; }
+            .nav-links, .btn-group, footer { display: none !important; }
+            .quiz-section { break-inside: avoid; border: 1px solid #000; }
+            .result-box { display: block !important; color: black; background: #eee; border: 1px solid #000; }
+            .result-item .score, .result-total .score { color: black; }
+            .section { break-inside: avoid; }
+        }
+
+        @media (max-width: 768px) {
+            .result-grid { grid-template-columns: 1fr 1fr; }
+            .container { padding: 25px; }
+            .header-badge h1 { font-size: 1.8rem; }
+            .btn-group { flex-direction: column; }
+            .btn { width: 100%; justify-content: center; }
+            .tf-table, .matching-table { font-size: 0.85rem; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <!-- Navigation -->
+    <div class="nav-links">
+        <a href="index.html">← Kembali ke Daftar Isi</a>
+        <a href="15.html">Bab 15: Giving Instructions</a>
+    </div>
+
+    <!-- Header -->
+    <div class="header-badge">
+        <span class="exam-type">🏆 Ujian Akhir Semester</span>
+        <h2>Pertemuan 16</h2>
+        <h1>Ujian Akhir Semester (UAS)</h1>
+        <p>
+            Bahasa Inggris Kelas VII Semester 1 — Tahun Pelajaran 2026/2027<br>
+            Menguji pemahaman menyeluruh materi Bab 1 s.d. Bab 15
+        </p>
+    </div>
+
+    <div class="exam-info-grid">
+        <div class="exam-info-item">
+            <div class="label">Mata Pelajaran</div>
+            <div class="value">Bahasa Inggris</div>
+        </div>
+        <div class="exam-info-item">
+            <div class="label">Kelas / Semester</div>
+            <div class="value">VII / 1 (Ganjil)</div>
+        </div>
+        <div class="exam-info-item">
+            <div class="label">Tahun Pelajaran</div>
+            <div class="value">2026/2027</div>
+        </div>
+        <div class="exam-info-item">
+            <div class="label">Waktu Pengerjaan</div>
+            <div class="value">90 Menit</div>
+        </div>
+        <div class="exam-info-item">
+            <div class="label">Total Soal</div>
+            <div class="value">50 Butir</div>
+        </div>
+        <div class="exam-info-item">
+            <div class="label">Skor Maksimal</div>
+            <div class="value">100</div>
+        </div>
+    </div>
+
+    <div class="author-info">
+        <strong>Penyusun: Hendria Roza, S.Pd.I</strong><br>
+        Guru Bahasa Inggris | MTsN 10 Agam
+    </div>
+
+    <!-- Petunjuk Umum -->
+    <div class="section">
+        <div class="section-title">📋 Petunjuk Pengerjaan</div>
+        <div class="instruction-box">
+            <h4>⚠️ Bacalah petunjuk berikut dengan saksama sebelum mengerjakan!</h4>
+            <ul>
+                <li>Isilah <strong>identitas diri</strong> (Nama, NIS, Kelas) dengan lengkap dan benar.</li>
+                <li>Ujian ini terdiri dari <strong>4 bagian</strong> dengan total <strong>50 soal</strong>.</li>
+                <li><strong>Bagian A:</strong> 30 soal Pilihan Ganda (25 LOTS + 5 HOTS) — pilih SATU jawaban paling tepat.</li>
+                <li><strong>Bagian B:</strong> 10 soal Pilihan Ganda Kompleks — pilih <strong>LEBIH DARI SATU</strong> jawaban yang benar.</li>
+                <li><strong>Bagian C:</strong> 5 soal Benar/Salah — tentukan apakah pernyataan Benar atau Salah.</li>
+                <li><strong>Bagian D:</strong> 5 soal Menjodohkan — pilih pasangan yang tepat dari dropdown.</li>
+                <li>Soal bertanda <span style="background: var(--hots); color: white; padding: 2px 8px; border-radius: 10px; font-size: 0.75rem;">HOTS</span> adalah soal tingkat tinggi yang memerlukan analisis dan penalaran.</li>
+                <li>Periksa kembali jawaban Anda sebelum menekan tombol <strong>"KIRIM JAWABAN"</strong>.</li>
+            </ul>
+        </div>
+
+        <div class="scoring-box">
+            <h4>📊 Sistem Penilaian</h4>
+            <div class="scoring-grid">
+                <div class="scoring-item">
+                    <div class="type">Bagian A — PG</div>
+                    <div class="points">30 × 2</div>
+                    <div class="desc">= 60 poin</div>
+                </div>
+                <div class="scoring-item">
+                    <div class="type">Bagian B — PG Kompleks</div>
+                    <div class="points">10 × 2</div>
+                    <div class="desc">= 20 poin</div>
+                </div>
+                <div class="scoring-item">
+                    <div class="type">Bagian C — B/S</div>
+                    <div class="points">5 × 2</div>
+                    <div class="desc">= 10 poin</div>
+                </div>
+                <div class="scoring-item">
+                    <div class="type">Bagian D — Menjodohkan</div>
+                    <div class="points">5 × 2</div>
+                    <div class="desc">= 10 poin</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- QUIZ SECTION -->
+    <div class="quiz-section" id="quiz">
+        <div class="quiz-header">
+            <h3>📝 UJIAN AKHIR SEMESTER (UAS)</h3>
+            <p style="color: #64748b; font-size: 0.95rem;">
+                Bahasa Inggris Kelas VII Semester 1 — MTsN 10 Agam — TP. 2026/2027
+            </p>
+        </div>
+
+        <form id="quizForm">
+            <!-- Identitas -->
+            <div style="background: white; padding: 25px; border-radius: 8px; margin-bottom: 30px; border: 1px solid var(--border);">
+                <h4 style="margin-bottom: 20px; color: var(--primary); border-bottom: 1px solid var(--border); padding-bottom: 10px;">📋 Identitas Siswa</h4>
+                <div class="form-group">
+                    <label>Nama Lengkap *</label>
+                    <input type="text" id="studentName" required placeholder="Masukkan nama lengkap sesuai absen">
+                </div>
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+                    <div class="form-group">
+                        <label>No. Absen / NIS *</label>
+                        <input type="text" id="studentNIS" required placeholder="Contoh: 15">
+                    </div>
+                    <div class="form-group">
+                        <label>Kelas *</label>
+                        <select id="studentClass" required>
+                            <option value="">Pilih Kelas</option>
+                            <option value="VII-A">VII-A</option>
+                            <option value="VII-B">VII-B</option>
+                            <option value="VII-C">VII-C</option>
+                            <option value="VII-D">VII-D</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>Tanggal Ujian</label>
+                    <input type="text" id="examDate" readonly style="background: #F1F5F9; color: #64748b;">
+                </div>
+            </div>
+
+            <!-- ==================== BAGIAN A: PILIHAN GANDA ==================== -->
+            <div class="part-header">
+                <span>BAGIAN A: PILIHAN GANDA</span>
+                <span class="badge">30 Soal × 2 Poin = 60</span>
+            </div>
+            <div class="instruction-box">
+                <h4>📌 Pilih SATU jawaban yang paling tepat!</h4>
+                <p style="margin-top: 8px;">Soal mencakup seluruh materi Bab 1 s.d. Bab 15. Soal bertanda <strong>HOTS</strong> memerlukan analisis dan penalaran tingkat tinggi.</p>
+            </div>
+
+            <!-- PG 1 - Bab 1 Greeting -->
+            <div class="question-block">
+                <span class="question-text">
+                    <span class="question-number">1</span>
+                    <span class="chapter-badge">Bab 1</span><br>
+                    Pukul 07.30 pagi, Ahmad bertemu kepala sekolah di gerbang. Sapaan yang paling tepat adalah...
+                </span>
+                <div class="options">
+                    <label><input type="radio" name="pg1" value="A"> A. Good night, Sir.</label>
+                    <label><input type="radio" name="pg1" value="B"> B. Good afternoon, Sir.</label>
+                    <label><input type="radio" name="pg1" value="C"> C. Good morning, Sir.</label>
+                    <label><input type="radio" name="pg1" value="D"> D. Good evening, Sir.</label>
+                </div>
+            </div>
+
+            <!-- PG 2 - Bab 1 Greeting HOTS -->
+            <div class="question-block hots">
+                <span class="question-text">
+                    <span class="question-number">2</span>
+                    <span class="chapter-badge">Bab 1</span>
+                    <span class="hots-badge">HOTS</span><br>
+                    Perhatikan dialog berikut!<br>
+                    <em>Mr. Budi: "How do you do, Mr. Hasan."<br>
+                    Mr. Hasan: "..."</em><br>
+                    Respon yang PALING TEPAT untuk melengkapi dialog di atas adalah...
+                </span>
+                <div class="options">
+                    <label><input type="radio" name="pg2" value="A"> A. I am fine, thank you.</label>
+                    <label><input type="radio" name="pg2" value="B"> B. How do you do?</label>
+                    <label><input type="radio" name="pg2" value="C"> C. Nice to meet you too.</label>
+                    <label><input type="radio" name="pg2" value="D"> D. Good morning, Sir.</label>
+                </div>
+            </div>
+
+            <!-- PG 3 - Bab 2 Saying Goodbye -->
+            <div class="question-block">
+                <span class="question-text">
+                    <span class="question-number">3</span>
+                    <span class="chapter-badge">Bab 2</span><br>
+                    Respon yang paling tepat untuk ungkapan <em>"Have a nice day"</em> adalah...
+                </span>
+                <div class="options">
+                    <label><input type="radio" name="pg3" value="A"> A. Thank you. You too.</label>
+                    <label><input type="radio" name="pg3" value="B"> B. My name is Rina.</label>
+                    <label><input type="radio" name="pg3" value="C"> C. Good morning.</label>
+                    <label><input type="radio" name="pg3" value="D"> D. I am fine.</label>
+                </div>
+            </div>
+
+            <!-- PG 4 - Bab 2 Saying Goodbye -->
+            <div class="question-block">
+                <span class="question-text">
+                    <span class="question-number">4</span>
+                    <span class="chapter-badge">Bab 2</span><br>
+                    Ungkapan <em>"Good Night"</em> digunakan ketika...
+                </span>
+                <div class="options">
+                    <label><input type="radio" name="pg4" value="A"> A. Kita bertemu seseorang di malam hari.</label>
+                    <label><input type="radio" name="pg4" value="B"> B. Kita berpisah atau akan tidur di malam hari.</label>
+                    <label><input type="radio" name="pg4" value="C"> C. Kita makan malam bersama keluarga.</label>
+                    <label><input type="radio" name="pg4" value="D"> D. Kita bangun tidur di malam hari.</label>
+                </div>
+            </div>
+
+            <!-- PG 5 - Bab 3 Self Introduction -->
+            <div class="question-block">
+                <span class="question-text">
+                    <span class="question-number">5</span>
+                    <span class="chapter-badge">Bab 3</span><br>
+                    Ungkapan <em>"I was born on March 15th, 2014"</em> digunakan untuk menyebutkan...
+                </span>
+                <div class="options">
+                    <label><input type="radio" name="pg5" value="A"> A. Alamat rumah</label>
+                    <label><input type="radio" name="pg5" value="B"> B. Tanggal lahir</label>
+                    <label><input type="radio" name="pg5" value="C"> C. Nama sekolah</label>
+                    <label><input type="radio" name="pg5" value="D"> D. Nama hobi</label>
+                </div>
+            </div>
+
+            <!-- PG 6 - Bab 3 Self Introduction -->
+            <div class="question-block">
+                <span class="question-text">
+                    <span class="question-number">6</span>
+                    <span class="chapter-badge">Bab 3</span><br>
+                    Manakah yang merupakan ungkapan <strong>formal</strong> untuk memperkenalkan diri?
+                </span>
+                <div class="options">
+                    <label><input type="radio" name="pg6" value="A"> A. Hi, I'm Rina!</label>
+                    <label><input type="radio" name="pg6" value="B"> B. Hey, call me Ahmad.</label>
+                    <label><input type="radio" name="pg6" value="C"> C. Let me introduce myself. My name is Ahmad Fauzi.</label>
+                    <label><input type="radio" name="pg6" value="D"> D. Yo, what's up? I'm Budi.</label>
+                </div>
+            </div>
+
+            <!-- PG 7 - Bab 4 Introducing Others -->
+            <div class="question-block">
+                <span class="question-text">
+                    <span class="question-number">7</span>
+                    <span class="chapter-badge">Bab 4</span><br>
+                    Manakah yang merupakan ungkapan <strong>formal</strong> untuk memperkenalkan orang lain?
+                </span>
+                <div class="options">
+                    <label><input type="radio" name="pg7" value="A"> A. This is my friend, Rina.</label>
+                    <label><input type="radio" name="pg7" value="B"> B. May I introduce Mr. Budi from the Education Office?</label>
+                    <label><input type="radio" name="pg7" value="C"> C. Hey, do you know Ahmad?</label>
+                    <label><input type="radio" name="pg7" value="D"> D. I'd like you to meet my cousin.</label>
+                </div>
+            </div>
+
+            <!-- PG 8 - Bab 4 Introducing Others -->
+            <div class="question-block">
+                <span class="question-text">
+                    <span class="question-number">8</span>
+                    <span class="chapter-badge">Bab 4</span><br>
+                    Respon yang paling tepat ketika seseorang berkata <em>"It's a pleasure to meet you"</em> adalah...
+                </span>
+                <div class="options">
+                    <label><input type="radio" name="pg8" value="A"> A. I am fine, thank you.</label>
+                    <label><input type="radio" name="pg8" value="B"> B. The pleasure is mine.</label>
+                    <label><input type="radio" name="pg8" value="C"> C. My name is Ahmad.</label>
+                    <label><input type="radio" name="pg8" value="D"> D. Goodbye.</label>
+                </div>
+            </div>
+
+            <!-- PG 9 - Bab 5 Describing Hobby -->
+            <div class="question-block">
+                <span class="question-text">
+                    <span class="question-number">9</span>
+                    <span class="chapter-badge">Bab 5</span><br>
+                    <em>"My hobby is reading novels."</em> Kata <em>"reading"</em> dalam kalimat tersebut termasuk jenis kata...
+                </span>
+                <div class="options">
+                    <label><input type="radio" name="pg9" value="A"> A. Noun (kata benda)</label>
+                    <label><input type="radio" name="pg9" value="B"> B. Gerund (kata kerja berbentuk -ing yang berfungsi sebagai benda)</label>
+                    <label><input type="radio" name="pg9" value="C"> C. Adjective (kata sifat)</label>
+                    <label><input type="radio" name="pg9" value="D"> D. Adverb (kata keterangan)</label>
+                </div>
+            </div>
+
+            <!-- PG 10 - Bab 5 Describing Hobby -->
+            <div class="question-block">
+                <span class="question-text">
+                    <span class="question-number">10</span>
+                    <span class="chapter-badge">Bab 5</span><br>
+                    Manakah ungkapan yang tepat untuk menanyakan hobi seseorang?
+                </span>
+                <div class="options">
+                    <label><input type="radio" name="pg10" value="A"> A. What is your name?</label>
+                    <label><input type="radio" name="pg10" value="B"> B. What is your hobby?</label>
+                    <label><input type="radio" name="pg10" value="C"> C. How old are you?</label>
+                    <label><input type="radio" name="pg10" value="D"> D. Where do you live?</label>
+                </div>
+            </div>
+
+            <!-- PG 11 - Bab 6 Physical Appearances HOTS -->
+            <div class="question-block hots">
+                <span class="question-text">
+                    <span class="question-number">11</span>
+                    <span class="chapter-badge">Bab 6</span>
+                    <span class="hots-badge">HOTS</span><br>
+                    Perhatikan deskripsi berikut!<br>
+                    <em>"She has long curly hair, brown eyes, and a slim body. She is very friendly and always smiles."</em><br>
+                    Kata yang menunjukkan <strong>physical appearance</strong> (penampilan fisik) adalah...
+                </span>
+                <div class="options">
+                    <label><input type="radio" name="pg11" value="A"> A. friendly and smiles</label>
+                    <label><input type="radio" name="pg11" value="B"> B. long curly hair, brown eyes, slim body</label>
+                    <label><input type="radio" name="pg11" value="C"> C. very friendly</label>
+                    <label><input type="radio" name="pg11" value="D"> D. always smiles</label>
+                </div>
+            </div>
+
+            <!-- PG 12 - Bab 6 Physical Appearances -->
+            <div class="question-block">
+                <span class="question-text">
+                    <span class="question-number">12</span>
+                    <span class="chapter-badge">Bab 6</span><br>
+                    Lawan kata dari <em>"tall"</em> (tinggi) adalah...
+                </span>
+                <div class="options">
+                    <label><input type="radio" name="pg12" value="A"> A. Fat</label>
+                    <label><input type="radio" name="pg12" value="B"> B. Short</label>
+                    <label><input type="radio" name="pg12" value="C"> C. Slim</label>
+                    <label><input type="radio" name="pg12" value="D"> D. Thin</label>
+                </div>
+            </div>
+
+            <!-- PG 13 - Bab 7 Regular Activities -->
+            <div class="question-block">
+                <span class="question-text">
+                    <span class="question-number">13</span>
+                    <span class="chapter-badge">Bab 7</span><br>
+                    <em>"She ... to school every day."</em> Kata yang tepat untuk melengkapi kalimat adalah...
+                </span>
+                <div class="options">
+                    <label><input type="radio" name="pg13" value="A"> A. go</label>
+                    <label><input type="radio" name="pg13" value="B"> B. goes</label>
+                    <label><input type="radio" name="pg13" value="C"> C. going</label>
+                    <label><input type="radio" name="pg13" value="D"> D. gone</label>
+                </div>
+            </div>
+
+            <!-- PG 14 - Bab 7 Regular Activities -->
+            <div class="question-block">
+                <span class="question-text">
+                    <span class="question-number">14</span>
+                    <span class="chapter-badge">Bab 7</span><br>
+                    Kata keterangan waktu yang sering digunakan dalam <em>Simple Present Tense</em> adalah...
+                </span>
+                <div class="options">
+                    <label><input type="radio" name="pg14" value="A"> A. Yesterday</label>
+                    <label><input type="radio" name="pg14" value="B"> B. Tomorrow</label>
+                    <label><input type="radio" name="pg14" value="C"> C. Every day</label>
+                    <label><input type="radio" name="pg14" value="D"> D. Last week</label>
+                </div>
+            </div>
+
+            <!-- PG 15 - Bab 9 Favorite Food & Drink -->
+            <div class="question-block">
+                <span class="question-text">
+                    <span class="question-number">15</span>
+                    <span class="chapter-badge">Bab 9</span><br>
+                    <em>"My favorite food is Rendang. It is ..."</em> Kata yang tepat untuk melengkapi adalah...
+                </span>
+                <div class="options">
+                    <label><input type="radio" name="pg15" value="A"> A. delicious</label>
+                    <label><input type="radio" name="pg15" value="B"> B. terrible</label>
+                    <label><input type="radio" name="pg15" value="C"> C. bitter</label>
+                    <label><input type="radio" name="pg15" value="D"> D. sour</label>
+                </div>
+            </div>
+
+            <!-- PG 16 - Bab 9 Favorite Food & Drink -->
+            <div class="question-block">
+                <span class="question-text">
+                    <span class="question-number">16</span>
+                    <span class="chapter-badge">Bab 9</span><br>
+                    Manakah yang merupakan contoh <strong>minuman</strong> tradisional Indonesia?
+                </span>
+                <div class="options">
+                    <label><input type="radio" name="pg16" value="A"> A. Rendang</label>
+                    <label><input type="radio" name="pg16" value="B"> B. Wedang Jahe</label>
+                    <label><input type="radio" name="pg16" value="C"> C. Nasi Goreng</label>
+                    <label><input type="radio" name="pg16" value="D"> D. Sate</label>
+                </div>
+            </div>
+
+            <!-- PG 17 - Bab 10 Food & Ingredients -->
+            <div class="question-block">
+                <span class="question-text">
+                    <span class="question-number">17</span>
+                    <span class="chapter-badge">Bab 10</span><br>
+                    <em>"What are the ingredients of fried rice?"</em> Manakah yang BUKAN bahan nasi goreng?
+                </span>
+                <div class="options">
+                    <label><input type="radio" name="pg17" value="A"> A. Rice</label>
+                    <label><input type="radio" name="pg17" value="B"> B. Garlic</label>
+                    <label><input type="radio" name="pg17" value="C"> C. Chocolate</label>
+                    <label><input type="radio" name="pg17" value="D"> D. Soy sauce</label>
+                </div>
+            </div>
+
+            <!-- PG 18 - Bab 10 Food & Ingredients HOTS -->
+            <div class="question-block hots">
+                <span class="question-text">
+                    <span class="question-number">18</span>
+                    <span class="chapter-badge">Bab 10</span>
+                    <span class="hots-badge">HOTS</span><br>
+                    Perhatikan dialog berikut!<br>
+                    <em>Siti: "What do you need to make orange juice?"<br>
+                    Rina: "I need oranges, sugar, and ..."</em><br>
+                    Kata yang paling tepat untuk melengkapi dialog adalah...
+                </span>
+                <div class="options">
+                    <label><input type="radio" name="pg18" value="A"> A. rice</label>
+                    <label><input type="radio" name="pg18" value="B"> B. water</label>
+                    <label><input type="radio" name="pg18" value="C"> C. chicken</label>
+                    <label><input type="radio" name="pg18" value="D"> D. flour</label>
+                </div>
+            </div>
+
+            <!-- PG 19 - Bab 11 Tools & Ingredients -->
+            <div class="question-block">
+                <span class="question-text">
+                    <span class="question-number">19</span>
+                    <span class="chapter-badge">Bab 11</span><br>
+                    Alat yang digunakan untuk <strong>mengaduk</strong> adonan adalah...
+                </span>
+                <div class="options">
+                    <label><input type="radio" name="pg19" value="A"> A. Knife</label>
+                    <label><input type="radio" name="pg19" value="B"> B. Spoon</label>
+                    <label><input type="radio" name="pg19" value="C"> C. Whisk / Stirrer</label>
+                    <label><input type="radio" name="pg19" value="D"> D. Plate</label>
+                </div>
+            </div>
+
+            <!-- PG 20 - Bab 11 Tools & Ingredients -->
+            <div class="question-block">
+                <span class="question-text">
+                    <span class="question-number">20</span>
+                    <span class="chapter-badge">Bab 11</span><br>
+                    <em>"We use a ... to cut the vegetables."</em> Kata yang tepat adalah...
+                </span>
+                <div class="options">
+                    <label><input type="radio" name="pg20" value="A"> A. knife</label>
+                    <label><input type="radio" name="pg20" value="B"> B. spoon</label>
+                    <label><input type="radio" name="pg20" value="C"> C. fork</label>
+                    <label><input type="radio" name="pg20" value="D"> D. glass</label>
+                </div>
+            </div>
+
+            <!-- PG 21 - Bab 12 Cooking Steps -->
+            <div class="question-block">
+                <span class="question-text">
+                    <span class="question-number">21</span>
+                    <span class="chapter-badge">Bab 12</span><br>
+                    Kata penghubung yang sering digunakan dalam urutan langkah memasak adalah...
+                </span>
+                <div class="options">
+                    <label><input type="radio" name="pg21" value="A"> A. First, then, finally</label>
+                    <label><input type="radio" name="pg21" value="B"> B. Because, so, therefore</label>
+                    <label><input type="radio" name="pg21" value="C"> C. Although, but, however</label>
+                    <label><input type="radio" name="pg21" value="D"> D. If, when, while</label>
+                </div>
+            </div>
+
+            <!-- PG 22 - Bab 12 Cooking Steps HOTS -->
+            <div class="question-block hots">
+                <span class="question-text">
+                    <span class="question-number">22</span>
+                    <span class="chapter-badge">Bab 12</span>
+                    <span class="hots-badge">HOTS</span><br>
+                    Urutan langkah membuat teh manis yang paling logis adalah...
+                </span>
+                <div class="options">
+                    <label><input type="radio" name="pg22" value="A"> A. Add sugar → Boil water → Put tea bag → Stir</label>
+                    <label><input type="radio" name="pg22" value="B"> B. Boil water → Put tea bag → Add sugar → Stir</label>
+                    <label><input type="radio" name="pg22" value="C"> C. Stir → Boil water → Add sugar → Put tea bag</label>
+                    <label><input type="radio" name="pg22" value="D"> D. Put tea bag → Stir → Boil water → Add sugar</label>
+                </div>
+            </div>
+
+            <!-- PG 23 - Bab 13 Rooms in House -->
+            <div class="question-block">
+                <span class="question-text">
+                    <span class="question-number">23</span>
+                    <span class="chapter-badge">Bab 13</span><br>
+                    Ruangan yang digunakan untuk <strong>tidur</strong> adalah...
+                </span>
+                <div class="options">
+                    <label><input type="radio" name="pg23" value="A"> A. Kitchen</label>
+                    <label><input type="radio" name="pg23" value="B"> B. Living room</label>
+                    <label><input type="radio" name="pg23" value="C"> C. Bedroom</label>
+                    <label><input type="radio" name="pg23" value="D"> D. Bathroom</label>
+                </div>
+            </div>
+
+            <!-- PG 24 - Bab 13 Rooms in House -->
+            <div class="question-block">
+                <span class="question-text">
+                    <span class="question-number">24</span>
+                    <span class="chapter-badge">Bab 13</span><br>
+                    <em>"There is a ... in the living room."</em> Benda yang paling tepat adalah...
+                </span>
+                <div class="options">
+                    <label><input type="radio" name="pg24" value="A"> A. bed</label>
+                    <label><input type="radio" name="pg24" value="B"> B. sofa</label>
+                    <label><input type="radio" name="pg24" value="C"> C. stove</label>
+                    <label><input type="radio" name="pg24" value="D"> D. shower</label>
+                </div>
+            </div>
+
+            <!-- PG 25 - Bab 14 House Cleaning -->
+            <div class="question-block">
+                <span class="question-text">
+                    <span class="question-number">25</span>
+                    <span class="chapter-badge">Bab 14</span><br>
+                    Alat yang digunakan untuk <strong>menyapu</strong> lantai adalah...
+                </span>
+                <div class="options">
+                    <label><input type="radio" name="pg25" value="A"> A. Mop</label>
+                    <label><input type="radio" name="pg25" value="B"> B. Broom</label>
+                    <label><input type="radio" name="pg25" value="C"> C. Vacuum</label>
+                    <label><input type="radio" name="pg25" value="D"> D. Sponge</label>
+                </div>
+            </div>
+
+            <!-- PG 26 - Bab 14 House Cleaning -->
+            <div class="question-block">
+                <span class="question-text">
+                    <span class="question-number">26</span>
+                    <span class="chapter-badge">Bab 14</span><br>
+                    <em>"Mother ... the floor every morning."</em> Kata yang tepat adalah...
+                </span>
+                <div class="options">
+                    <label><input type="radio" name="pg26" value="A"> A. sweep</label>
+                    <label><input type="radio" name="pg26" value="B"> B. sweeps</label>
+                    <label><input type="radio" name="pg26" value="C"> C. sweeping</label>
+                    <label><input type="radio" name="pg26" value="D"> D. swept</label>
+                </div>
+            </div>
+
+            <!-- PG 27 - Bab 15 Giving Instructions -->
+            <div class="question-block">
+                <span class="question-text">
+                    <span class="question-number">27</span>
+                    <span class="chapter-badge">Bab 15</span><br>
+                    Kalimat instruksi yang tepat untuk menyuruh seseorang membuka buku adalah...
+                </span>
+                <div class="options">
+                    <label><input type="radio" name="pg27" value="A"> A. You open your book.</label>
+                    <label><input type="radio" name="pg27" value="B"> B. Open your book, please.</label>
+                    <label><input type="radio" name="pg27" value="C"> C. I open my book.</label>
+                    <label><input type="radio" name="pg27" value="D"> D. He opens his book.</label>
+                </div>
+            </div>
+
+            <!-- PG 28 - Bab 15 Giving Instructions -->
+            <div class="question-block">
+                <span class="question-text">
+                    <span class="question-number">28</span>
+                    <span class="chapter-badge">Bab 15</span><br>
+                    Manakah yang merupakan contoh <strong>imperative sentence</strong> (kalimat perintah)?
+                </span>
+                <div class="options">
+                    <label><input type="radio" name="pg28" value="A"> A. She is reading a book.</label>
+                    <label><input type="radio" name="pg28" value="B"> B. Do you like coffee?</label>
+                    <label><input type="radio" name="pg28" value="C"> C. Stir the mixture well.</label>
+                    <label><input type="radio" name="pg28" value="D"> D. They are playing football.</label>
+                </div>
+            </div>
+
+            <!-- PG 29 - Campuran HOTS -->
+            <div class="question-block hots">
+                <span class="question-text">
+                    <span class="question-number">29</span>
+                    <span class="chapter-badge">Campuran</span>
+                    <span class="hots-badge">HOTS</span><br>
+                    Perhatikan situasi berikut!<br>
+                    <em>Andi baru saja pindah ke kota baru. Ia bertemu tetangganya untuk pertama kali di pagi hari.</em><br>
+                    Urutan tindakan komunikasi yang PALING TEPAT dilakukan Andi adalah...
+                </span>
+                <div class="options">
+                    <label><input type="radio" name="pg29" value="A"> A. Langsung bertanya hobi → Menyebutkan nama → Berpamitan</label>
+                    <label><input type="radio" name="pg29" value="B"> B. Memberi salam → Memperkenalkan diri → Berjabat tangan → Berpamitan sopan</label>
+                    <label><input type="radio" name="pg29" value="C"> C. Langsung pergi tanpa menyapa → Menyesal kemudian</label>
+                    <label><input type="radio" name="pg29" value="D"> D. Hanya tersenyum tanpa berbicara → Meninggalkan tetangga</label>
+                </div>
+            </div>
+
+            <!-- PG 30 - Campuran -->
+            <div class="question-block">
+                <span class="question-text">
+                    <span class="question-number">30</span>
+                    <span class="chapter-badge">Campuran</span><br>
+                    Manakah pasangan ungkapan yang tepat?
+                </span>
+                <div class="options">
+                    <label><input type="radio" name="pg30" value="A"> A. Greeting: "Goodbye" — Leave-taking: "Hello"</label>
+                    <label><input type="radio" name="pg30" value="B"> B. Greeting: "Good morning" — Leave-taking: "See you later"</label>
+                    <label><input type="radio" name="pg30" value="C"> C. Greeting: "Take care" — Leave-taking: "How are you?"</label>
+                    <label><input type="radio" name="pg30" value="D"> D. Greeting: "Nice to meet you" — Leave-taking: "What is your name?"</label>
+                </div>
+            </div>
+
+            <!-- ==================== BAGIAN B: PILIHAN GANDA KOMPLEKS ==================== -->
+            <div class="part-header">
+                <span>BAGIAN B: PILIHAN GANDA KOMPLEKS</span>
+                <span class="badge">10 Soal × 2 Poin = 20</span>
+            </div>
+            <div class="instruction-box">
+                <h4>📌 Pilih LEBIH DARI SATU jawaban yang benar!</h4>
+                <p style="margin-top: 8px;">Centang semua jawaban yang Anda anggap benar. Jawaban benar semua = nilai penuh. Jika ada jawaban yang salah atau kurang, nilai disesuaikan.</p>
+            </div>
+
+            <!-- PGK 1 -->
+            <div class="question-block">
+                <span class="question-text">
+                    <span class="question-number">31</span>
+                    <span class="chapter-badge">Bab 1-2</span><br>
+                    Manakah yang termasuk <strong>Formal Greeting/Leave-taking</strong>? (Pilih semua yang benar)
+                </span>
+                <div class="options">
+                    <label><input type="checkbox" name="pgk1" value="A"> A. Good morning, Sir.</label>
+                    <label><input type="checkbox" name="pgk1" value="B"> B. Hey, what's up?</label>
+                    <label><input type="checkbox" name="pgk1" value="C"> C. It was a pleasure meeting you.</label>
+                    <label><input type="checkbox" name="pgk1" value="D"> D. See ya!</label>
+                    <label><input type="checkbox" name="pgk1" value="E"> E. How do you do?</label>
+                </div>
+            </div>
+
+            <!-- PGK 2 -->
+            <div class="question-block">
+                <span class="question-text">
+                    <span class="question-number">32</span>
+                    <span class="chapter-badge">Bab 3-4</span><br>
+                    Informasi apa saja yang umumnya ada dalam perkenalan diri? (Pilih semua yang benar)
+                </span>
+                <div class="options">
+                    <label><input type="checkbox" name="pgk2" value="A"> A. Nama lengkap</label>
+                    <label><input type="checkbox" name="pgk2" value="B"> B. Nomor KTP orang tua</label>
+                    <label><input type="checkbox" name="pgk2" value="C"> C. Usia / tanggal lahir</label>
+                    <label><input type="checkbox" name="pgk2" value="D"> D. Alamat</label>
+                    <label><input type="checkbox" name="pgk2" value="E"> E. Password media sosial</label>
+                </div>
+            </div>
+
+            <!-- PGK 3 -->
+            <div class="question-block">
+                <span class="question-text">
+                    <span class="question-number">33</span>
+                    <span class="chapter-badge">Bab 5</span><br>
+                    Manakah yang merupakan contoh <strong>hobi</strong>? (Pilih semua yang benar)
+                </span>
+                <div class="options">
+                    <label><input type="checkbox" name="pgk3" value="A"> A. Reading novels</label>
+                    <label><input type="checkbox" name="pgk3" value="B"> B. Sleeping all day</label>
+                    <label><input type="checkbox" name="pgk3" value="C"> C. Playing football</label>
+                    <label><input type="checkbox" name="pgk3" value="D"> D. Cooking</label>
+                    <label><input type="checkbox" name="pgk3" value="E"> E. Breathing</label>
+                </div>
+            </div>
+
+            <!-- PGK 4 -->
+            <div class="question-block">
+                <span class="question-text">
+                    <span class="question-number">34</span>
+                    <span class="chapter-badge">Bab 6</span><br>
+                    Manakah yang merupakan <strong>physical appearance</strong>? (Pilih semua yang benar)
+                </span>
+                <div class="options">
+                    <label><input type="checkbox" name="pgk4" value="A"> A. Tall</label>
+                    <label><input type="checkbox" name="pgk4" value="B"> B. Kind</label>
+                    <label><input type="checkbox" name="pgk4" value="C"> C. Long hair</label>
+                    <label><input type="checkbox" name="pgk4" value="D"> D. Brown eyes</label>
+                    <label><input type="checkbox" name="pgk4" value="E"> E. Honest</label>
+                </div>
+            </div>
+
+            <!-- PGK 5 -->
+            <div class="question-block">
+                <span class="question-text">
+                    <span class="question-number">35</span>
+                    <span class="chapter-badge">Bab 7</span><br>
+                    Manakah kalimat <strong>Simple Present Tense</strong> yang benar? (Pilih semua yang benar)
+                </span>
+                <div class="options">
+                    <label><input type="checkbox" name="pgk5" value="A"> A. She goes to school every day.</label>
+                    <label><input type="checkbox" name="pgk5" value="B"> B. They go to school every day.</label>
+                    <label><input type="checkbox" name="pgk5" value="C"> C. He going to school every day.</label>
+                    <label><input type="checkbox" name="pgk5" value="D"> D. I study English every night.</label>
+                    <label><input type="checkbox" name="pgk5" value="E"> E. She went to school yesterday.</label>
+                </div>
+            </div>
+
+            <!-- PGK 6 -->
+            <div class="question-block">
+                <span class="question-text">
+                    <span class="question-number">36</span>
+                    <span class="chapter-badge">Bab 9-10</span><br>
+                    Manakah yang termasuk <strong>ingredients</strong> (bahan) untuk membuat nasi goreng? (Pilih semua yang benar)
+                </span>
+                <div class="options">
+                    <label><input type="checkbox" name="pgk6" value="A"> A. Rice</label>
+                    <label><input type="checkbox" name="pgk6" value="B"> B. Garlic</label>
+                    <label><input type="checkbox" name="pgk6" value="C"> C. Soy sauce</label>
+                    <label><input type="checkbox" name="pgk6" value="D"> D. Chocolate</label>
+                    <label><input type="checkbox" name="pgk6" value="E"> E. Cooking oil</label>
+                </div>
+            </div>
+
+            <!-- PGK 7 -->
+            <div class="question-block">
+                <span class="question-text">
+                    <span class="question-number">37</span>
+                    <span class="chapter-badge">Bab 11</span><br>
+                    Manakah yang merupakan <strong>cooking tools</strong> (alat masak)? (Pilih semua yang benar)
+                </span>
+                <div class="options">
+                    <label><input type="checkbox" name="pgk7" value="A"> A. Frying pan</label>
+                    <label><input type="checkbox" name="pgk7" value="B"> B. Spoon</label>
+                    <label><input type="checkbox" name="pgk7" value="C"> C. Knife</label>
+                    <label><input type="checkbox" name="pgk7" value="D"> D. Television</label>
+                    <label><input type="checkbox" name="pgk7" value="E"> E. Stove</label>
+                </div>
+            </div>
+
+            <!-- PGK 8 -->
+            <div class="question-block">
+                <span class="question-text">
+                    <span class="question-number">38</span>
+                    <span class="chapter-badge">Bab 12</span><br>
+                    Manakah yang merupakan <strong>sequence words</strong> (kata urutan)? (Pilih semua yang benar)
+                </span>
+                <div class="options">
+                    <label><input type="checkbox" name="pgk8" value="A"> A. First</label>
+                    <label><input type="checkbox" name="pgk8" value="B"> B. Then</label>
+                    <label><input type="checkbox" name="pgk8" value="C"> C. Finally</label>
+                    <label><input type="checkbox" name="pgk8" value="D"> D. Because</label>
+                    <label><input type="checkbox" name="pgk8" value="E"> E. Next</label>
+                </div>
+            </div>
+
+            <!-- PGK 9 -->
+            <div class="question-block">
+                <span class="question-text">
+                    <span class="question-number">39</span>
+                    <span class="chapter-badge">Bab 13</span><br>
+                    Manakah benda yang biasanya ada di <strong>kamar mandi (bathroom)</strong>? (Pilih semua yang benar)
+                </span>
+                <div class="options">
+                    <label><input type="checkbox" name="pgk9" value="A"> A. Soap</label>
+                    <label><input type="checkbox" name="pgk9" value="B"> B. Towel</label>
+                    <label><input type="checkbox" name="pgk9" value="C"> C. Shampoo</label>
+                    <label><input type="checkbox" name="pgk9" value="D"> D. Pillow</label>
+                    <label><input type="checkbox" name="pgk9" value="E"> E. Stove</label>
+                </div>
+            </div>
+
+            <!-- PGK 10 -->
+            <div class="question-block">
+                <span class="question-text">
+                    <span class="question-number">40</span>
+                    <span class="chapter-badge">Bab 14-15</span><br>
+                    Manakah yang merupakan <strong>cleaning tools</strong> (alat kebersihan)? (Pilih semua yang benar)
+                </span>
+                <div class="options">
+                    <label><input type="checkbox" name="pgk10" value="A"> A. Broom</label>
+                    <label><input type="checkbox" name="pgk10" value="B"> B. Mop</label>
+                    <label><input type="checkbox" name="pgk10" value="C"> C. Dustpan</label>
+                    <label><input type="checkbox" name="pgk10" value="D"> D. Fork</label>
+                    <label><input type="checkbox" name="pgk10" value="E"> E. Sponge</label>
+                </div>
+            </div>
+
+            <!-- ==================== BAGIAN C: BENAR / SALAH ==================== -->
+            <div class="part-header">
+                <span>BAGIAN C: BENAR / SALAH</span>
+                <span class="badge">5 Soal × 2 Poin = 10</span>
+            </div>
+            <div class="instruction-box">
+                <h4>📌 Tentukan apakah pernyataan berikut BENAR atau SALAH!</h4>
+                <p style="margin-top: 8px;">Pilih salah satu opsi pada kolom di sebelah kanan setiap pernyataan.</p>
+            </div>
+
+            <div class="question-block">
+                <span class="question-text">
+                    <span class="question-number">41-45</span>
+                    Tentukan Benar atau Salah untuk setiap pernyataan berikut:
+                </span>
+                <table class="tf-table">
+                    <thead>
+                        <tr>
+                            <th style="width: 70%;">Pernyataan</th>
+                            <th style="width: 30%; text-align: center;">B / S</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="statement"><strong>41.</strong> <em>"Good Night"</em> digunakan untuk menyapa seseorang di malam hari.</td>
+                            <td class="tf-options">
+                                <label><input type="radio" name="tf1" value="B"> Benar</label>
+                                <label><input type="radio" name="tf1" value="S"> Salah</label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="statement"><strong>42.</strong> Dalam perkenalan diri formal, kita sebaiknya menggunakan nama lengkap.</td>
+                            <td class="tf-options">
+                                <label><input type="radio" name="tf2" value="B"> Benar</label>
+                                <label><input type="radio" name="tf2" value="S"> Salah</label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="statement"><strong>43.</strong> Kata <em>"friendly"</em> dan <em>"kind"</em> termasuk deskripsi penampilan fisik (physical appearance).</td>
+                            <td class="tf-options">
+                                <label><input type="radio" name="tf3" value="B"> Benar</label>
+                                <label><input type="radio" name="tf3" value="S"> Salah</label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="statement"><strong>44.</strong> <em>"First, Then, Finally"</em> adalah kata penghubung yang digunakan dalam urutan langkah memasak.</td>
+                            <td class="tf-options">
+                                <label><input type="radio" name="tf4" value="B"> Benar</label>
+                                <label><input type="radio" name="tf4" value="S"> Salah</label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="statement"><strong>45.</strong> Kalimat <em>"Open the door, please!"</em> adalah contoh imperative sentence (kalimat perintah).</td>
+                            <td class="tf-options">
+                                <label><input type="radio" name="tf5" value="B"> Benar</label>
+                                <label><input type="radio" name="tf5" value="S"> Salah</label>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- ==================== BAGIAN D: MENJODOHKAN ==================== -->
+            <div class="part-header">
+                <span>BAGIAN D: MENJODOHKAN</span>
+                <span class="badge">5 Soal × 2 Poin = 10</span>
+            </div>
+            <div class="instruction-box">
+                <h4>📌 Pasangkan pernyataan di kolom kiri dengan jawaban yang tepat di dropdown!</h4>
+                <p style="margin-top: 8px;">Setiap jawaban hanya digunakan satu kali.</p>
+            </div>
+
+            <div class="question-block">
+                <span class="question-text">
+                    <span class="question-number">46-50</span>
+                    Pasangkan pertanyaan/ungkapan di kiri dengan respon/jawaban yang paling tepat!
+                </span>
+                <table class="matching-table">
+                    <thead>
+                        <tr>
+                            <th style="width: 50%;">Pernyataan / Pertanyaan</th>
+                            <th style="width: 50%;">Jawaban (Pilih dari dropdown)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>46.</strong> "How are you?"</td>
+                            <td>
+                                <select name="match1">
+                                    <option value="">-- Pilih Jawaban --</option>
+                                    <option value="A">A. Nice to meet you too.</option>
+                                    <option value="B">B. I am fine, thank you.</option>
+                                    <option value="C">C. My hobby is reading.</option>
+                                    <option value="D">D. First, boil the water.</option>
+                                    <option value="E">E. It is in the kitchen.</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><strong>47.</strong> "Nice to meet you."</td>
+                            <td>
+                                <select name="match2">
+                                    <option value="">-- Pilih Jawaban --</option>
+                                    <option value="A">A. Nice to meet you too.</option>
+                                    <option value="B">B. I am fine, thank you.</option>
+                                    <option value="C">C. My hobby is reading.</option>
+                                    <option value="D">D. First, boil the water.</option>
+                                    <option value="E">E. It is in the kitchen.</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><strong>48.</strong> "What is your hobby?"</td>
+                            <td>
+                                <select name="match3">
+                                    <option value="">-- Pilih Jawaban --</option>
+                                    <option value="A">A. Nice to meet you too.</option>
+                                    <option value="B">B. I am fine, thank you.</option>
+                                    <option value="C">C. My hobby is reading.</option>
+                                    <option value="D">D. First, boil the water.</option>
+                                    <option value="E">E. It is in the kitchen.</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><strong>49.</strong> "What is the first step to make tea?"</td>
+                            <td>
+                                <select name="match4">
+                                    <option value="">-- Pilih Jawaban --</option>
+                                    <option value="A">A. Nice to meet you too.</option>
+                                    <option value="B">B. I am fine, thank you.</option>
+                                    <option value="C">C. My hobby is reading.</option>
+                                    <option value="D">D. First, boil the water.</option>
+                                    <option value="E">E. It is in the kitchen.</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><strong>50.</strong> "Where do you cook?"</td>
+                            <td>
+                                <select name="match5">
+                                    <option value="">-- Pilih Jawaban --</option>
+                                    <option value="A">A. Nice to meet you too.</option>
+                                    <option value="B">B. I am fine, thank you.</option>
+                                    <option value="C">C. My hobby is reading.</option>
+                                    <option value="D">D. First, boil the water.</option>
+                                    <option value="E">E. It is in the kitchen.</option>
+                                </select>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Result Display -->
+            <div class="result-box" id="resultBox">
+                <h3 style="font-family: 'Georgia', serif; margin-bottom: 10px;">📊 HASIL UJIAN AKHIR SEMESTER</h3>
+                <div class="result-grid">
+                    <div class="result-item">
+                        <span class="score" id="pgScore">0</span>
+                        <span class="label">Bagian A: PG (/60)</span>
+                    </div>
+                    <div class="result-item">
+                        <span class="score" id="pgkScore">0</span>
+                        <span class="label">Bagian B: PG Kompleks (/20)</span>
+                    </div>
+                    <div class="result-item">
+                        <span class="score" id="tfScore">0</span>
+                        <span class="label">Bagian C: B/S (/10)</span>
+                    </div>
+                    <div class="result-item">
+                        <span class="score" id="matchScore">0</span>
+                        <span class="label">Bagian D: Menjodohkan (/10)</span>
+                    </div>
+                </div>
+                <div class="result-total">
+                    <span class="score" id="totalScore">0</span>
+                    <span class="label">🏆 Skor Total (/100)</span>
+                </div>
+                <p style="margin-top: 20px; font-size: 0.9rem; opacity: 0.9; background: rgba(255,255,255,0.1); padding: 12px; border-radius: 6px;">
+                    *Hasil ini bersifat sementara. Nilai akhir akan ditentukan oleh guru setelah verifikasi jawaban.
+                </p>
+            </div>
+
+            <!-- Action Buttons -->
+            <div class="btn-group">
+                <button type="button" class="btn btn-primary" onclick="calculateScore()">✉️ KIRIM JAWABAN & LIHAT HASIL</button>
+                <button type="button" class="btn btn-secondary" onclick="downloadPDF()">📥 UNDUH PDF LENGKAP</button>
+                <button type="button" class="btn btn-secondary" onclick="downloadTXT()">📄 UNDUH JAWABAN (TXT)</button>
+                <button type="button" class="btn btn-warning" onclick="resetQuiz()">🔄 MULAI ULANG</button>
+                <button type="button" class="btn btn-success" onclick="emailGuru()">📧 KIRIM KE EMAIL GURU</button>
+            </div>
+        </form>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2026 <strong>Hendria Roza, S.Pd.I</strong> — MTsN 10 Agam.</p>
+        <p>Hak Cipta Dilindungi Undang-Undang. Dilarang memperbanyak tanpa izin.</p>
+        <p style="margin-top: 10px;">Email: <a href="mailto:hendriaroza85@gmail.com">hendriaroza85@gmail.com</a></p>
+    </footer>
+</div>
+
+<script>
+    // Set tanggal ujian otomatis
+    document.getElementById('examDate').value = new Date().toLocaleDateString('id-ID', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' });
+
+    // Kunci Jawaban
+    const pgKey = {
+        pg1: 'C', pg2: 'B', pg3: 'A', pg4: 'B', pg5: 'B',
+        pg6: 'C', pg7: 'B', pg8: 'B', pg9: 'B', pg10: 'B',
+        pg11: 'B', pg12: 'B', pg13: 'B', pg14: 'C', pg15: 'A',
+        pg16: 'B', pg17: 'C', pg18: 'B', pg19: 'C', pg20: 'A',
+        pg21: 'A', pg22: 'B', pg23: 'C', pg24: 'B', pg25: 'B',
+        pg26: 'B', pg27: 'B', pg28: 'C', pg29: 'B', pg30: 'B'
+    };
+
+    // Kunci PG Kompleks (array jawaban benar)
+    const pgkKey = {
+        pgk1: ['A', 'C', 'E'],
+        pgk2: ['A', 'C', 'D'],
+        pgk3: ['A', 'C', 'D'],
+        pgk4: ['A', 'C', 'D'],
+        pgk5: ['A', 'B', 'D'],
+        pgk6: ['A', 'B', 'C', 'E'],
+        pgk7: ['A', 'B', 'C', 'E'],
+        pgk8: ['A', 'B', 'C', 'E'],
+        pgk9: ['A', 'B', 'C'],
+        pgk10: ['A', 'B', 'C', 'E']
+    };
+
+    // Kunci Benar/Salah
+    const tfKey = { tf1: 'S', tf2: 'B', tf3: 'S', tf4: 'B', tf5: 'B' };
+
+    // Kunci Menjodohkan
+    const matchKey = { match1: 'B', match2: 'A', match3: 'C', match4: 'D', match5: 'E' };
+
+    function calculateScore() {
+        const name = document.getElementById('studentName').value.trim();
+        const nis = document.getElementById('studentNIS').value.trim();
+        const kelas = document.getElementById('studentClass').value;
+
+        if (!name || !nis || !kelas) {
+            alert("⚠️ Harap lengkapi Identitas Siswa (Nama, NIS, dan Kelas) sebelum mengirim jawaban!");
+            return;
+        }
+
+        // Hitung skor PG (30 soal × 2 poin = 60)
+        let pgCorrect = 0;
+        for (let i = 1; i <= 30; i++) {
+            const selected = document.querySelector(`input[name="pg${i}"]:checked`);
+            if (selected && selected.value === pgKey[`pg${i}`]) {
+                pgCorrect++;
+            }
+        }
+        const pgScore = pgCorrect * 2;
+
+        // Hitung skor PG Kompleks (10 soal × 2 poin = 20)
+        // Penilaian: jika semua jawaban benar dan tidak ada yang salah = 2 poin. Jika ada yang kurang/salah = 1 poin. Jika tidak dijawab = 0.
+        let pgkScore = 0;
+        for (let i = 1; i <= 10; i++) {
+            const selected = document.querySelectorAll(`input[name="pgk${i}"]:checked`);
+            const selectedValues = Array.from(selected).map(s => s.value).sort();
+            const correctValues = pgkKey[`pgk${i}`].slice().sort();
+            
+            if (selectedValues.length === 0) continue;
+            
+            const isExactMatch = JSON.stringify(selectedValues) === JSON.stringify(correctValues);
+            const isAllCorrect = selectedValues.every(v => correctValues.includes(v));
+            
+            if (isExactMatch) {
+                pgkScore += 2;
+            } else if (isAllCorrect && selectedValues.length < correctValues.length) {
+                pgkScore += 1; // Jawaban benar tapi kurang lengkap
+            }
+        }
+
+        // Hitung skor B/S (5 soal × 2 poin = 10)
+        let tfScore = 0;
+        for (let i = 1; i <= 5; i++) {
+            const selected = document.querySelector(`input[name="tf${i}"]:checked`);
+            if (selected && selected.value === tfKey[`tf${i}`]) {
+                tfScore += 2;
+            }
+        }
+
+        // Hitung skor Menjodohkan (5 soal × 2 poin = 10)
+        let matchScore = 0;
+        for (let i = 1; i <= 5; i++) {
+            const selected = document.querySelector(`select[name="match${i}"]`);
+            if (selected && selected.value === matchKey[`match${i}`]) {
+                matchScore += 2;
+            }
+        }
+
+        const totalScore = pgScore + pgkScore + tfScore + matchScore;
+
+        // Tampilkan hasil
+        document.getElementById('pgScore').textContent = pgScore;
+        document.getElementById('pgkScore').textContent = pgkScore;
+        document.getElementById('tfScore').textContent = tfScore;
+        document.getElementById('matchScore').textContent = matchScore;
+        document.getElementById('totalScore').textContent = totalScore;
+        document.getElementById('resultBox').style.display = 'block';
+
+        document.getElementById('resultBox').scrollIntoView({ behavior: 'smooth', block: 'center' });
+
+        let grade = '';
+        if (totalScore >= 90) grade = 'A (Sangat Baik)';
+        else if (totalScore >= 80) grade = 'B (Baik)';
+        else if (totalScore >= 70) grade = 'C (Cukup)';
+        else if (totalScore >= 60) grade = 'D (Kurang)';
+        else grade = 'E (Perlu Perbaikan)';
+
+        alert(`✅ Terima kasih, ${name}!\n\n📊 HASIL UJIAN ANDA:\n- Pilihan Ganda: ${pgScore}/60\n- PG Kompleks: ${pgkScore}/20\n- Benar/Salah: ${tfScore}/10\n- Menjodohkan: ${matchScore}/10\n━━━━━━━━━━━━━━━\n- TOTAL: ${totalScore}/100\n- Predikat: ${grade}\n\nNilai akhir akan diverifikasi oleh guru.`);
+    }
+
+    function downloadPDF() {
+        window.print();
+    }
+
+    function downloadTXT() {
+        const name = document.getElementById('studentName').value.trim() || "Nama_Siswa";
+        const nis = document.getElementById('studentNIS').value.trim() || "NIS";
+        const kelas = document.getElementById('studentClass').value || "Kelas";
+        const totalScore = document.getElementById('totalScore').textContent;
+
+        let content = `==================================================\n`;
+        content += `LEMBAR JAWABAN UJIAN AKHIR SEMESTER (UAS)\n`;
+        content += `Bahasa Inggris Kelas VII Semester 1\n`;
+        content += `MTsN 10 Agam — TP. 2026/2027\n`;
+        content += `==================================================\n`;
+        content += `Nama  : ${name}\n`;
+        content += `NIS   : ${nis}\n`;
+        content += `Kelas : ${kelas}\n`;
+        content += `Tanggal: ${new Date().toLocaleDateString('id-ID', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' })}\n`;
+        content += `Skor Total: ${totalScore}/100\n`;
+        content += `==================================================\n\n`;
+
+        content += `--- BAGIAN A: PILIHAN GANDA (30 soal) ---\n`;
+        for (let i = 1; i <= 30; i++) {
+            const selected = document.querySelector(`input[name="pg${i}"]:checked`);
+            const jawaban = selected ? selected.value : "-";
+            const isCorrect = selected && jawaban === pgKey[`pg${i}`] ? "[BENAR]" : "[ ]";
+            content += `Soal ${i.toString().padStart(2, '0')}: ${jawaban} ${isCorrect} (Kunci: ${pgKey[`pg${i}`]})\n`;
+        }
+
+        content += `\n--- BAGIAN B: PILIHAN GANDA KOMPLEKS (10 soal) ---\n`;
+        for (let i = 1; i <= 10; i++) {
+            const selected = document.querySelectorAll(`input[name="pgk${i}"]:checked`);
+            const jawaban = Array.from(selected).map(s => s.value).join(', ') || "-";
+            content += `Soal ${i.toString().padStart(2, '0')}: ${jawaban} (Kunci: ${pgkKey[`pgk${i}`].join(', ')})\n`;
+        }
+
+        content += `\n--- BAGIAN C: BENAR/SALAH (5 soal) ---\n`;
+        for (let i = 1; i <= 5; i++) {
+            const selected = document.querySelector(`input[name="tf${i}"]:checked`);
+            const jawaban = selected ? (selected.value === 'B' ? 'Benar' : 'Salah') : "-";
+            const isCorrect = selected && selected.value === tfKey[`tf${i}`] ? "[BENAR]" : "[ ]";
+            content += `Soal ${40 + i}: ${jawaban} ${isCorrect} (Kunci: ${tfKey[`tf${i}`] === 'B' ? 'Benar' : 'Salah'})\n`;
+        }
+
+        content += `\n--- BAGIAN D: MENJODOHKAN (5 soal) ---\n`;
+        for (let i = 1; i <= 5; i++) {
+            const selected = document.querySelector(`select[name="match${i}"]`);
+            const jawaban = selected ? selected.value : "-";
+            const isCorrect = selected && selected.value === matchKey[`match${i}`] ? "[BENAR]" : "[ ]";
+            content += `Soal ${45 + i}: ${jawaban} ${isCorrect} (Kunci: ${matchKey[`match${i}`]})\n`;
+        }
+
+        content += `\n==================================================\n`;
+        content += `Dokumen ini dibuat secara otomatis.\n`;
+        content += `© 2026 Hendria Roza, S.Pd.I - MTsN 10 Agam`;
+
+        const blob = new Blob([content], { type: 'text/plain;charset=utf-8' });
+        const url = window.URL.createObjectURL(blob);
+        const a = document.createElement('a');
+        a.href = url;
+        a.download = `UAS_BInggris_Kelas7_${name.replace(/\s+/g, '_')}.txt`;
+        document.body.appendChild(a);
+        a.click();
+        document.body.removeChild(a);
+        window.URL.revokeObjectURL(url);
+    }
+
+    function resetQuiz() {
+        if (confirm("⚠️ Apakah Anda yakin ingin mengosongkan SEMUA jawaban dan mulai ulang? Tindakan ini tidak dapat dibatalkan.")) {
+            document.getElementById('quizForm').reset();
+            document.getElementById('resultBox').style.display = 'none';
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+    }
+
+    function emailGuru() {
+        const name = document.getElementById('studentName').value.trim();
+        const nis = document.getElementById('studentNIS').value.trim();
+        const kelas = document.getElementById('studentClass').value;
+        const totalScore = document.getElementById('totalScore').textContent;
+
+        if (!name) {
+            alert("⚠️ Harap isi Nama Lengkap terlebih dahulu.");
+            return;
+        }
+
+        const subject = `Hasil UAS Bahasa Inggris Kelas VII - ${name} (${kelas})`;
+        const body = `Yth. Ibu Hendria Roza, S.Pd.I,\n\nAssalamu'alaikum Warahmatullahi Wabarakatuh.\n\nBerikut adalah hasil Ujian Akhir Semester (UAS) saya:\n\nNama : ${name}\nNIS  : ${nis}\nKelas: ${kelas}\nSkor Total: ${totalScore}/100\n\nSaya telah mengunduh file TXT berisi jawaban lengkap dan siap mengumpulkan/mengirimkannya sesuai instruksi Ibu.\n\nTerima kasih.\nWassalamu'alaikum Warahmatullahi Wabarakatuh.`;
+
+        window.location.href = `mailto:hendriaroza85@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    }
+</script>
+
+</body>
+</html>
